@@ -1,0 +1,59 @@
+---
+title: Yuma Consensus
+summary: An in-depth explanation of Yuma Consensus, the mechanism that aggregates validator weights to translate evaluations into incentive allocations across miners and validators.
+categories: [bittensor, consensus, incentives]
+---
+
+# Yuma Consensus in Bittensor
+
+Yuma Consensus (YC) is Bittensor’s mechanism for aggregating validator-submitted weights into final incentives for miners and dividends for validators. Validators evaluate miners’ outputs on a subnet, submit weights that reflect relative performance, and Yuma Consensus combines these signals into a robust outcome that resists manipulation and rewards honest, high-quality work.
+
+- **Role:** Translates validator evaluations into emissions (TAO) distribution and validator dividends.
+- **Scope:** Operates per subnet, using weights that validators submit after running the subnet’s incentive mechanism.
+
+References: [Yuma Consensus (learnbittensor.org)](https://docs.learnbittensor.org/yuma-consensus/), [Yuma overview (taostats.io docs)](https://docs.taostats.io/docs/consensus)
+
+## Inputs to Yuma
+
+- **Validator weights:** Each validator derives a vector of weights for miners after evaluating their performance per the subnet’s mechanism.
+- **Mechanism independence:** Subnets can define their own incentive mechanisms; YC is agnostic to how validators score miners, focusing instead on reliably aggregating the submitted weights.
+
+Reference: [Understanding Incentive Mechanisms](https://docs.learnbittensor.org/learn/anatomy-of-incentive-mechanism)
+
+## Desired Properties
+
+- **Robustness:** Downweights inconsistent or adversarial validators; rewards validators whose evaluations trend with the cohort.
+- **Convergence:** Encourages validators to produce timely, consistent evaluations that predict the eventual consensus outcome.
+- **Alignment:** Incentivizes miners to produce outputs that score well across honest evaluators, not just a single party.
+
+Reference: [Yuma Consensus (learnbittensor.org)](https://docs.learnbittensor.org/yuma-consensus/)
+
+## Outcomes of YC
+
+- **Miner incentives:** A miner’s emissions share is proportional to their aggregate weight after YC.
+- **Validator dividends:** Validators receive dividends based on their contribution and (in some archetypes) their stake, encouraging accurate and timely evaluations.
+- **Subnet autonomy:** Each subnet’s consensus is computed per its submitted weights, enabling specialization and local optimization.
+
+Reference: [Consensus summary (taostats docs)](https://docs.taostats.io/docs/consensus)
+
+## Interaction with Dynamic TAO
+
+Dynamic TAO (dTAO) provides the broader tokenomics and governance model. YC fits within that model as the method for converting evaluations to payouts, while dTAO defines how emissions are injected and how governance evolves.
+
+- **dTAO governs emission policy and decentralization trajectory.**
+- **YC aggregates evaluation signals to allocate those emissions.**
+
+References: [Core Dynamic TAO Concepts](https://docs.bittensor.com/dynamic-tao/dtao-guide), [Emission](https://docs.bittensor.com/emissions)
+
+## Practical Implications
+
+- **For miners:** Optimize for evaluation criteria defined by the subnet; consistent performance across validators improves your YC outcome.
+- **For validators:** Provide honest, consistent, timely evaluations; YC rewards validators whose weights align with the eventual consensus trend.
+- **For subnet creators:** Design mechanisms that are measurable, evaluable, and hard to game; YC will then aggregate validator signals effectively.
+
+## Further Reading
+
+- [Yuma Consensus (learnbittensor.org)](https://docs.learnbittensor.org/yuma-consensus/)
+- [Understanding Incentive Mechanisms](https://docs.learnbittensor.org/learn/anatomy-of-incentive-mechanism)
+- [Emission (docs.bittensor.com)](https://docs.bittensor.com/emissions)
+- [Core Dynamic TAO Concepts](https://docs.bittensor.com/dynamic-tao/dtao-guide)

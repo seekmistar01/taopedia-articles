@@ -1,0 +1,58 @@
+---
+title: Mining and Validating in Bittensor
+summary: A factual overview of miners and validators in Bittensor, including roles, registration, evaluation, rewards, and how emissions are distributed.
+categories: [bittensor, mining, validating]
+---
+
+# Mining and Validating in Bittensor
+
+Bittensor organizes work into specialized subnets. Within each subnet, **miners** produce a digital commodity (e.g., model outputs, retrieval results, compute), and **validators** evaluate that work according to the subnet’s incentive mechanism. Emissions of TAO are allocated based on validator-submitted weights aggregated by consensus.
+
+References: [Docs Home](https://docs.bittensor.com/), [Mining in Bittensor](https://docs.bittensor.com/miners/), [Emission](https://docs.bittensor.com/emissions)
+
+## Miners
+
+- **Role:** Produce the commodity requested by a subnet (e.g., respond to prompts, retrieve documents, provide compute).
+- **Joining a subnet:** Miners generally register to an existing subnet; they do not need to create their own.
+- **Registration cost:** Registration consumes TAO (cost varies dynamically based on time since the last registration). The TAO used to secure a UID is sunk (burned) during registration.
+- **Competition:** Miners compete by improving the quality, timeliness, and reliability of their outputs according to the subnet’s evaluation criteria.
+
+Reference: [Mining in Bittensor](https://docs.bittensor.com/miners/)
+
+## Validators
+
+- **Role:** Evaluate miner outputs using the subnet’s incentive mechanism and produce a weight vector that reflects relative miner performance.
+- **Weight submission:** Validators periodically submit weights to the blockchain; these are inputs to consensus for emissions allocation.
+- **Dividends and stake:** Validators may receive dividends aligned with their performance and stake (depending on the mechanism archetype). Stakers can delegate TAO to validators.
+
+References: [Validators (learnbittensor.org)](https://docs.learnbittensor.org/validators), [Understanding Incentive Mechanisms](https://docs.learnbittensor.org/learn/anatomy-of-incentive-mechanism)
+
+## Incentives and Emissions
+
+- **Emission process:** Newly issued TAO is injected into subnet pools; allocation to miners and validators is driven by validator weights after consensus aggregation.
+- **Aggregation:** Yuma Consensus aggregates validator-submitted weights, rewarding validators whose evaluations are consistent, timely, and predictive; miners with higher aggregate weights receive larger emission shares.
+- **Staker participation:** TAO holders can stake to validators and share in validator rewards.
+
+References: [Emission](https://docs.bittensor.com/emissions), [Yuma Consensus](https://docs.learnbittensor.org/yuma-consensus/)
+
+## Subnets and Mechanisms
+
+- **Subnet creators:** Define the incentive mechanism for evaluating work and set the tasks validators use for scoring.
+- **Mechanism flexibility:** Different subnets can adopt different mechanisms (e.g., accuracy-based scoring, reputation-based signals), enabling specialization.
+
+References: [Docs Home](https://docs.bittensor.com/), [The Bittensor Standard](https://bittensor.com/content/the-bittensor-standard)
+
+## Practical Considerations
+
+- **Quality matters:** Miners should optimize for the subnet’s published evaluation criteria and datasets; validators reward consistent high-quality outputs.
+- **Costs and operations:** Miners should plan for registration costs, runtime costs (compute, bandwidth), and iteration to improve scores; validators need robust evaluation infrastructure and transparent methodology.
+- **Transparency and security:** Use official docs and release announcements to avoid malicious lookalikes; validate endpoints and software sources.
+
+References: [Docs Home](https://docs.bittensor.com/)
+
+## Summary
+
+- Miners generate outputs; validators evaluate them and submit weights.
+- Emissions in TAO are distributed based on aggregated validator weights.
+- Stakers delegate to validators; subnet creators define the rules of evaluation.
+- This division of roles allows Bittensor to allocate incentives to useful work across many specialized subnets.

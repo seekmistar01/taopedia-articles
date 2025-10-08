@@ -1,0 +1,52 @@
+---
+title: Hotkeys (Bittensor)
+summary: The operational key used by miners, validators, and subnet actors to register, submit weights, and perform day-to-day on-chain actions.
+categories: [bittensor, wallets, operations]
+infoboxTitle: Hotkey
+infoboxCaption: Operates network roles; safe to run on online nodes (with limits).
+infoboxImage: "https://bittensor.com/_next/image?url=%2Fimages%2Fopentensor-brand.png&w=3840&q=75"
+infoboxRows:
+  - label: Purpose
+    value: Operational authority for miners/validators/subnet actors
+  - label: Typical actions
+    value: Register, submit weights, interact with subnet protocols
+  - label: Relation to coldkey
+    value: Controlled by a coldkey; does not hold funds
+  - label: Safety
+    value: Can run online; rotate if compromised (funds protected by coldkey)
+  - label: Docs
+    value: docs.learnbittensor.org, docs.bittensor.com
+---
+
+# Hotkeys (Bittensor)
+
+A hotkey is the operational key in the Bittensor wallet model. It is used by participants to perform routine, on-chain actions needed for roles like miners and validators.
+
+References: [Wallets (learnbittensor.org)](https://docs.learnbittensor.org/getting-started/wallets/), [Working with Keys](https://docs.learnbittensor.org/working-with-keys/), [BTCLI Reference](https://docs.bittensor.com/btcli)
+
+## Responsibilities
+
+- Identify and authorize operational actions by network participants (e.g., register a miner/validator, submit evaluation weights).
+- Interact with subnet services according to published mechanisms.
+
+## Security model
+
+- Hotkeys are designed to be used on online infrastructure (e.g., validator and miner nodes).
+- They should not control funds; if compromised, the coldkey can rotate or revoke authority.
+
+## Operational practices
+
+- Use separate hotkeys for distinct roles or nodes to bound blast radius.
+- Monitor activity and rotate keys if suspicious behavior is detected.
+- Keep node environments patched and restrict access to hotkey material.
+
+## Tooling
+
+- `btcli` and the Wallet SDK support generating and managing hotkeys under a wallet.
+- Registration and day-to-day actions are performed with the hotkey.
+
+## Further Reading
+
+- [Wallets, Coldkeys and Hotkeys](https://docs.learnbittensor.org/getting-started/wallets/)
+- [Working with Keys](https://docs.learnbittensor.org/working-with-keys/)
+- [BTCLI Reference](https://docs.bittensor.com/btcli)

@@ -1,0 +1,51 @@
+---
+title: Wallets, Coldkeys, and Hotkeys
+summary: Understanding Bittensor wallets and the roles of coldkeys and hotkeys for security, identity, and operations.
+categories: [bittensor, wallets, security]
+infoboxTitle: Wallet Keys (Cold/Hot)
+infoboxCaption: Coldkeys secure funds and stake; hotkeys operate on-chain roles.
+infoboxImage: "https://bittensor.com/_next/image?url=%2Fimages%2Fopentensor-brand.png&w=3840&q=75"
+infoboxRows:
+  - label: Coldkey role
+    value: Secures TAO and stake; signs financial ops
+  - label: Hotkey role
+    value: Operates miners/validators; registers; submits weights
+  - label: Wallet tooling
+    value: btcli, Wallet SDK
+  - label: Key safety
+    value: Protect seed; never expose coldkey on online nodes
+  - label: Sources
+    value: docs.learnbittensor.org, docs.bittensor.com
+---
+
+# Wallets, Coldkeys, and Hotkeys
+
+In Bittensor, a wallet represents your identity and signing authority. It manages two key types:
+
+- **Coldkey** — The security-critical key that controls TAO and stake. Use for financial transactions (stake/unstake/transfer). Keep offline or in a secure environment.
+- **Hotkey** — The operational key used by network participants to run miners/validators, register, and submit weights on-chain.
+
+References: [Wallets (learnbittensor.org)](https://docs.learnbittensor.org/getting-started/wallets/), [Working with Keys](https://docs.learnbittensor.org/working-with-keys/), [BTCLI Reference](https://docs.bittensor.com/btcli)
+
+## Why two keys?
+
+- **Security separation:** Coldkey protects funds; hotkey performs day-to-day on-chain actions for miners/validators.
+- **Operational safety:** If a hotkey is compromised on a node, cold funds remain protected.
+
+## Typical lifecycle
+
+- Create/import wallet and generate a coldkey (store seed securely).
+- Generate a hotkey for the role (mining/validating/subnet operations).
+- Fund and manage stake with the coldkey; operate services using the hotkey.
+
+## Best practices
+
+- Store coldkey seed offline; use hardware-backed storage where possible.
+- Never place coldkey on internet-exposed nodes.
+- Validate you’re using official tools and documentation.
+
+## Further reading
+
+- [Wallets, Coldkeys and Hotkeys](https://docs.learnbittensor.org/getting-started/wallets/)
+- [Working with Keys](https://docs.learnbittensor.org/working-with-keys/)
+- [BTCLI Reference](https://docs.bittensor.com/btcli)

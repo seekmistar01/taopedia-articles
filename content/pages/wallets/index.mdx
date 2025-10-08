@@ -1,0 +1,52 @@
+---
+title: Bittensor Wallets
+summary: What a Bittensor wallet is, what it stores, and how it is used to prove identity and sign transactions on the network.
+categories: [bittensor, wallets, security]
+infoboxTitle: Wallet (Concept)
+infoboxCaption: A wallet holds keys used to access TAO and sign transactions.
+infoboxImage: "https://bittensor.com/_next/image?url=%2Fimages%2Fopentensor-brand.png&w=3840&q=75"
+infoboxRows:
+  - label: Purpose
+    value: Identity, signing, access to TAO, manage stake
+  - label: Key types
+    value: Coldkey (funds/stake), Hotkey (operations)
+  - label: Tooling
+    value: btcli, Wallet SDK
+  - label: Safety
+    value: Protect seed/mnemonic; verify official docs/tools
+  - label: Docs
+    value: docs.learnbittensor.org, docs.bittensor.com
+---
+
+# Bittensor Wallets
+
+A Bittensor wallet represents a user or entity’s identity and signing authority on the network. It stores cryptographic keys used to access TAO, delegate stake, and authorize operations.
+
+- A wallet contains or references two key roles: a security-critical coldkey, and one or more operational hotkeys.
+- Wallet operations include creating/importing keys, viewing balances, staking/unstaking, and registering participants.
+
+References: [Wallets (learnbittensor.org)](https://docs.learnbittensor.org/getting-started/wallets/), [BTCLI Reference](https://docs.bittensor.com/btcli)
+
+## What a wallet does
+
+- Proves identity for transactions and on-chain actions.
+- Controls TAO and stake (via the coldkey) and runs roles like miners/validators (via hotkeys).
+- Interfaces with CLI (`btcli`) or SDKs to manage keys and send transactions.
+
+## Managing a wallet (conceptual)
+
+- Create or import a wallet using the CLI or SDK.
+- Securely store the seed phrase (mnemonic) offline.
+- Generate a hotkey for operational roles.
+
+## Security guidelines
+
+- Keep seed phrases private and offline.
+- Verify you are using official documentation and released binaries.
+- Use hardware-backed or dedicated secure storage for the coldkey if possible.
+
+## Further Reading
+
+- [Wallets, Coldkeys and Hotkeys](https://docs.learnbittensor.org/getting-started/wallets/)
+- [Working with Keys](https://docs.learnbittensor.org/working-with-keys/)
+- [BTCLI Reference](https://docs.bittensor.com/btcli)

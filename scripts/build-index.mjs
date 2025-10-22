@@ -37,12 +37,13 @@ async function main() {
     const { data } = matter(raw);
 
     const title = normalizeString(data?.title) || slug;
+    const summary = normalizeString(data?.summary) || '';
     const category = normalizeString(data?.category) || null;
     const tags = Array.isArray(data?.tags)
       ? data.tags.map(normalizeString).filter(Boolean)
       : [];
 
-    const record = { slug, title, category, tags };
+    const record = { slug, title, summary, category, tags };
     await out.appendFile(JSON.stringify(record) + '\n');
   }
 

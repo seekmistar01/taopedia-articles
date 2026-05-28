@@ -6,11 +6,11 @@ https://github.com/e35ventura/taopedia
 
 ## Quick Start
 
-1. Fork or branch from `main`.
+1. Fork or branch from `test`.
 2. Add or edit an article under `content/pages/<slug>/index.mdx`.
 3. Use the required front matter.
 4. Keep the article factual, concise, and Bittensor-focused.
-5. Open a pull request.
+5. Open a pull request targeting `test`.
 
 ## File Layout
 
@@ -132,4 +132,4 @@ Keep infobox values short. Use the main article body for explanation.
 
 ## Deployment
 
-Merging to `main` updates the article index. Once the Taopedia site rebuild finishes, the live site reflects the new article content.
+Merging to `test` validates and stages article changes without updating production. Maintainers promote `test` to `main` with the release workflow when changes are ready. Merging to `main` updates the article index and the live site after the Taopedia rebuild finishes.

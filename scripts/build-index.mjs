@@ -1,50 +1,48 @@
-import { promises as fs } from 'node:fs';
-import path from 'node:path';
-import matter from 'gray-matter';
+import { promises as fs } from "node:fs";
+import path from "node:path";
+import matter from "gray-matter";
 
 const ROOT = process.cwd();
-const PAGES_DIR = path.join(ROOT, 'content/pages');
-const OUT_DIR = path.join(ROOT, 'content/index');
-const OUT_JSONL = path.join(OUT_DIR, 'articles.jsonl');
+const PAGES_DIR = path.join(ROOT, "content/pages");
+const OUT_DIR = path.join(ROOT, "content/index");
+const OUT_JSONL = path.join(OUT_DIR, "articles.jsonl");
 
 async function* walk(dir) {
   for (const entry of await fs.readdir(dir, { withFileTypes: true })) {
     const fp = path.join(dir, entry.name);
     if (entry.isDirectory()) yield* walk(fp);
-    else if (entry.isFile() && entry.name === 'index.mdx') yield fp;
+    else if (entry.isFile() && entry.name === "index.mdx") yield fp;
   }
 }
 
 function slugFromPath(fp) {
   const parts = fp.split(path.sep);
-  const idx = parts.indexOf('pages');
+  const idx = parts.indexOf("pages");
   return idx >= 0 ? parts[idx + 1] : null;
 }
 
 function normalizeString(s) {
-  return typeof s === 'string' ? s.trim() : '';
+  return typeof s === "string" ? s.trim() : "";
 }
 
 async function main() {
   await fs.mkdir(OUT_DIR, { recursive: true });
-  const out = await fs.open(OUT_JSONL, 'w');
+  const out = await fs.open(OUT_JSONL, "w");
 
   for await (const fp of walk(PAGES_DIR)) {
     const slug = slugFromPath(fp);
     if (!slug) continue;
 
-    const raw = await fs.readFile(fp, 'utf8');
+    const raw = await fs.readFile(fp, "utf8");
     const { data } = matter(raw);
 
     const title = normalizeString(data?.title) || slug;
-    const summary = normalizeString(data?.summary) || '';
+    const summary = normalizeString(data?.summary) || "";
     const category = normalizeString(data?.category) || null;
-    const tags = Array.isArray(data?.tags)
-      ? data.tags.map(normalizeString).filter(Boolean)
-      : [];
+    const tags = Array.isArray(data?.tags) ? data.tags.map(normalizeString).filter(Boolean) : [];
 
     const record = { slug, title, summary, category, tags };
-    await out.appendFile(JSON.stringify(record) + '\n');
+    await out.appendFile(JSON.stringify(record) + "\n");
   }
 
   await out.close();

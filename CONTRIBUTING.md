@@ -1,6 +1,7 @@
 # Contributing To Taopedia Articles
 
-Thanks for improving Taopedia. This repository is for article content only. Website code, UI, routing, and deployment config belong in:
+Thanks for improving Taopedia. This repository is for article content only. Website code, UI,
+routing, and deployment config belong in:
 
 https://github.com/e35ventura/taopedia
 
@@ -11,6 +12,13 @@ https://github.com/e35ventura/taopedia
 3. Use the required front matter.
 4. Keep the article factual, concise, and Bittensor-focused.
 5. Open a pull request targeting `test`.
+
+Before opening a PR, run:
+
+```bash
+npm run format:check
+npm run validate
+```
 
 ## File Layout
 
@@ -81,7 +89,8 @@ The Taopedia app currently publishes articles when:
 
 - the slug is `taopedia`;
 - `tags` includes `Bittensor`;
-- or `category` is one of `Bittensor`, `Consensus`, `Staking`, `Subnets`, `Tokenomics`, or `Wallets`.
+- or `category` is one of `Bittensor`, `Consensus`, `Staking`, `Subnets`, `Tokenomics`, or
+  `Wallets`.
 
 ## Writing Style
 
@@ -128,8 +137,11 @@ Keep infobox values short. Use the main article body for explanation.
 - Sources are included for technical or factual claims.
 - Images are local or from trusted sources.
 - Spelling and grammar have been checked.
+- `npm run format:check` succeeds if dependencies are installed.
 - `npm run build:index` succeeds if dependencies are installed.
 
 ## Deployment
 
-Merging to `test` validates and stages article changes without updating production. Maintainers promote `test` to `main` with the release workflow when changes are ready. Merging to `main` updates the article index and the live site after the Taopedia rebuild finishes.
+Merging to `test` validates and stages article changes without updating production. Maintainers
+promote `test` to `main` with the release workflow when changes are ready. Merging to `main` updates
+the article index and the live site after the Taopedia rebuild finishes.

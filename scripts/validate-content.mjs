@@ -1,37 +1,52 @@
-import { promises as fs } from 'node:fs';
-import path from 'node:path';
-import matter from 'gray-matter';
+import { promises as fs } from "node:fs";
+import path from "node:path";
+import matter from "gray-matter";
 
 const root = process.cwd();
-const pagesDir = path.join(root, 'content/pages');
-const allowedAssetExtensions = new Set(['.avif', '.gif', '.jpg', '.jpeg', '.json', '.png', '.webp']);
+const pagesDir = path.join(root, "content/pages");
+const allowedAssetExtensions = new Set([
+  ".avif",
+  ".gif",
+  ".jpg",
+  ".jpeg",
+  ".json",
+  ".png",
+  ".webp",
+]);
 const maxAssetBytes = 5 * 1024 * 1024;
 const unsafeContentPatterns = [
-  { pattern: /^\s*import\s/m, reason: 'MDX imports are not allowed' },
-  { pattern: /^\s*export\s/m, reason: 'MDX exports are not allowed' },
-  { pattern: /<\s*script[\s>]/i, reason: 'script tags are not allowed' },
-  { pattern: /<\s*\/\s*script\s*>/i, reason: 'script tags are not allowed' },
-  { pattern: /<\s*(iframe|object|embed|link|meta|style)\b/i, reason: 'active HTML elements are not allowed' },
-  { pattern: /\son[a-z]+\s*=/i, reason: 'inline event handlers are not allowed' },
-  { pattern: /\bjavascript\s*:/i, reason: 'javascript: URLs are not allowed' },
-  { pattern: /\bdata\s*:\s*text\/html/i, reason: 'HTML data URLs are not allowed' },
-  { pattern: /\bset:html\b/i, reason: 'raw HTML injection directives are not allowed' },
-  { pattern: /\bclient:[a-z-]+\b/i, reason: 'client directives are not allowed' },
+  { pattern: /^\s*import\s/m, reason: "MDX imports are not allowed" },
+  { pattern: /^\s*export\s/m, reason: "MDX exports are not allowed" },
+  { pattern: /<\s*script[\s>]/i, reason: "script tags are not allowed" },
+  { pattern: /<\s*\/\s*script\s*>/i, reason: "script tags are not allowed" },
+  {
+    pattern: /<\s*(iframe|object|embed|link|meta|style)\b/i,
+    reason: "active HTML elements are not allowed",
+  },
+  { pattern: /\son[a-z]+\s*=/i, reason: "inline event handlers are not allowed" },
+  { pattern: /\bjavascript\s*:/i, reason: "javascript: URLs are not allowed" },
+  { pattern: /\bdata\s*:\s*text\/html/i, reason: "HTML data URLs are not allowed" },
+  { pattern: /\bset:html\b/i, reason: "raw HTML injection directives are not allowed" },
+  { pattern: /\bclient:[a-z-]+\b/i, reason: "client directives are not allowed" },
 ];
 
 function validateSlug(slug) {
   if (!/^[a-z0-9][a-z0-9_-]*$/.test(slug)) {
-    throw new Error(`Unsafe article slug "${slug}". Use lowercase letters, numbers, underscores, and hyphens.`);
+    throw new Error(
+      `Unsafe article slug "${slug}". Use lowercase letters, numbers, underscores, and hyphens.`
+    );
   }
 }
 
 function validateTextField(data, field, filePath, maxLength) {
   const value = data[field];
-  if (typeof value !== 'string' || !value.trim()) {
+  if (typeof value !== "string" || !value.trim()) {
     throw new Error(`${filePath}: front matter field "${field}" is required`);
   }
   if (value.length > maxLength) {
-    throw new Error(`${filePath}: front matter field "${field}" must be ${maxLength} characters or fewer`);
+    throw new Error(
+      `${filePath}: front matter field "${field}" must be ${maxLength} characters or fewer`
+    );
   }
 }
 
@@ -43,7 +58,7 @@ function validateTags(data, filePath) {
     throw new Error(`${filePath}: use at most 3 tags`);
   }
   for (const tag of data.tags) {
-    if (typeof tag !== 'string' || !tag.trim()) {
+    if (typeof tag !== "string" || !tag.trim()) {
       throw new Error(`${filePath}: tags must be non-empty strings`);
     }
     if (tag.length > 40) {
@@ -55,8 +70,8 @@ function validateTags(data, filePath) {
 async function validateArticle(slug, articleDir) {
   validateSlug(slug);
 
-  const articlePath = path.join(articleDir, 'index.mdx');
-  const raw = await fs.readFile(articlePath, 'utf8');
+  const articlePath = path.join(articleDir, "index.mdx");
+  const raw = await fs.readFile(articlePath, "utf8");
   for (const { pattern, reason } of unsafeContentPatterns) {
     if (pattern.test(raw)) {
       throw new Error(`${articlePath}: ${reason}`);
@@ -64,14 +79,14 @@ async function validateArticle(slug, articleDir) {
   }
 
   const { data } = matter(raw);
-  validateTextField(data, 'title', articlePath, 120);
-  validateTextField(data, 'summary', articlePath, 240);
-  validateTextField(data, 'category', articlePath, 60);
+  validateTextField(data, "title", articlePath, 120);
+  validateTextField(data, "summary", articlePath, 240);
+  validateTextField(data, "category", articlePath, 60);
   validateTags(data, articlePath);
 
   if (Array.isArray(data.infoboxRows)) {
     for (const row of data.infoboxRows) {
-      if (typeof row?.label !== 'string' || typeof row?.value !== 'string') {
+      if (typeof row?.label !== "string" || typeof row?.value !== "string") {
         throw new Error(`${articlePath}: infoboxRows must contain string label/value pairs`);
       }
     }
@@ -86,11 +101,13 @@ async function validateAssets(articleDir) {
       await validateAssets(entryPath);
       continue;
     }
-    if (!entry.isFile() || entry.name === 'index.mdx') continue;
+    if (!entry.isFile() || entry.name === "index.mdx") continue;
 
     const ext = path.extname(entry.name).toLowerCase();
     if (!allowedAssetExtensions.has(ext)) {
-      throw new Error(`${entryPath}: unsupported asset type. Allowed: ${Array.from(allowedAssetExtensions).join(', ')}`);
+      throw new Error(
+        `${entryPath}: unsupported asset type. Allowed: ${Array.from(allowedAssetExtensions).join(", ")}`
+      );
     }
 
     const stat = await fs.stat(entryPath);
@@ -107,7 +124,7 @@ async function main() {
   for (const entry of entries) {
     if (!entry.isDirectory()) continue;
     const articleDir = path.join(pagesDir, entry.name);
-    const articlePath = path.join(articleDir, 'index.mdx');
+    const articlePath = path.join(articleDir, "index.mdx");
 
     try {
       await fs.access(articlePath);

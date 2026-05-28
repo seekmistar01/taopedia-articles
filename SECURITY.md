@@ -1,10 +1,12 @@
 # Security Policy
 
-Taopedia Articles is a public content repository. Please report suspected vulnerabilities privately instead of opening a public issue.
+Taopedia Articles is a public content repository. Please report suspected vulnerabilities privately
+instead of opening a public issue.
 
 ## Reporting
 
-Email the maintainers or use GitHub private vulnerability reporting if it is enabled for this repository.
+Email the maintainers or use GitHub private vulnerability reporting if it is enabled for this
+repository.
 
 Include:
 
@@ -15,8 +17,10 @@ Include:
 
 ## Contributor Safety Rules
 
-- Do not include secrets, wallet seeds, private keys, build hook URLs, API tokens, or private endpoints in articles or pull requests.
-- Do not add executable MDX, imports, exports, scripts, event handlers, iframes, embeds, or `javascript:` URLs.
+- Do not include secrets, wallet seeds, private keys, build hook URLs, API tokens, or private
+  endpoints in articles or pull requests.
+- Do not add executable MDX, imports, exports, scripts, event handlers, iframes, embeds, or
+  `javascript:` URLs.
 - Use local image assets only when they are necessary and from trusted sources.
 - Cite official or primary sources for technical claims.
 - Keep article changes separate from workflow or tooling changes.

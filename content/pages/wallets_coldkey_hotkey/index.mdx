@@ -1,6 +1,8 @@
 ---
 title: Wallets, Coldkeys, and Hotkeys
-summary: Understanding Bittensor wallets and the roles of coldkeys and hotkeys for security, identity, and operations.
+summary:
+  Understanding Bittensor wallets and the roles of coldkeys and hotkeys for security, identity, and
+  operations.
 category: "Wallets"
 tags: ["Bittensor", "Security"]
 infoboxTitle: Wallet Keys (Cold/Hot)
@@ -23,14 +25,20 @@ infoboxRows:
 
 In Bittensor, a wallet represents your identity and signing authority. It manages two key types:
 
-- **Coldkey** — The security-critical key that controls TAO and stake. Use for financial transactions (stake/unstake/transfer). Keep offline or in a secure environment.
-- **Hotkey** — The operational key used by network participants to run miners/validators, register, and submit weights on-chain.
+- **Coldkey** — The security-critical key that controls TAO and stake. Use for financial
+  transactions (stake/unstake/transfer). Keep offline or in a secure environment.
+- **Hotkey** — The operational key used by network participants to run miners/validators, register,
+  and submit weights on-chain.
 
-References: [Wallets (learnbittensor.org)](https://docs.learnbittensor.org/getting-started/wallets/), [Working with Keys](https://docs.learnbittensor.org/working-with-keys/), [BTCLI Reference](https://docs.bittensor.com/btcli)
+References:
+[Wallets (learnbittensor.org)](https://docs.learnbittensor.org/getting-started/wallets/),
+[Working with Keys](https://docs.learnbittensor.org/working-with-keys/),
+[BTCLI Reference](https://docs.bittensor.com/btcli)
 
 ## Why two keys?
 
-- **Security separation:** Coldkey protects funds; hotkey performs day-to-day on-chain actions for miners/validators.
+- **Security separation:** Coldkey protects funds; hotkey performs day-to-day on-chain actions for
+  miners/validators.
 - **Operational safety:** If a hotkey is compromised on a node, cold funds remain protected.
 
 ## Typical lifecycle

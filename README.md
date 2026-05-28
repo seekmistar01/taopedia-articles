@@ -1,6 +1,7 @@
 # Taopedia Articles
 
-This repository contains the public MDX article source for Taopedia, a Bittensor-focused knowledge base.
+This repository contains the public MDX article source for Taopedia, a Bittensor-focused knowledge
+base.
 
 Website app:
 
@@ -70,9 +71,11 @@ Taopedia is Bittensor-centric. The app currently publishes articles when:
 
 - the slug is `taopedia`;
 - `tags` includes `Bittensor`;
-- or `category` is one of `Bittensor`, `Consensus`, `Staking`, `Subnets`, `Tokenomics`, or `Wallets`.
+- or `category` is one of `Bittensor`, `Consensus`, `Staking`, `Subnets`, `Tokenomics`, or
+  `Wallets`.
 
-General sample articles may stay in this repo, but they will not appear on Taopedia unless they match the sync rules above.
+General sample articles may stay in this repo, but they will not appear on Taopedia unless they
+match the sync rules above.
 
 ## Local Checks
 

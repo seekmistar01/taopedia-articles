@@ -1,0 +1,15 @@
+name: Trigger Taopedia deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    env:
+      NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+    steps:
+      - name: Trigger Netlify build
+        if: ${{ env.NETLIFY_BUILD_HOOK != '' }}
+        run: curl -fsS -X POST "$NETLIFY_BUILD_HOOK"

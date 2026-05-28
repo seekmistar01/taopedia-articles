@@ -1,62 +1,135 @@
-# Contributing
-- One folder per article: content/pages/<slug>/index.mdx
-- Co-locate images and reference with relative paths (./image.jpg).
+# Contributing To Taopedia Articles
 
+Thanks for improving Taopedia. This repository is for article content only. Website code, UI, routing, and deployment config belong in:
 
-## Quick Start (TL;DR)
+https://github.com/e35ventura/taopedia
 
-- **Create a folder**: `content/pages/<slug>/index.mdx`
-- **Add front matter (required)**: `title`, `summary`, `category` (single string), `tags` (0–3 strings)
-- **Optional**: `featured`, `draft`, `infoboxTitle`, `infoboxCaption`, `infoboxImage`, `infoboxRows`
-- **Write content** below the front matter in Markdown/MDX
-- **Link internally** using `[[Page Title]]`
+## Quick Start
+
+1. Fork or branch from `main`.
+2. Add or edit an article under `content/pages/<slug>/index.mdx`.
+3. Use the required front matter.
+4. Keep the article factual, concise, and Bittensor-focused.
+5. Open a pull request.
 
 ## File Layout
 
-- **Article path**: `content/pages/<slug>/index.mdx`
-- **Assets**: place alongside `index.mdx` and reference via `./image.png`
+```txt
+content/pages/<slug>/index.mdx
+```
 
-## Required Front Matter (Schema)
+Use lowercase slugs with words separated by underscores when possible:
 
-- **title**: string — Article title displayed on the page
-- **summary**: string — One-sentence description used in lists/previews
-- **category**: string — Single category that best fits (e.g., `"Wallets"`)
-- **tags**: array of strings (0–3) — Topical tags (e.g., `["Bittensor", "Operations"]`)
+```txt
+content/pages/yuma_consensus/index.mdx
+content/pages/dynamic_tao/index.mdx
+```
 
-Minimal required example:
+Place images beside the article and reference them with relative paths:
 
+```txt
+content/pages/dynamic_tao/
+  index.mdx
+  emission-flow.png
+```
+
+```mdx
+![Emission flow](./emission-flow.png)
+```
+
+## Required Front Matter
+
+```mdx
 ---
-title: "Your Article Title"
-summary: "One-sentence summary describing the article."
-category: "One clear category"
-tags: ["Up to", "Three", "Tags"]
+title: "Dynamic TAO"
+summary: "How Dynamic TAO changes subnet tokenomics and incentive allocation in Bittensor."
+category: "Tokenomics"
+tags: ["Bittensor", "TAO", "Subnets"]
 ---
+```
 
-## Infobox Rows (Optional)
+Required fields:
 
-- `infoboxRows` is a list of `{ label, value }` pairs.
-- Keep values short; links and brief phrases are best.
+- `title`: Human-readable article title.
+- `summary`: One sentence, preferably under 180 characters.
+- `category`: One primary category.
+- `tags`: Zero to three topical tags.
 
-Example:
+Optional fields:
 
+- `featured`: `true` for especially important pages.
+- `draft`: `true` to keep unfinished work out of normal publication.
+- `infoboxTitle`: Title shown in the article infobox.
+- `infoboxCaption`: Short caption below the infobox image.
+- `infoboxImage`: URL or local image path.
+- `infoboxRows`: List of short `{ label, value }` rows.
+
+## Bittensor Scope
+
+Taopedia is Bittensor-centric. Good topics include:
+
+- TAO
+- wallets, coldkeys, and hotkeys
+- staking and delegation
+- validators and miners
+- Yuma Consensus
+- Dynamic TAO
+- subnets and incentive mechanisms
+- Bittensor governance, emissions, and operations
+
+The Taopedia app currently publishes articles when:
+
+- the slug is `taopedia`;
+- `tags` includes `Bittensor`;
+- or `category` is one of `Bittensor`, `Consensus`, `Staking`, `Subnets`, `Tokenomics`, or `Wallets`.
+
+## Writing Style
+
+- Write for builders, validators, miners, and TAO holders.
+- Be factual and direct.
+- Define terms before using jargon heavily.
+- Prefer short sections with clear headings.
+- Use `[[Article Title]]` for internal links.
+- Cite official docs or primary sources when making claims.
+- Avoid price predictions, investment advice, hype, or unsupported claims.
+
+## Internal Links
+
+Use wiki-style links:
+
+```mdx
+See [[Yuma Consensus]] and [[Dynamic TAO]].
+```
+
+The app resolves these links to Taopedia article pages and uses them to build backlinks.
+
+## Infobox Example
+
+```yaml
+infoboxTitle: Dynamic TAO
+infoboxCaption: Subnet tokenomics and emissions.
 infoboxRows:
-  - label: "Purpose"
-    value: "What this is used for"
-  - label: "Docs"
-    value: "https://docs.example.com"
+  - label: Network
+    value: Bittensor
+  - label: Asset
+    value: TAO
+  - label: Related
+    value: "[[Subnets]]"
+```
 
-## Content Style Guide
-
-- **Be factual and concise**; avoid opinion unless clearly marked as such
-- **Use internal links** with `[[Page Title]]` to connect topics
-- **Use headings** (`##`) to structure sections (Overview, Concepts, References)
-- **Cite sources** in a References section when applicable
-- **Use code fences** for commands or code; keep lines readable
+Keep infobox values short. Use the main article body for explanation.
 
 ## Pull Request Checklist
 
-- **Front matter present**: `title`, `summary`, `category` (single), `tags` (0–3)
-- **No broken links**; internal links use `[[...]]`
-- **Images local or trusted URLs**; local assets referenced via `./`
-- **Infobox (if present)** uses concise labels/values
-- **Spelling/grammar** pass completed
+- Required front matter is present.
+- The article is in `content/pages/<slug>/index.mdx`.
+- The topic is Bittensor-related or intentionally marked as a sample/reference page.
+- Internal links use `[[...]]`.
+- Sources are included for technical or factual claims.
+- Images are local or from trusted sources.
+- Spelling and grammar have been checked.
+- `npm run build:index` succeeds if dependencies are installed.
+
+## Deployment
+
+Merging to `main` updates the article index. Once the Taopedia site rebuild finishes, the live site reflects the new article content.

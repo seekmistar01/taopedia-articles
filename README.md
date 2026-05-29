@@ -15,7 +15,7 @@ https://taopedia.org
 
 - Contributors add and edit articles in this repository.
 - Articles are stored as MDX files under `content/pages`.
-- The Taopedia app syncs Bittensor-focused articles from this repo during its Netlify build.
+- The Taopedia app syncs Bittensor-focused articles from this repo during the site build.
 - Contributor pull requests target `test`.
 - Maintainers promote `test` to `main` after review.
 - When changes land on `main`, the Taopedia site is rebuilt from the latest approved content.

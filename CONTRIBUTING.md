@@ -100,7 +100,28 @@ The Taopedia app currently publishes articles when:
 - Prefer short sections with clear headings.
 - Use `[[Article Title]]` for internal links.
 - Cite official docs or primary sources when making claims.
+- Link relevant codebases, source files, releases, or commits when describing implementation
+  behavior.
 - Avoid price predictions, investment advice, hype, or unsupported claims.
+
+## Sources
+
+Sources are required for factual and technical claims. AI-assisted writing is allowed, but unsourced
+writing is not.
+
+Preferred sources:
+
+1. Current implementation code, official protocol repos, and release notes.
+2. Official Bittensor/OpenTensor docs.
+3. Maintainer-authored specs or documentation.
+4. Reputable third-party explainers for background only.
+
+When docs and code disagree, code is the source of truth for implementation behavior. Docs can
+support conceptual explanations, but exact mechanics should be backed by code, release notes, or
+official specs.
+
+Do not use generic homepages, SEO pages, social posts, or screenshots as support for technical
+claims unless they are clearly marked as context and no stronger source exists.
 
 ## Internal Links
 
@@ -135,6 +156,7 @@ Keep infobox values short. Use the main article body for explanation.
 - The topic is Bittensor-related or intentionally marked as a sample/reference page.
 - Internal links use `[[...]]`.
 - Sources are included for technical or factual claims.
+- Codebase links are included when implementation behavior is described.
 - Images are local or from trusted sources.
 - Spelling and grammar have been checked.
 - `npm run format:check` succeeds if dependencies are installed.

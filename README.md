@@ -44,7 +44,7 @@ Reference local assets with relative paths such as `./diagram.png`.
 ---
 title: "Your Article Title"
 summary: "One clear sentence describing the article."
-category: "Bittensor"
+category: "Wallets"
 tags: ["Bittensor", "Wallets"]
 ---
 ```
@@ -53,8 +53,8 @@ Required fields:
 
 - `title`: Display title.
 - `summary`: Short description used in listings and search.
-- `category`: One primary category.
-- `tags`: Zero to three topical tags.
+- `category`: One primary topic. Do not use `Bittensor` as a catch-all category.
+- `tags`: Zero to three tags. Include `Bittensor` for articles that should publish to Taopedia.
 
 Optional fields:
 
@@ -70,12 +70,11 @@ Optional fields:
 Taopedia is Bittensor-centric. The app currently publishes articles when:
 
 - the slug is `taopedia`;
-- `tags` includes `Bittensor`;
-- or `category` is one of `Bittensor`, `Consensus`, `Staking`, `Subnets`, `Tokenomics`, or
-  `Wallets`.
+- or `tags` includes `Bittensor`.
 
 General sample articles may stay in this repo, but they will not appear on Taopedia unless they
-match the sync rules above.
+match the sync rules above. Categories can be added over time without changing the website sync
+logic.
 
 ## Local Checks
 

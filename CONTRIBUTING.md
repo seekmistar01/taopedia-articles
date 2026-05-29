@@ -60,8 +60,8 @@ Required fields:
 
 - `title`: Human-readable article title.
 - `summary`: One sentence, preferably under 180 characters.
-- `category`: One primary category.
-- `tags`: Zero to three topical tags.
+- `category`: One primary topic. Do not use `Bittensor` as a catch-all category.
+- `tags`: Zero to three tags. Include `Bittensor` for articles that should publish to Taopedia.
 
 Optional fields:
 
@@ -88,9 +88,9 @@ Taopedia is Bittensor-centric. Good topics include:
 The Taopedia app currently publishes articles when:
 
 - the slug is `taopedia`;
-- `tags` includes `Bittensor`;
-- or `category` is one of `Bittensor`, `Consensus`, `Staking`, `Subnets`, `Tokenomics`, or
-  `Wallets`.
+- or `tags` includes `Bittensor`.
+
+Categories can be added over time without changing the website sync logic.
 
 ## Writing Style
 

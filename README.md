@@ -3,22 +3,38 @@
 This repository contains the public MDX article source for Taopedia, a Bittensor-focused knowledge
 base.
 
-Website app:
-
-https://github.com/e35ventura/taopedia
-
 Live site:
 
 https://taopedia.org
 
-## How This Repo Works
+Website app:
 
-- Contributors add and edit articles in this repository.
-- Articles are stored as MDX files under `content/pages`.
-- The Taopedia app syncs Bittensor-focused articles from this repo during the site build.
-- Contributor pull requests target `test`.
+https://github.com/e35ventura/taopedia
+
+## Repository Role
+
+- Contributors add and edit articles here.
+- Articles are stored as MDX under `content/pages`.
+- The Taopedia website syncs Bittensor-scoped articles from this repo during the site build.
+- Contributor PRs target `test`.
 - Maintainers promote `test` to `main` after review.
-- When changes land on `main`, the Taopedia site is rebuilt from the latest approved content.
+
+If you want to change the website UI, routing, styling, search, or deployment config, use
+`taopedia`. If you want to improve Taopedia's knowledge base, use this repo.
+
+## What To Contribute
+
+Good changes for this repo include:
+
+- New Bittensor articles.
+- Corrections to existing articles.
+- Better sources for factual or technical claims.
+- Local images or diagrams that clarify an article.
+- Category or tag improvements.
+- Concision edits that remove repetition or filler.
+
+Articles should be factual, sourced, concise, and useful to builders, validators, miners, and TAO
+holders.
 
 ## Article Layout
 
@@ -36,7 +52,11 @@ content/pages/<slug>/
   diagram.png
 ```
 
-Reference local assets with relative paths such as `./diagram.png`.
+Reference local assets with relative paths:
+
+```mdx
+![Emission flow](./diagram.png)
+```
 
 ## Required Front Matter
 
@@ -65,31 +85,36 @@ Optional fields:
 - `infoboxImage`
 - `infoboxRows`
 
-## What Gets Published
+## Publication Rules
 
-Taopedia is Bittensor-centric. The app currently publishes articles when:
+Taopedia publishes articles when:
 
 - the slug is `taopedia`;
 - or `tags` includes `Bittensor`.
 
-General sample articles may stay in this repo, but they will not appear on Taopedia unless they
-match the sync rules above. Categories can be added over time without changing the website sync
-logic.
+General sample articles can remain in this repo, but they do not appear on Taopedia unless they
+match the publication rules. Categories can be added over time without changing website sync logic.
+
+## Source Standard
+
+Sources are required for factual and technical claims. Prefer:
+
+1. Current implementation code, official protocol repos, and release notes.
+2. Official Bittensor/OpenTensor docs.
+3. Maintainer-authored specs or documentation.
+4. Reputable third-party explainers for background only.
+
+When docs and code disagree, implementation code is the source of truth for implementation behavior.
 
 ## Local Checks
 
-Install dependencies:
-
 ```bash
 npm install
-```
-
-Build the article index:
-
-```bash
+npm run format:check
+npm run validate
 npm run build:index
 ```
 
 ## Contributing
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md).
+Read [CONTRIBUTING.md](./CONTRIBUTING.md) before opening a PR.

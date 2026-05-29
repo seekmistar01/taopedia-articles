@@ -98,6 +98,11 @@ The Taopedia app currently publishes articles when:
 - Be factual and direct.
 - Define terms before using jargon heavily.
 - Prefer short sections with clear headings.
+- Avoid repeating the same definition, claim, or caveat.
+- Cut generic blockchain, AI, decentralization, or crypto filler unless it directly explains the
+  Bittensor topic.
+- Keep sentences direct; do not use a long explanation when a short one preserves the meaning.
+- Every section should add a new fact, distinction, caveat, source, or operational detail.
 - Use `[[Article Title]]` for internal links.
 - Cite official docs or primary sources when making claims.
 - Link relevant codebases, source files, releases, or commits when describing implementation
@@ -157,6 +162,7 @@ Keep infobox values short. Use the main article body for explanation.
 - Internal links use `[[...]]`.
 - Sources are included for technical or factual claims.
 - Codebase links are included when implementation behavior is described.
+- The article avoids repeated information and unnecessary filler.
 - Images are local or from trusted sources.
 - Spelling and grammar have been checked.
 - `npm run format:check` succeeds if dependencies are installed.

@@ -26,6 +26,7 @@
 - [ ] Sources are included for technical claims
 - [ ] Relevant codebase links are included where implementation behavior is described
 - [ ] Article avoids speculation, price discussion, and unsupported claims
+- [ ] Article avoids repeated information and unnecessary filler
 - [ ] Internal links use `[[...]]`
 - [ ] `npm run format:check` passes
 - [ ] `npm run validate` passes

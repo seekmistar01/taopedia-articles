@@ -29,6 +29,7 @@ const unsafeContentPatterns = [
   { pattern: /\bset:html\b/i, reason: "raw HTML injection directives are not allowed" },
   { pattern: /\bclient:[a-z-]+\b/i, reason: "client directives are not allowed" },
 ];
+const wikiLinkPattern = /\[\[([^\]|]+)(?:\|[^\]]+)?\]\]/g;
 const sourceLinkPattern = /\[[^\]]+\]\(https?:\/\/[^)]+\)/i;
 
 function validateSlug(slug) {
@@ -68,12 +69,23 @@ function validateTags(data, filePath) {
   }
 }
 
+function slugifyWikiLink(value) {
+  return value
+    .toLowerCase()
+    .replace(/ /g, "_")
+    .replace(/[^\w-]/g, "");
+}
+
+function extractWikiLinks(content) {
+  return [...content.matchAll(wikiLinkPattern)].map((match) => match[1].trim());
+}
+
 function isPublishedBittensorArticle(data) {
   if (data?.draft === true) return false;
   return Array.isArray(data?.tags) && data.tags.includes("Bittensor");
 }
 
-async function validateArticle(slug, articleDir) {
+async function validateArticle(slug, articleDir, knownTargets) {
   validateSlug(slug);
 
   const articlePath = path.join(articleDir, "index.mdx");
@@ -89,6 +101,14 @@ async function validateArticle(slug, articleDir) {
   validateTextField(data, "summary", articlePath, 240);
   validateTextField(data, "category", articlePath, 60);
   validateTags(data, articlePath);
+  for (const target of extractWikiLinks(content)) {
+    const normalizedTarget = slugifyWikiLink(target);
+    if (!knownTargets.has(normalizedTarget)) {
+      throw new Error(
+        `${articlePath}: internal link "[[${target}]]" does not resolve to an article`
+      );
+    }
+  }
   if (isPublishedBittensorArticle(data) && !sourceLinkPattern.test(content)) {
     throw new Error(
       `${articlePath}: published Bittensor articles must include at least one source link`
@@ -130,7 +150,8 @@ async function validateAssets(articleDir) {
 
 async function main() {
   const entries = await fs.readdir(pagesDir, { withFileTypes: true });
-  let count = 0;
+  const articles = [];
+  const knownTargets = new Set();
 
   for (const entry of entries) {
     if (!entry.isDirectory()) continue;
@@ -138,12 +159,22 @@ async function main() {
     const articlePath = path.join(articleDir, "index.mdx");
 
     try {
-      await fs.access(articlePath);
+      const raw = await fs.readFile(articlePath, "utf8");
+      const { data } = matter(raw);
+      articles.push({ slug: entry.name, articleDir });
+      knownTargets.add(entry.name);
+      if (typeof data.title === "string" && data.title.trim()) {
+        knownTargets.add(slugifyWikiLink(data.title.trim()));
+      }
     } catch {
-      continue;
+      // Skip folders without article content.
     }
+  }
 
-    await validateArticle(entry.name, articleDir);
+  let count = 0;
+
+  for (const { slug, articleDir } of articles) {
+    await validateArticle(slug, articleDir, knownTargets);
     await validateAssets(articleDir);
     count += 1;
   }

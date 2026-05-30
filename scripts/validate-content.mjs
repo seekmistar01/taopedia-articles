@@ -80,9 +80,9 @@ function extractWikiLinks(content) {
   return [...content.matchAll(wikiLinkPattern)].map((match) => match[1].trim());
 }
 
-function isPublishedBittensorArticle(data) {
+function isPublishedArticle(slug, data) {
   if (data?.draft === true) return false;
-  return Array.isArray(data?.tags) && data.tags.includes("Bittensor");
+  return slug !== "taopedia";
 }
 
 async function validateArticle(slug, articleDir, knownTargets) {
@@ -109,10 +109,8 @@ async function validateArticle(slug, articleDir, knownTargets) {
       );
     }
   }
-  if (isPublishedBittensorArticle(data) && !sourceLinkPattern.test(content)) {
-    throw new Error(
-      `${articlePath}: published Bittensor articles must include at least one source link`
-    );
+  if (isPublishedArticle(slug, data) && !sourceLinkPattern.test(content)) {
+    throw new Error(`${articlePath}: published articles must include at least one source link`);
   }
 
   if (Array.isArray(data.infoboxRows)) {

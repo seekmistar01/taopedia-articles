@@ -19,12 +19,21 @@ async function writeArticle(slug, body) {
   );
 }
 
-await writeArticle("known_target", "# Known Target\n");
-await writeArticle("valid_link", "See [[known target]].\n");
+await writeArticle(
+  "known_target",
+  "# Known Target\n\nSource: [docs](https://docs.bittensor.com/).\n"
+);
+await writeArticle(
+  "valid_link",
+  "See [[known target]].\n\nSource: [docs](https://docs.bittensor.com/).\n"
+);
 
 execFileSync(process.execPath, [scriptPath], { cwd: fixtureRoot, stdio: "inherit" });
 
-await writeArticle("broken_link", "See [[missing target]].\n");
+await writeArticle(
+  "broken_link",
+  "See [[missing target]].\n\nSource: [docs](https://docs.bittensor.com/).\n"
+);
 
 assert.throws(
   () => execFileSync(process.execPath, [scriptPath], { cwd: fixtureRoot, stdio: "pipe" }),

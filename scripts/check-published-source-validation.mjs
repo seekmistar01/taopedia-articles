@@ -10,38 +10,40 @@ const scriptPath = path.join(path.dirname(__filename), "validate-content.mjs");
 const fixtureRoot = await fs.mkdtemp(path.join(os.tmpdir(), "taopedia-source-validation-"));
 const pagesDir = path.join(fixtureRoot, "content", "pages");
 
-async function writeArticle(slug, tags, body) {
+async function writeArticle(slug, tags, body, draft = false) {
   const articleDir = path.join(pagesDir, slug);
   await fs.mkdir(articleDir, { recursive: true });
+  const draftField = draft ? "draft: true\n" : "";
   await fs.writeFile(
     path.join(articleDir, "index.mdx"),
-    `---\ntitle: ${slug}\nsummary: Test article.\ncategory: Testing\ntags: ${tags}\n---\n\n${body}\n`
+    `---\n${draftField}title: ${slug}\nsummary: Test article.\ncategory: Testing\ntags: ${tags}\n---\n\n${body}\n`
   );
 }
 
 await writeArticle(
-  "sourced_bittensor",
-  '["Bittensor"]',
+  "sourced_article",
+  '["Testing"]',
   "This claim has a [source](https://docs.bittensor.com/).\n"
 );
 await writeArticle(
-  "sample_article",
+  "draft_article",
   '["Science"]',
-  "Sample pages can exist without Bittensor sources.\n"
+  "Draft pages can exist without sources.\n",
+  true
 );
 
 execFileSync(process.execPath, [scriptPath], { cwd: fixtureRoot, stdio: "inherit" });
 
 await writeArticle(
-  "unsourced_bittensor",
-  '["Bittensor"]',
+  "unsourced_article",
+  '["Testing"]',
   "This published article has no source link.\n"
 );
 
 assert.throws(
   () => execFileSync(process.execPath, [scriptPath], { cwd: fixtureRoot, stdio: "pipe" }),
-  /published Bittensor articles must include at least one source link/,
-  "validator must reject published Bittensor articles without source links"
+  /published articles must include at least one source link/,
+  "validator must reject published articles without source links"
 );
 
 await fs.rm(fixtureRoot, { recursive: true, force: true });

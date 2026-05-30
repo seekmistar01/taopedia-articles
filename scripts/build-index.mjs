@@ -28,7 +28,7 @@ function normalizeString(s) {
 function isPublishedArticle(slug, data) {
   if (data?.draft === true) return false;
   if (slug === "taopedia") return true;
-  return Array.isArray(data?.tags) && data.tags.includes("Bittensor");
+  return true;
 }
 
 async function main() {

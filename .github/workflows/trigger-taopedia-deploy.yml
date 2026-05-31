@@ -2,14 +2,29 @@ name: Trigger Taopedia deploy
 
 on:
   push:
-    branches: [main]
+    branches: [main, test]
 
 jobs:
   trigger:
     runs-on: ubuntu-latest
     env:
       NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+      NETLIFY_TEST_BUILD_HOOK: ${{ secrets.NETLIFY_TEST_BUILD_HOOK }}
     steps:
       - name: Trigger Netlify build
-        if: ${{ env.NETLIFY_BUILD_HOOK != '' }}
-        run: curl -fsS -X POST "$NETLIFY_BUILD_HOOK"
+        run: |
+          if [ "$GITHUB_REF_NAME" = "test" ]; then
+            hook="$NETLIFY_TEST_BUILD_HOOK"
+            context="test branch deploy"
+          else
+            hook="$NETLIFY_BUILD_HOOK"
+            context="production deploy"
+          fi
+
+          if [ -z "$hook" ]; then
+            echo "::notice::No Netlify build hook configured for $context."
+            exit 0
+          fi
+
+          echo "Triggering Taopedia $context from taopedia-articles/$GITHUB_REF_NAME."
+          curl -fsS -X POST "$hook"

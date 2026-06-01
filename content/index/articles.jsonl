@@ -165,6 +165,7 @@
 {"slug":"subnet_protocol","title":"Subnet Protocol","summary":"How a subnet protocol defines the interaction rules between miners and validators.","category":"Subnets","tags":["Subnets","Mining","Validation"]}
 {"slug":"subnet_stake_burn","title":"Subnet Stake Burn","summary":"How Bittensor subnet stake burn removes alpha from circulation while adding TAO to a subnet reserve.","category":"Core Concepts","tags":["Subtensor","Staking"]}
 {"slug":"subnet_task","title":"Subnet Task","summary":"How a subnet task defines the work miners produce and validators evaluate in Bittensor.","category":"Subnets","tags":["Subnets","Mining","Validation"]}
+{"slug":"subnet_validator","title":"Subnet Validator","summary":"How a subnet validator evaluates miner work inside a Bittensor subnet.","category":"Subnets","tags":["Subnets","Validation","Mining"]}
 {"slug":"subtensor_constants","title":"Subtensor Constants","summary":"How Subtensor runtime constants provide named values grouped by runtime area.","category":"Core Concepts","tags":["Subtensor","Reference"]}
 {"slug":"subtensor_error_codes","title":"Subtensor Error Codes","summary":"How Subtensor error-code families help Bittensor readers interpret failed network actions.","category":"Core Concepts","tags":["Subtensor","Errors"]}
 {"slug":"subtensor_events","title":"Subtensor Events","summary":"How Subtensor runtime events provide named records of Bittensor chain activity.","category":"Core Concepts","tags":["Subtensor","Events"]}

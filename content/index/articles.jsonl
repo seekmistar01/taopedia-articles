@@ -10,6 +10,7 @@
 {"slug":"bittensor_tools","title":"Bittensor Tools","summary":"How Bittensor tooling gives users and developers interfaces around subnets, roles, and network features.","category":"Tools","tags":["Tools","Interfaces"]}
 {"slug":"block","title":"Block","summary":"How a block groups Bittensor transactions into a blockchain record.","category":"Core Concepts","tags":["Protocol","Transactions"]}
 {"slug":"bt_logging_levels","title":"Bittensor Logging Levels","summary":"How Bittensor log levels help readers interpret message severity without treating logs as complete chain-state proof.","category":"Tools","tags":["Diagnostics","Tools"]}
+{"slug":"burn_cost","title":"Burn Cost","summary":"How burn cost names the dynamic TAO amount recycled when creating a new Bittensor subnet.","category":"Tokenomics","tags":["Tokenomics","Subnets"]}
 {"slug":"coldkeys","title":"Coldkeys (Bittensor)","summary":"The security-critical key that controls TAO and stake; used for financial transactions like stake, unstake, and transfers.","category":"Wallets","tags":["Security"]}
 {"slug":"commit_reveal","title":"Commit Reveal","summary":"How Commit Reveal conceals fresh validator weights before consensus so validators cannot simply copy the latest public weight matrix.","category":"Consensus","tags":["Validation","Consensus"]}
 {"slug":"consensus_based_weights","title":"Consensus-Based Weights","summary":"How liquid alpha adjusts Bittensor validator-miner bond smoothing according to consensus alignment.","category":"Consensus","tags":["Consensus","Validation"]}

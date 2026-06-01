@@ -26,6 +26,7 @@
 {"slug":"governance","title":"Bittensor Governance","summary":"How Bittensor governance uses Triumvirate proposals and Senate approval to review privileged network changes.","category":"Governance","tags":["Governance","Senate"]}
 {"slug":"halving_mechanisms","title":"Halving Mechanisms","summary":"How Bittensor uses supply-based TAO and subnet alpha halvings to reduce emission rates across network and subnet tokenomics.","category":"Tokenomics","tags":["Tokenomics","Emissions"]}
 {"slug":"hotkeys","title":"Hotkeys (Bittensor)","summary":"The operational key used by miners, validators, and subnet actors to register, submit weights, and perform day-to-day on-chain actions.","category":"Wallets","tags":["Operations"]}
+{"slug":"immunity_period","title":"Immunity Period","summary":"How an immunity period gives a newly registered Bittensor subnet participant temporary protection from deregistration.","category":"Subnets","tags":["Subnets","Registration"]}
 {"slug":"issuance","title":"Issuance","summary":"How issuance describes the circulating TAO amount used in Bittensor emission and halving context.","category":"Tokenomics","tags":["Tokenomics","TAO"]}
 {"slug":"mainchain","title":"Mainchain","summary":"How Mainchain refers to the primary production Bittensor blockchain network.","category":"Protocol","tags":["Networks","Protocol"]}
 {"slug":"mempool_visibility","title":"Mempool Visibility","summary":"How pending transaction visibility creates MEV risk in Bittensor before block inclusion.","category":"Safety","tags":["Safety","Transactions"]}

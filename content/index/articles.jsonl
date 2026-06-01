@@ -29,6 +29,7 @@
 {"slug":"halving_mechanisms","title":"Halving Mechanisms","summary":"How Bittensor uses supply-based TAO and subnet alpha halvings to reduce emission rates across network and subnet tokenomics.","category":"Tokenomics","tags":["Tokenomics","Emissions"]}
 {"slug":"hotkeys","title":"Hotkeys (Bittensor)","summary":"The operational key used by miners, validators, and subnet actors to register, submit weights, and perform day-to-day on-chain actions.","category":"Wallets","tags":["Operations"]}
 {"slug":"immunity_period","title":"Immunity Period","summary":"How an immunity period gives a newly registered Bittensor subnet participant temporary protection from deregistration.","category":"Subnets","tags":["Subnets","Registration"]}
+{"slug":"incentives","title":"Incentives","summary":"How incentives name the miner-facing reward portion of Bittensor emissions inside a subnet.","category":"Tokenomics","tags":["Tokenomics","Mining"]}
 {"slug":"issuance","title":"Issuance","summary":"How issuance describes the circulating TAO amount used in Bittensor emission and halving context.","category":"Tokenomics","tags":["Tokenomics","TAO"]}
 {"slug":"mainchain","title":"Mainchain","summary":"How Mainchain refers to the primary production Bittensor blockchain network.","category":"Protocol","tags":["Networks","Protocol"]}
 {"slug":"mempool","title":"Mempool","summary":"How a mempool holds pending transactions before they are included in a block.","category":"Core Concepts","tags":["Transactions"]}

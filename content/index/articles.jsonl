@@ -52,6 +52,7 @@
 {"slug":"seed_phrase_security","title":"Seed Phrase Security","summary":"How Bittensor wallet recovery phrases relate to wallet access, loss risk, and disclosure risk.","category":"Wallets","tags":["Wallets","Safety"]}
 {"slug":"senate","title":"Senate","summary":"How the Senate functions as the proposal-review body in Bittensor governance.","category":"Governance","tags":["Governance"]}
 {"slug":"slippage","title":"Slippage","summary":"How slippage affects Bittensor staking and unstaking when subnet pools convert between TAO and alpha tokens.","category":"Tokenomics","tags":["Tokenomics","Staking"]}
+{"slug":"stake","title":"Stake","summary":"How stake names the token amount associated with a validator position inside a Bittensor subnet.","category":"Staking","tags":["Staking","Consensus"]}
 {"slug":"stake_weight","title":"Stake Weight","summary":"How stake weight describes validator influence inside Bittensor subnet consensus.","category":"Consensus","tags":["Consensus","Staking"]}
 {"slug":"staking_and_delegation","title":"Staking and Delegation (TAO)","summary":"How TAO holders stake and delegate to validators using Bittensor tooling, including concepts, minimums, and operational cautions.","category":"Staking","tags":["Delegation"]}
 {"slug":"subnet","title":"Subnet","summary":"How a Bittensor subnet organizes a specialized market for digital work, miner production, and validator evaluation.","category":"Subnets","tags":["Subnets","Mining","Validation"]}

@@ -53,6 +53,7 @@
 {"slug":"nacl_format","title":"NaCl Format","summary":"How NaCl Format fits Bittensor wallet-file security terminology.","category":"Wallets","tags":["Wallets","Security"]}
 {"slug":"nominate","title":"Nominate","summary":"How nominate describes staking TAO with validators in Bittensor delegation terminology.","category":"Staking","tags":["Staking","Delegation"]}
 {"slug":"price_protection","title":"Price Protection","summary":"How Bittensor price protection limits adverse price movement handling during staking and unstaking.","category":"Safety","tags":["Safety","Staking"]}
+{"slug":"private_key","title":"Private Key","summary":"How private key names the protected side of a Bittensor cryptographic key pair used for authorization.","category":"Wallets","tags":["Wallets","Security"]}
 {"slug":"proposal","title":"Proposal","summary":"How a proposal functions as the item put forward by the Triumvirate for Senate review in Bittensor governance.","category":"Governance","tags":["Governance"]}
 {"slug":"proposal_hash","title":"Proposal Hash","summary":"How a proposal hash identifies a governance proposal during Bittensor Senate review and voting.","category":"Governance","tags":["Governance"]}
 {"slug":"public_key","title":"Public Key","summary":"How a public key fits Bittensor wallet-key terminology as the shareable side of a cryptographic keypair.","category":"Wallets","tags":["Wallets","Security"]}

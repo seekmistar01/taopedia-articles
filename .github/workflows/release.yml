@@ -43,6 +43,19 @@ jobs:
           git push origin refs/remotes/origin/test:refs/heads/main
           echo "::notice::Promoted $AHEAD commit(s) from test to main."
 
+      - name: Trigger Taopedia production deploy
+        if: ${{ !inputs.dry_run }}
+        env:
+          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+        run: |
+          if [ -z "$NETLIFY_BUILD_HOOK" ]; then
+            echo "::notice::No production Netlify build hook configured."
+            exit 0
+          fi
+
+          echo "Triggering Taopedia production deploy after release."
+          curl -fsS -X POST "$NETLIFY_BUILD_HOOK"
+
       - name: Dry run summary
         if: ${{ inputs.dry_run }}
         run: |

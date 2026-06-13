@@ -27,6 +27,28 @@ are interpreted. The official [Miners](https://docs.learnbittensor.org/miners) a
 [Validators](https://docs.learnbittensor.org/validators) pages describe those two roles at a high
 level: miners produce subnet work, and validators evaluate miner responses.
 
+## Slot Capacity and Limits
+
+Each Bittensor subnet has a configurable maximum number of UID slots. The official
+[Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters) reference
+includes `max_allowed_uids` as the hyperparameter that sets this ceiling for a given subnet. When a
+subnet's slots are all occupied, a new registration can succeed only by displacing an existing
+participant.
+
+The official
+[Mining: Miner deregistration](https://docs.learnbittensor.org/miners#miner-deregistration)
+documentation describes what happens when a full subnet receives a new registration: the participant
+with the lowest pruning score is the candidate for displacement. The full selection criteria,
+including how the immunity period interacts with the pruning score, how ties are resolved, and which
+participants are exempt, are specified in that reference. For readers, the key concept is that the
+slot ceiling is a real capacity constraint: once max_allowed_uids is reached, accepting a new
+registrant requires removing an existing one according to the rules described in the official
+documentation.
+
+References:
+[Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters),
+[Mining: Miner deregistration](https://docs.learnbittensor.org/miners#miner-deregistration)
+
 ## Reader Boundary
 
 This article defines the slot concept. It does not list subnet participants, count occupied slots,
@@ -38,3 +60,4 @@ details.
 - [Glossary: UID Slot](https://docs.learnbittensor.org/resources/glossary#uid-slot)
 - [Miners](https://docs.learnbittensor.org/miners)
 - [Validators](https://docs.learnbittensor.org/validators)
+- [Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters)

@@ -60,6 +60,7 @@
 {"slug":"miner_deregistration","title":"Miner Deregistration","summary":"How miner deregistration removes a low-performing Bittensor subnet miner from a UID slot when a subnet needs room for a new registration.","category":"Subnets","tags":["Subnets","Mining"]}
 {"slug":"mining_and_validating","title":"Mining and Validating in Bittensor","summary":"A factual overview of miners and validators in Bittensor, including roles, registration, evaluation, rewards, and how emissions are distributed.","category":"Mining","tags":["Mining","Validation"]}
 {"slug":"mnemonic","title":"Mnemonic","summary":"How a mnemonic represents a wallet recovery phrase in Bittensor key management.","category":"Wallets","tags":["Wallets","Security"]}
+{"slug":"multisig","title":"Multisig Wallets","summary":"How a Bittensor multisig wallet distributes control of a coldkey across several signatories, requiring a threshold of approvals before an action can go ahead.","category":"Wallets","tags":["Wallets","Security"]}
 {"slug":"nacl_format","title":"NaCl Format","summary":"How NaCl Format fits Bittensor wallet-file security terminology.","category":"Wallets","tags":["Wallets","Security"]}
 {"slug":"netuid","title":"Netuid","summary":"How a netuid identifies a subnet context inside Bittensor.","category":"Subnets","tags":["Subnets"]}
 {"slug":"neuron","title":"Neuron","summary":"How a neuron represents a registered participant inside a Bittensor subnet.","category":"Subnets","tags":["Subnets","Mining"]}
@@ -70,6 +71,7 @@
 {"slug":"private_key","title":"Private Key","summary":"How private key names the protected side of a Bittensor cryptographic key pair used for authorization.","category":"Wallets","tags":["Wallets","Security"]}
 {"slug":"proposal","title":"Proposal","summary":"How a proposal functions as the item put forward by the Triumvirate for Senate review in Bittensor governance.","category":"Governance","tags":["Governance"]}
 {"slug":"proposal_hash","title":"Proposal Hash","summary":"How a proposal hash identifies a governance proposal during Bittensor Senate review and voting.","category":"Governance","tags":["Governance"]}
+{"slug":"proxy_wallets","title":"Proxy Wallets","summary":"Proxy wallets let one Bittensor account perform limited actions for another, helping reduce how often a high-value wallet must be used directly.","category":"Wallets","tags":["Security"]}
 {"slug":"public_key","title":"Public Key","summary":"How a public key fits Bittensor wallet-key terminology as the shareable side of a cryptographic keypair.","category":"Wallets","tags":["Wallets","Security"]}
 {"slug":"public_subtensor","title":"Public Subtensor","summary":"How public Subtensor refers to publicly reachable Bittensor chain access.","category":"Protocol","tags":["Protocol","Networks"]}
 {"slug":"rank","title":"Rank","summary":"How rank summarizes consensus-adjusted miner evaluation in Bittensor subnets.","category":"Consensus","tags":["Consensus","Subnets"]}

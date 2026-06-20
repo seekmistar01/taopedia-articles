@@ -110,8 +110,28 @@ This article defines the term at a high level. It does not list live delegate ba
 delegates, recommend staking choices, or describe staking steps. Readers should use official staking
 references for staking-specific actions.
 
+## Relationship to Coinbase
+
+Effective stake and coinbase are related but different parts of subnet consensus and emissions.
+Effective stake is the total staked TAO associated with a delegate, including its own TAO and TAO
+delegated by nominators. The
+[Coinbase Implementation](https://docs.learnbittensor.org/navigating-subtensor/emissions-coinbase)
+documentation describes coinbase as the per-block protocol mechanism that drives TAO emission,
+accumulates pending emissions, and triggers Yuma Consensus rounds at epoch boundaries, while the
+[Glossary: Effective Stake](https://docs.learnbittensor.org/resources/glossary#effective-stake)
+describes the delegate's total staked amount.
+
+The connection is indirect. A delegate's effective stake contributes to its stake weight, which in
+turn shapes its consensus influence; coinbase separately triggers the epoch and
+emission-distribution process. Effective stake is a staked-amount measure on the staking side, while
+coinbase is the per-block mechanism that advances emissions and fires the epoch calculations.
+Effective stake is not itself a direct input that coinbase reads; it matters to consensus only
+through the stake-weight relationship, whereas coinbase is the protocol process that runs the epoch
+cycle.
+
 ## Further Reading
 
 - [Glossary: Effective Stake](https://docs.learnbittensor.org/resources/glossary#effective-stake)
 - [Glossary: Delegate](https://docs.learnbittensor.org/resources/glossary#delegate)
 - [Glossary: Delegate Stake](https://docs.learnbittensor.org/resources/glossary#delegate-stake)
+- [Coinbase Implementation](https://docs.learnbittensor.org/navigating-subtensor/emissions-coinbase)

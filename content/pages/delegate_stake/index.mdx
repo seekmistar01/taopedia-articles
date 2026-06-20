@@ -106,8 +106,28 @@ This article defines the term at a high level. It does not report live stake bal
 delegates, or describe transaction steps. Readers should use official staking references for
 staking-specific details.
 
+## Relationship to Coinbase
+
+Delegate stake and coinbase are related but different parts of Bittensor's staking and emission
+picture. Delegate stake is the TAO a delegate has staked itself, one component of the delegate's
+total stake. The
+[Coinbase Implementation](https://docs.learnbittensor.org/navigating-subtensor/emissions-coinbase)
+documentation describes coinbase as the per-block protocol mechanism that drives TAO emission,
+accumulates pending emissions, and triggers Yuma Consensus rounds at epoch boundaries, while the
+[Glossary: Delegate Stake](https://docs.learnbittensor.org/resources/glossary#delegate-stake)
+describes the self-staked amount.
+
+Delegate stake adds to a delegate's total stake, which contributes to its stake weight and consensus
+influence; coinbase is the per-block mechanism that triggers the epoch rounds and advances the
+emission-distribution process those stake values feed into. Delegate stake is a staked-amount
+measure on the staking side — a standing quantity behind a delegate going into consensus — while
+coinbase is the protocol process that runs the epoch cycle each block. One names how much TAO a
+delegate has committed to itself; the other names the recurring mechanism that drives the emission
+cycle that stake takes part in.
+
 ## Further Reading
 
 - [Glossary: Delegate Stake](https://docs.learnbittensor.org/resources/glossary#delegate-stake)
 - [Glossary: Delegate](https://docs.learnbittensor.org/resources/glossary#delegate)
 - [Glossary: Nominator](https://docs.learnbittensor.org/resources/glossary#nominator)
+- [Coinbase Implementation](https://docs.learnbittensor.org/navigating-subtensor/emissions-coinbase)

@@ -178,8 +178,30 @@ This article defines the term at a high level. It does not list current permit h
 validators, describe staking or registration steps, or restate operational requirements. Readers
 should use official validator references for those details.
 
+## Relationship to Coinbase
+
+A validator permit and coinbase are related but different parts of how validation rights connect to
+emissions. A validator permit is the boolean flag marking whether a subnet participant holds
+validation rights. Coinbase is the per-block protocol mechanism that drives TAO emission, injects
+TAO into emitting subnets' pool reserves, accumulates pending emissions, and checks epoch boundaries
+to trigger Yuma Consensus rounds. The
+[Glossary: Validator Permit](https://docs.learnbittensor.org/resources/glossary#validator-permit)
+describes the permission flag, and the
+[Coinbase Implementation](https://docs.learnbittensor.org/navigating-subtensor/emissions-coinbase)
+documentation describes the per-block emission operation.
+
+A validator permit governs whether a participant is eligible for validator emissions in a subnet,
+which are the validator dividends coinbase distributes each epoch. Coinbase runs the Yuma Consensus
+round at the epoch boundary and pays out emissions; the permit is part of what determines whether a
+given validator is eligible to receive the validator-side share of that payout. The permit does not
+itself perform the consensus computation — it is an eligibility flag tied to stake-weight position,
+while coinbase is the mechanism that produces and distributes the emissions a permit-holding
+validator can earn. One governs eligibility for validator dividends; the other generates and
+distributes them.
+
 ## Further Reading
 
 - [Glossary: Validator Permit](https://docs.learnbittensor.org/resources/glossary#validator-permit)
 - [Glossary: VPermit](https://docs.learnbittensor.org/resources/glossary#vpermit)
 - [Glossary: Stake Weight](https://docs.learnbittensor.org/resources/glossary#stake-weight)
+- [Coinbase Implementation](https://docs.learnbittensor.org/navigating-subtensor/emissions-coinbase)

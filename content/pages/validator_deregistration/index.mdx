@@ -175,9 +175,28 @@ References:
 [Validating: Validator deregistration](https://docs.learnbittensor.org/validators#validator-deregistration),
 [Subnet Deregistration](https://docs.learnbittensor.org/subnets/subnet-deregistration)
 
+## Relationship to Coinbase
+
+Validator deregistration and coinbase are related but different parts of a validator's subnet
+lifecycle. Validator deregistration is the removal of a low-performing validator from a subnet. The
+[Coinbase Implementation](https://docs.learnbittensor.org/navigating-subtensor/emissions-coinbase)
+documentation describes coinbase as the per-block protocol mechanism that drives TAO emission,
+accumulates pending emissions, and triggers Yuma Consensus rounds at epoch boundaries, and the
+[Validating: Validator deregistration](https://docs.learnbittensor.org/validators#validator-deregistration)
+documentation describes the removal process.
+
+The connection is that emissions are an ongoing benefit of active participation, and deregistration
+ends that participation. While registered, a validator can earn validator dividends from the
+emissions coinbase distributes each epoch; after deregistration, the validator is no longer an
+active subnet participant and so no longer shares in those distributions. Coinbase is the recurring
+process that produces and distributes emissions each epoch; validator deregistration is the
+lifecycle event that removes a validator from the subnet where it would otherwise take part in that
+flow.
+
 ## Further Reading
 
 - [Validating: Validator deregistration](https://docs.learnbittensor.org/validators#validator-deregistration)
 - [Glossary: Deregistration](https://docs.learnbittensor.org/resources/glossary#deregistration)
 - [Miner Deregistration](https://docs.learnbittensor.org/miners#miner-deregistration)
 - [Glossary: Validator Permit](https://docs.learnbittensor.org/resources/glossary#validator-permit)
+- [Coinbase Implementation](https://docs.learnbittensor.org/navigating-subtensor/emissions-coinbase)

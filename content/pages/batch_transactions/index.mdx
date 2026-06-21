@@ -118,6 +118,17 @@ call inside the batch.
 That final distinction is the safest way to read a batch: first identify the wrapper, then read the
 inner actions on their own terms.
 
+## Inner Call Scope
+
+A batch transaction groups calls, but it does not erase the meaning of each inner action. The batch
+source describes grouped submissions, while the extrinsics reference keeps the submitted calls tied
+to runtime methods ([Batch Transactions](https://docs.learnbittensor.org/learn/batch-transactions),
+[Subtensor extrinsics](https://docs.learnbittensor.org/subtensor-api/extrinsics)).
+
+For readers, the batch is the container and the inner calls are still the actions being evaluated. A
+source-backed batch claim should distinguish grouping behavior from the purpose and result of each
+call inside the batch.
+
 ## Further Reading
 
 - [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-networks)

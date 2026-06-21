@@ -79,6 +79,23 @@ dogelayer, with the description "Dogelayer is the world's first mining pool enab
 to join Bittensor subnet." The GitHub repository is
 [dogelayer-ai/dogelayer](https://github.com/dogelayer-ai/dogelayer).
 
+## Relationship to Yuma Consensus
+
+Subnet 80 uses [Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus) to convert the
+hashrate-contribution weight vectors that validators submit into the emission shares distributed to
+miners and validators within the subnet each tempo. The
+[Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus) documentation describes how
+validator weight submissions are aggregated into consensus weights for each miner registered on the
+subnet.
+
+In DogeLayer's context, validators evaluate miner contributions by comparing the share value each
+miner produces over a measurement period, ranking miners that provide more valuable Scrypt hashrate
+higher in the weight distribution. Unlike subnets that evaluate model outputs or generated content,
+DogeLayer's weight signal comes from externally measurable proof-of-work contribution. The
+[Emission](https://docs.learnbittensor.org/learn/emissions) documentation describes how those
+consensus weights determine each participant's share of the subnet's accumulated emission each
+tempo.
+
 ## Development Stage Context
 
 The

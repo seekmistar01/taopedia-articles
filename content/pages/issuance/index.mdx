@@ -1,7 +1,8 @@
 ---
 title: "Issuance"
 summary:
-  "How issuance describes the circulating TAO amount used in Bittensor emission and halving context."
+  "How issuance describes the circulating TAO amount used in Bittensor supply, emission, and halving
+  context."
 category: "Tokenomics"
 tags: ["Tokenomics", "TAO"]
 infoboxTitle: Issuance
@@ -14,140 +15,83 @@ infoboxRows:
   - label: Includes
     value: Direct and pool-held TAO
   - label: Related
-    value: Halving
+    value: Emission and halving
 ---
 
 # Issuance
 
-Issuance is the circulating amount of TAO in the Bittensor network. The
-[Glossary: Issuance](https://docs.learnbittensor.org/resources/glossary#issuance) places issuance in
-circulating-supply vocabulary, including TAO held directly and TAO held in subnet liquidity pools.
-
-## Circulating TAO
-
-Issuance is a supply measure, not a reward category. It tells readers which TAO is counted as part
-of network circulation. The
-[Glossary: Issuance](https://docs.learnbittensor.org/resources/glossary#issuance) includes both
-directly held TAO and TAO held in subnet pool contexts.
-
-That makes issuance broader than a single role's received rewards. It is the supply-side term for
-circulating TAO, not a label for one payout path.
-
-## Subnet Pool Context
-
-Subnet pool TAO belongs to issuance vocabulary because it remains part of circulating supply. The
-[Emission](https://docs.learnbittensor.org/learn/emissions) documentation describes TAO entering
-subnet contexts, while the [Issuance](https://docs.learnbittensor.org/resources/glossary#issuance)
-glossary entry includes TAO held in subnet liquidity pools.
-
-This boundary keeps pool-held TAO from being mistaken for a separate supply category. It is still
-part of the circulating issuance picture, even though it sits in a subnet reserve context.
-
-Pool-held TAO also keeps issuance separate from wallet-balance language. A unit of TAO can be part
-of circulating issuance without being held directly by an individual wallet. The glossary's
-pool-held wording makes issuance a network supply term rather than a personal balance term
+Issuance is the circulating amount of TAO in Bittensor. The term includes TAO held directly and TAO
+held in subnet liquidity pools
 ([Glossary: Issuance](https://docs.learnbittensor.org/resources/glossary#issuance)).
 
-That distinction is useful when reading subnet liquidity material. A subnet pool can hold TAO as
-part of the subnet's reserve structure, while issuance still names the broader circulating TAO
-amount that includes those reserves ([Emission](https://docs.learnbittensor.org/learn/emissions)).
+That makes issuance a supply term. It tells readers what TAO is counted as circulating, not which
+role received a reward or which wallet holds a balance.
 
-## Emission Boundary
+## What Issuance Counts
 
-Issuance and emission answer different tokenomics questions. Emission names the process that creates
-and allocates new token amounts over time
-([Emission](https://docs.learnbittensor.org/learn/emissions)). Issuance names the circulating TAO
-supply state that those processes affect.
+Issuance counts circulating TAO. The glossary's wording includes both directly held TAO and TAO held
+in subnet liquidity pools, so the concept is broader than a simple wallet-balance view
+([Glossary: Issuance](https://docs.learnbittensor.org/resources/glossary#issuance),
+[Emissions](https://docs.learnbittensor.org/learn/emissions)).
 
-In short, emission is process vocabulary and issuance is supply-state vocabulary. A statement about
-new rewards reaching a role is not the same as a statement about circulating TAO supply.
+This matters because Bittensor tokenomics often moves between personal balances, subnet pools, and
+network-level supply. Issuance is the network-level supply word in that group.
 
-This makes issuance useful as context around emission without replacing the emission process. Newly
-created TAO can affect the supply picture, but issuance itself names the amount being counted, not
-the validator, miner, staker, or subnet creator path that received emitted tokens
-([Emission](https://docs.learnbittensor.org/learn/emissions)).
+## Pool-Held TAO
 
-The same separation helps when RAO appears in token amounts. RAO gives the smaller denomination of
-TAO, while issuance identifies which TAO supply is in circulation
-([Glossary: RAO](https://docs.learnbittensor.org/resources/glossary#rao)).
+Pool-held TAO remains part of issuance because it is still counted in circulating TAO. A subnet pool
+changes where TAO sits inside the system, but it does not make that TAO disappear from issuance
+([Glossary: Issuance](https://docs.learnbittensor.org/resources/glossary#issuance),
+[Emissions](https://docs.learnbittensor.org/learn/emissions)).
 
-## Halving Boundary
+For readers, this keeps subnet liquidity language separate from supply language. A pool can hold TAO
+for subnet mechanics while issuance still names the broader circulating amount.
 
-TAO halving rules use issuance milestones. The
-[Halving Mechanisms](https://docs.learnbittensor.org/concepts/halving) documentation describes
-network-level halving as a reduction in TAO emission rate after total issuance reaches supply-based
-milestones.
+## Emission Relationship
 
-That makes issuance important for halving context, but it does not make issuance the same as
-halving. Issuance names the supply measure; halving names the rate-change rule that refers to that
-measure.
+Emission and issuance are related but distinct. Emission is how new token amounts are distributed
+over time; issuance is the circulating TAO amount that supply discussions refer to
+([Emissions](https://docs.learnbittensor.org/learn/emissions),
+[Glossary: Issuance](https://docs.learnbittensor.org/resources/glossary#issuance)).
 
-Halving language is therefore clearest when the supply measure and the rate change stay separate.
-Issuance gives the supply-side milestone context, while halving describes the emission-rate change
-that follows the milestone ([Halving Mechanisms](https://docs.learnbittensor.org/concepts/halving)).
+The difference is useful when reading rewards material. A reward event may affect circulating
+supply, but issuance is not the reward event itself.
 
-This also keeps TAO issuance distinct from subnet alpha-token language. TAO issuance describes the
-network token's circulating-supply context; alpha tokens belong to subnet-specific tokenomics
-([Emission](https://docs.learnbittensor.org/learn/emissions)).
+## Halving Relationship
 
-## Recycling and Burning
+Halving uses issuance as supply context. TAO halving concerns emission-rate changes tied to supply
+milestones, while issuance names the TAO amount being counted for those milestones
+([Halving Mechanisms](https://docs.learnbittensor.org/concepts/halving),
+[Emissions](https://docs.learnbittensor.org/learn/emissions)).
 
-Recycling and burning affect supply records in different ways. The
-[Recycling and burning](https://docs.learnbittensor.org/resources/glossary#recycling-and-burning)
-glossary entry describes recycling as subtracting tokens from the issuance record so the same
-quantity can be emitted again later. Burning removes tokens from ordinary circulation without making
-them available for future emission in the same way.
+This keeps the vocabulary precise. Issuance is the measured supply concept; halving is the rule that
+changes emission rates at supply thresholds.
 
-These terms should stay separate from issuance itself. Issuance names the circulating-supply record;
-recycling and burning describe supply-flow changes that can affect how that record is interpreted.
+## Recycling and Burning Relationship
 
-That distinction keeps supply-accounting language precise. A recycling statement is about tokens
-leaving the issuance record for later emission, while a burning statement is about removal from
-ordinary circulation
-([Glossary: Recycling and burning](https://docs.learnbittensor.org/resources/glossary#recycling-and-burning)).
+Recycling and burning describe supply-flow changes around issuance. Recycling can return amounts to
+future emission, while burning removes tokens from ordinary circulation
+([Glossary: Recycling and burning](https://docs.learnbittensor.org/resources/glossary#recycling-and-burning),
+[Glossary: Issuance](https://docs.learnbittensor.org/resources/glossary#issuance)).
 
-Issuance remains the counted supply context around those flows, not the name of either flow.
+Issuance is the surrounding supply count. It should not be used as a substitute for either recycling
+or burning.
 
-## Reading Boundaries
+## Reader Boundary
 
-Issuance is the right term when the focus is circulating TAO supply. If the focus is token creation
-and distribution, [emission](https://docs.learnbittensor.org/learn/emissions) is more precise. If
-the focus is scheduled emission-rate reduction,
-[halving](https://docs.learnbittensor.org/concepts/halving) is more precise. If the focus is supply
-removal or reuse,
-[recycling and burning](https://docs.learnbittensor.org/resources/glossary#recycling-and-burning) is
-more precise.
+Use issuance when the topic is circulating TAO supply. Use emission when the topic is distribution
+over time, halving when the topic is rate reduction, and recycling or burning when the topic is
+supply removal or reuse
+([Glossary: Issuance](https://docs.learnbittensor.org/resources/glossary#issuance),
+[Emissions](https://docs.learnbittensor.org/learn/emissions),
+[Halving Mechanisms](https://docs.learnbittensor.org/concepts/halving)).
 
-These boundaries keep issuance focused on supply records, not staking returns, subnet rankings, or a
-full explanation of every tokenomics flow.
-
-## Development Stage Context
-
-The
-[Introduction to Bittensor](https://docs.learnbittensor.org/learn/introduction#subnet-development)
-describes subnet development as moving from localnet to testnet and then mainnet. For issuance, that
-sequence changes how readers should interpret examples of circulating TAO supply figures.
-
-In localnet, issuance reflects the TAO in a locally running chain. Localnet circulating supply
-figures do not represent production TAO supply state.
-
-On testnet, issuance reflects the TAO circulating on the shared, non-production network. Testnet
-supply figures are separate from mainnet TAO supply state.
-
-On mainnet, issuance is the live circulating TAO supply measure that emission processes and halving
-milestones reference in production Bittensor operations. The
-[Emission](https://docs.learnbittensor.org/learn/emissions) documentation describes the emission
-mechanics that affect issuance on the production network.
-
-The [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-networks) reference
-separates mainnet, testnet, and localnet. An issuance figure from one environment should not be read
-as representing circulating TAO supply in another environment.
+This page is a reference article for the term. It does not report supply figures or interpret market
+conditions.
 
 ## Further Reading
 
 - [Glossary: Issuance](https://docs.learnbittensor.org/resources/glossary#issuance)
-- [Emission](https://docs.learnbittensor.org/learn/emissions)
+- [Emissions](https://docs.learnbittensor.org/learn/emissions)
 - [Halving Mechanisms](https://docs.learnbittensor.org/concepts/halving)
 - [Glossary: Recycling and burning](https://docs.learnbittensor.org/resources/glossary#recycling-and-burning)
-- [Introduction to Bittensor: Subnet development](https://docs.learnbittensor.org/learn/introduction#subnet-development)
-- [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-networks)

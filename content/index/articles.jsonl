@@ -5,7 +5,7 @@
 {"slug":"alpha_outstanding","title":"Alpha Outstanding","summary":"How alpha outstanding describes subnet alpha held outside reserves for emission and stake context.","category":"Tokenomics","tags":["Tokenomics","Subnets"]}
 {"slug":"alpha_price","title":"Alpha Price","summary":"How alpha price describes the TAO-denominated price of a subnet alpha token derived from a subnet's TAO and alpha reserves.","category":"Tokenomics","tags":["Tokenomics","Subnets"]}
 {"slug":"alpha_reserve","title":"Alpha Reserve","summary":"How an alpha reserve describes subnet alpha held inside a subnet liquidity pool rather than with outside-pool balances.","category":"Tokenomics","tags":["Tokenomics","Subnets"]}
-{"slug":"alpha_staker","title":"Alpha Staker","summary":"How an alpha staker names a participant who holds subnet alpha through staking in a specific Bittensor subnet market.","category":"Staking","tags":["Staking","Tokenomics"]}
+{"slug":"alpha_staker","title":"Alpha Staker","summary":"How an alpha staker names a staker who holds subnet alpha through staking in a specific Bittensor subnet.","category":"Staking","tags":["Staking","Tokenomics"]}
 {"slug":"alpha_tokens","title":"Alpha Tokens","summary":"How Bittensor uses subnet-specific alpha tokens in emissions, staking, and subnet liquidity pools.","category":"Tokenomics","tags":["Tokenomics","Subnets"]}
 {"slug":"autostaking","title":"Autostaking","summary":"How autostaking automatically routes Bittensor miner emissions into validator staking.","category":"Staking","tags":["Staking","Mining"]}
 {"slug":"axon","title":"Axon","summary":"How axon names the server-side endpoint used with dendrites in Bittensor subnet communication.","category":"Subnets","tags":["Subnets","Mining","Validation"]}

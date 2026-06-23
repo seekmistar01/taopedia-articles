@@ -329,6 +329,7 @@
 {"slug":"wallet_location","title":"Wallet Location","summary":"How wallet location describes where Bittensor wallet files are stored on a user's machine.","category":"Wallets","tags":["Wallets","Security"]}
 {"slug":"wallets","title":"Bittensor Wallets","summary":"What a Bittensor wallet is, what it stores, and how it is used to prove identity and sign transactions on the network.","category":"Wallets","tags":["Security"]}
 {"slug":"wallets_coldkey_hotkey","title":"Wallets, Coldkeys, and Hotkeys","summary":"Understanding Bittensor wallets and the roles of coldkeys and hotkeys for security, identity, and operations.","category":"Wallets","tags":["Security"]}
+{"slug":"wash_trading","title":"Wash Trading","summary":"How wash trading uses self-dealing to fake market activity, and why Bittensor's automated market maker makes it a costly, self-defeating exercise.","category":"Safety","tags":["Safety","Tokenomics"]}
 {"slug":"weight_copying","title":"Weight Copying","summary":"How copied validator weight information weakens independent miner evaluation in Bittensor consensus.","category":"Consensus","tags":["Validation","Consensus"]}
 {"slug":"weight_matrix","title":"Weight Matrix","summary":"How Bittensor groups validator weight vectors as structured input for Yuma Consensus.","category":"Consensus","tags":["Consensus","Validation"]}
 {"slug":"weight_setting","title":"Weight Setting","summary":"How weight setting names the validator process of scoring miners in Bittensor subnets.","category":"Consensus","tags":["Consensus","Subnets"]}

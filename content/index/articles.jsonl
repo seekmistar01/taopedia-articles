@@ -41,6 +41,7 @@
 {"slug":"delegate","title":"Delegate","summary":"How a delegate functions as a subnet validator that receives staked TAO from delegators.","category":"Staking","tags":["Staking"]}
 {"slug":"delegate_stake","title":"Delegate Stake","summary":"How delegate stake refers to the TAO a Bittensor delegate stakes themselves.","category":"Staking","tags":["Staking"]}
 {"slug":"delegation","title":"Delegation","summary":"How delegation names staking TAO to a validator to support validator stake and subnet consensus context.","category":"Staking","tags":["Staking","Consensus"]}
+{"slug":"delegation_rewards","title":"Delegation Rewards","summary":"How a delegator earns a share of a validator's rewards in proportion to the stake it adds, after the validator's take.","category":"Staking","tags":["Staking","Tokenomics"]}
 {"slug":"dendrite","title":"Dendrite","summary":"How dendrite names the client-side request component used with axons in Bittensor subnet communication.","category":"Subnets","tags":["Subnets","Mining","Validation"]}
 {"slug":"deregistration","title":"Deregistration","summary":"How deregistration removes a low-performing Bittensor subnet entrant when subnet capacity and replacement rules apply.","category":"Subnets","tags":["Subnets","Removal"]}
 {"slug":"digital_commodities","title":"Digital Commodities","summary":"How Bittensor subnets define useful digital work for miners to produce and validators to evaluate.","category":"Subnets","tags":["Subnets","Mining","Validation"]}

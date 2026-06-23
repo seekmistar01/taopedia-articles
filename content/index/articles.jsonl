@@ -134,6 +134,7 @@
 {"slug":"sandwich_attack","title":"Sandwich Attack","summary":"How a sandwich attack names a transaction ordering exploit that wraps a target transaction between two adversarial ones in Bittensor.","category":"Safety","tags":["Safety","Transactions","Tokenomics"]}
 {"slug":"seed_phrase","title":"Seed Phrase","summary":"How a seed phrase names the human-readable recovery words that can restore Bittensor wallet key access.","category":"Wallets","tags":["Wallets","Security"]}
 {"slug":"seed_phrase_security","title":"Seed Phrase Security","summary":"How Bittensor wallet recovery phrases relate to wallet access, loss risk, and disclosure risk.","category":"Wallets","tags":["Wallets","Safety"]}
+{"slug":"self_weighting","title":"Self-Weighting","summary":"How a lone validator inflating weights for its own miners is blunted by Bittensor's stake-weighted consensus, which clips weights that depart from the broader agreement.","category":"Safety","tags":["Safety","Consensus"]}
 {"slug":"senate","title":"Senate","summary":"How the Senate functions as the proposal-review body in Bittensor governance.","category":"Governance","tags":["Governance"]}
 {"slug":"senator","title":"Senator","summary":"How a senator names the delegate role that votes on Triumvirate proposals inside Bittensor governance.","category":"Governance","tags":["Governance"]}
 {"slug":"slippage","title":"Slippage","summary":"How slippage affects Bittensor staking and unstaking when subnet pools convert between TAO and alpha tokens.","category":"Tokenomics","tags":["Tokenomics","Staking"]}

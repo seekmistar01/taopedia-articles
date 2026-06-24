@@ -93,6 +93,19 @@ Project-specific requirements, service endpoints, solver packaging details, and 
 belong in Hone's own repository. The stable distinction is that Hone rewards sandboxed reasoning
 performance, not generic compute availability.
 
+## Reader Boundary
+
+Subnet 5 Hone should not be read as generic Bittensor subnet documentation, a model-hosting or
+prompt-serving service, or a certificate that a solver is generally intelligent. It names one
+subnet's ARC-AGI-2 reasoning evaluation — scoring submitted solver repositories on held-out problems
+inside a managed GPU sandbox — on netuid 5 ([Hone repository](https://github.com/manifold-inc/hone),
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)).
+
+A miner's score reflects how many held-out ARC-AGI-2 problems its solver answers correctly, so it
+should not be read as a measure of general reasoning ability or performance on any other benchmark
+([Subnet 5 on TaoStats](https://taostats.io/subnets/5)).
+
 ## Further Reading
 
 - [Hone repository](https://github.com/manifold-inc/hone)

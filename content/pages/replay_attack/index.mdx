@@ -47,6 +47,27 @@ it as a repeat and turns it away instead of acting on it twice.
 References:
 [bittensor.core.axon](https://docs.learnbittensor.org/python-api/html/autoapi/bittensor/core/axon/)
 
+## Development Stage Context
+
+The
+[Introduction to Bittensor](https://docs.learnbittensor.org/learn/introduction#subnet-development)
+describes subnet development as moving from localnet to testnet and then mainnet. For Replay Attack,
+that sequence changes how an example should be read, because the surrounding network state differs
+at each stage.
+
+In localnet, replay Attack can be exercised in an isolated development environment, where the
+surrounding chain state reflects local configuration rather than production history.
+
+On testnet, replay Attack can be observed in a shared, non-production network whose state is kept
+separate from mainnet.
+
+On mainnet, replay Attack applies on the live, production Bittensor network, where the surrounding
+state is real and persistent.
+
+The [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-networks) reference
+separates mainnet, testnet, and localnet. A replay Attack example from one environment should not be
+read as representing another environment.
+
 ## Reader Boundary
 
 This page defines the concept and the role of nonce checking at a high level. It does not specify

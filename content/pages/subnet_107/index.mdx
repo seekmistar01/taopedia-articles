@@ -117,6 +117,29 @@ The [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-netw
 separates mainnet, testnet, and localnet. A benchmark result or emission outcome from one
 environment should not be read as representing production subnet performance in another environment.
 
+## Netuid 107 Identifies the Subnet On-Chain
+
+Bittensor assigns every subnet a unique numeric identifier called a netuid, and Subnet 107 is the
+subnet registered at netuid 107
+([Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)). The
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets) reference
+explains that each subnet runs its own incentive mechanism while sharing the same underlying
+Subtensor chain, so the netuid is the stable handle that distinguishes Minos from every other
+subnet.
+
+For a reader, this means "Subnet 107" and "netuid 107" refer to the same on-chain slot. A claim
+about Minos should be tied to that netuid rather than to the registered name alone, because the name
+field can be changed on-chain while the netuid stays fixed.
+
+## Reader Boundary
+
+Subnet 107 Minos should not be read as generic Bittensor subnet documentation, a clinical or
+diagnostic genomics service, or proof that any pipeline performs on real patient data. It names one
+genomics subnet where miners tune variant-calling pipelines on synthetic genomes and validators run
+their configs to score accuracy on netuid 107
+([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)).
+
 ## Further Reading
 
 - [Minos website](https://theminos.ai)

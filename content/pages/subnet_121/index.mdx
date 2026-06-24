@@ -107,6 +107,29 @@ The [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-netw
 separates mainnet, testnet, and localnet. An agent evaluation result or emission outcome from one
 environment should not be read as representing production subnet performance in another environment.
 
+## Netuid 121 Identifies the Subnet On-Chain
+
+Bittensor assigns every subnet a unique numeric identifier called a netuid, and Subnet 121 is the
+subnet registered at netuid 121
+([Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)). The
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets) reference
+explains that each subnet runs its own incentive mechanism while sharing the same underlying
+Subtensor chain, so the netuid is the stable handle that distinguishes sundae_bar from every other
+subnet.
+
+For a reader, this means "Subnet 121" and "netuid 121" refer to the same on-chain slot. A claim
+about sundae_bar should be tied to that netuid rather than to the registered name alone, because the
+name field can be changed on-chain while the netuid stays fixed.
+
+## Reader Boundary
+
+Subnet 121 sundae_bar should not be read as generic Bittensor subnet documentation, a ready-to-use
+business-automation product, or a guarantee that the agent completes any specific workflow. It names
+one subnet for creating and benchmarking a generalist AI agent that can execute real business
+workflows on netuid 121
+([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)).
+
 ## Further Reading
 
 - [sundae_bar website](https://www.sundaebar.ai/)

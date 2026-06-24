@@ -135,6 +135,27 @@ the broader Yuma Consensus path for incentives
 Trust explains a consensus relationship between pre-rank and rank, while emissions describe the
 broader reward-flow setting.
 
+## Development Stage Context
+
+The
+[Introduction to Bittensor](https://docs.learnbittensor.org/learn/introduction#subnet-development)
+describes subnet development as moving from localnet to testnet and then mainnet. For Trust, that
+sequence changes how an example should be read, because the surrounding network state differs at
+each stage.
+
+In localnet, trust can be exercised in an isolated development environment, where the surrounding
+chain state reflects local configuration rather than production history.
+
+On testnet, trust can be observed in a shared, non-production network whose state is kept separate
+from mainnet.
+
+On mainnet, trust applies on the live, production Bittensor network, where the surrounding state is
+real and persistent.
+
+The [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-networks) reference
+separates mainnet, testnet, and localnet. A trust example from one environment should not be read as
+representing another environment.
+
 ## Reader Boundary
 
 Trust is a miner-side consensus metric after clipping. It is not rank itself, validator trust, or a

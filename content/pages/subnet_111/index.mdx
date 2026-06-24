@@ -108,6 +108,28 @@ The [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-netw
 separates mainnet, testnet, and localnet. A content extraction result or emission outcome from one
 environment should not be read as representing production subnet performance in another environment.
 
+## Netuid 111 Identifies the Subnet On-Chain
+
+Bittensor assigns every subnet a unique numeric identifier called a netuid, and Subnet 111 is the
+subnet registered at netuid 111
+([Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)). The
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets) reference
+explains that each subnet runs its own incentive mechanism while sharing the same underlying
+Subtensor chain, so the netuid is the stable handle that distinguishes Claims from every other
+subnet.
+
+For a reader, this means "Subnet 111" and "netuid 111" refer to the same on-chain slot. A claim
+about Claims should be tied to that netuid rather than to the registered name alone, because the
+name field can be changed on-chain while the netuid stays fixed.
+
+## Reader Boundary
+
+Subnet 111 Claims should not be read as generic Bittensor subnet documentation, a peer-reviewed
+scientific authority, or proof that any extracted claim is true. It names one subnet whose on-chain
+identity registers it for turning scientific literature into a structured claim-evidence graph on
+netuid 111 ([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)).
+
 ## Further Reading
 
 - [Claims on GitHub](https://github.com/oneoneone-io/subnet-111)

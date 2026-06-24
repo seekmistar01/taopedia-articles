@@ -119,6 +119,28 @@ On mainnet, Poker44 (SN126) is registered as the live production subnet at netui
 separates mainnet, testnet, and localnet. Participation examples or emission outcomes from one
 environment should not be read as representing production subnet performance in another environment.
 
+## Netuid 126 Identifies the Subnet On-Chain
+
+Bittensor assigns every subnet a unique numeric identifier called a netuid, and Subnet 126 is the
+subnet registered at netuid 126
+([Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)). The
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets) reference
+explains that each subnet runs its own incentive mechanism while sharing the same underlying
+Subtensor chain, so the netuid is the stable handle that distinguishes Poker44 from every other
+subnet.
+
+For a reader, this means "Subnet 126" and "netuid 126" refer to the same on-chain slot. A claim
+about Poker44 should be tied to that netuid rather than to the registered name alone, because the
+name field can be changed on-chain while the netuid stays fixed.
+
+## Reader Boundary
+
+Subnet 126 Poker44 should not be read as generic Bittensor subnet documentation, proof that any
+single result from the subnet is correct or guaranteed, or a substitute for the subnet's own primary
+sources. It names the on-chain subnet registered at netuid 126 under the identity "Poker44"
+([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)).
+
 ## Further Reading
 
 - [Poker44 website](https://poker44.net)

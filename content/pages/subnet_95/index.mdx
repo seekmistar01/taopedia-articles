@@ -58,6 +58,28 @@ On mainnet, Actual (SN95) is registered as the live production subnet at netuid 
 separates mainnet, testnet, and localnet. Participation examples or emission outcomes from one
 environment should not be read as representing production subnet performance in another environment.
 
+## Netuid 95 Identifies the Subnet On-Chain
+
+Bittensor assigns every subnet a unique numeric identifier called a netuid, and Subnet 95 is the
+subnet registered at netuid 95
+([Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)). The
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets) reference
+explains that each subnet runs its own incentive mechanism while sharing the same underlying
+Subtensor chain, so the netuid is the stable handle that distinguishes Actual from every other
+subnet.
+
+For a reader, this means "Subnet 95" and "netuid 95" refer to the same on-chain slot. A claim about
+Actual should be tied to that netuid rather than to the registered name alone, because the name
+field can be changed on-chain while the netuid stays fixed.
+
+## Reader Boundary
+
+Subnet 95 Actual should not be read as generic Bittensor subnet documentation, an endorsement of the
+operator Actual Computer Inc., or proof that any single inference response is correct. It names one
+subnet's heterogeneous inference network operated by Actual Computer Inc. on netuid 95
+([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)).
+
 ## Further Reading
 
 - [Actual website](https://actual.inc)

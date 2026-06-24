@@ -1,5 +1,6 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import matter from "gray-matter";
 
 const root = process.cwd();
@@ -50,7 +51,7 @@ const markdownHttpLinkPattern = /!?\[[^\]]+\]\(https?:\/\/[^)]+\)/gi;
 const fencedCodeBlockPattern = /^[ \t]*(```|~~~)/m;
 const markdownImagePattern = /!\[[^\]]*\]\(([^)]+)\)/g;
 
-function validateSlug(slug) {
+export function validateSlug(slug) {
   if (!/^[a-z0-9][a-z0-9_-]*$/.test(slug)) {
     throw new Error(
       `Unsafe article slug "${slug}". Use lowercase letters, numbers, underscores, and hyphens.`
@@ -58,7 +59,7 @@ function validateSlug(slug) {
   }
 }
 
-function validateTextField(data, field, filePath, maxLength) {
+export function validateTextField(data, field, filePath, maxLength) {
   const value = data[field];
   if (typeof value !== "string" || !value.trim()) {
     throw new Error(`${filePath}: front matter field "${field}" is required`);
@@ -70,13 +71,14 @@ function validateTextField(data, field, filePath, maxLength) {
   }
 }
 
-function validateTags(data, filePath) {
+export function validateTags(data, filePath) {
   if (!Array.isArray(data.tags)) {
     throw new Error(`${filePath}: front matter field "tags" must be an array`);
   }
   if (data.tags.length > 3) {
     throw new Error(`${filePath}: use at most 3 tags`);
   }
+  const seenTags = new Set();
   for (const tag of data.tags) {
     if (typeof tag !== "string" || !tag.trim()) {
       throw new Error(`${filePath}: tags must be non-empty strings`);
@@ -89,6 +91,13 @@ function validateTags(data, filePath) {
         `${filePath}: do not use "Bittensor" as a tag; every Taopedia article is already Bittensor-focused`
       );
     }
+    const normalizedTag = tag.toLowerCase().trim();
+    if (seenTags.has(normalizedTag)) {
+      throw new Error(
+        `${filePath}: duplicate tag "${tag}"; tags must be unique after trimming whitespace and ignoring case`
+      );
+    }
+    seenTags.add(normalizedTag);
   }
 }
 
@@ -327,7 +336,12 @@ async function main() {
   console.log(`Validated ${count} articles`);
 }
 
-main().catch((error) => {
-  console.error(error.message);
-  process.exit(1);
-});
+const invokedDirectly =
+  process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+
+if (invokedDirectly) {
+  main().catch((error) => {
+    console.error(error.message);
+    process.exit(1);
+  });
+}

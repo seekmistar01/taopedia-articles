@@ -62,7 +62,8 @@ Required fields:
 - `summary`: One sentence, preferably under 180 characters.
 - `category`: One primary topic. Do not use `Bittensor` as a catch-all category.
 - `tags`: Zero to three specific topic tags. Do not use `Bittensor`; every published Taopedia
-  article is already Bittensor-focused.
+  article is already Bittensor-focused. Tags must be unique after trimming whitespace and ignoring
+  case, so `["Subnet", "subnet"]` is rejected as a duplicate.
 
 Optional fields:
 

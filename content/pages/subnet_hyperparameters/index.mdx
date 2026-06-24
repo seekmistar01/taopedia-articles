@@ -95,6 +95,27 @@ settings because they describe constraints around a selected subnet
 That does not make every lifecycle statement a hyperparameter statement. A reader should keep the
 specific setting, subnet, and network context attached when a claim depends on a value or limit.
 
+## Development Stage Context
+
+The
+[Introduction to Bittensor](https://docs.learnbittensor.org/learn/introduction#subnet-development)
+describes subnet development as moving from localnet to testnet and then mainnet. For Subnet
+Hyperparameters, that sequence changes how an example should be read, because the surrounding
+network state differs at each stage.
+
+In localnet, subnet Hyperparameters can be exercised in an isolated development environment, where
+the surrounding chain state reflects local configuration rather than production history.
+
+On testnet, subnet Hyperparameters can be observed in a shared, non-production network whose state
+is kept separate from mainnet.
+
+On mainnet, subnet Hyperparameters applies on the live, production Bittensor network, where the
+surrounding state is real and persistent.
+
+The [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-networks) reference
+separates mainnet, testnet, and localnet. A subnet Hyperparameters example from one environment
+should not be read as representing another environment.
+
 ## Reader Boundary
 
 A hyperparameter claim should name the behavior being described and stay separate from the subnet

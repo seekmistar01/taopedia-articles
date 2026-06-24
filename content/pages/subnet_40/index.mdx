@@ -51,6 +51,28 @@ On mainnet, Subnet 40 is registered as the live production subnet at netuid 40. 
 separates mainnet, testnet, and localnet. Participation examples or emission outcomes from one
 environment should not be read as representing production subnet performance in another environment.
 
+## Netuid 40 Identifies the Subnet On-Chain
+
+Bittensor assigns every subnet a unique numeric identifier called a netuid, and Subnet 40 is the
+subnet registered at netuid 40
+([Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)). The
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets) reference
+explains that each subnet runs its own incentive mechanism while sharing the same underlying
+Subtensor chain, so the netuid is the stable handle that distinguishes Subnet 40 from every other
+subnet.
+
+For a reader, this means "Subnet 40" and "netuid 40" refer to the same on-chain slot. A claim about
+Subnet 40 should be tied to that netuid rather than to the registered name alone, because the name
+field can be changed on-chain while the netuid stays fixed.
+
+## Reader Boundary
+
+Subnet 40 should not be read as generic Bittensor subnet documentation, mining-profitability advice,
+or a substitute for the subnet's own primary sources. It names the on-chain subnet slot registered
+at netuid 40; see this article's On-Chain Identity section for its current registered fields
+([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)).
+
 ## Further Reading
 
 - [Subnet 40 on TaoStats](https://taostats.io/subnets/40)

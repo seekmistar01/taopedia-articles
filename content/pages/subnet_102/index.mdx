@@ -116,6 +116,29 @@ The [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-netw
 separates mainnet, testnet, and localnet. An expert contribution score or emission outcome from one
 environment should not be read as representing production subnet performance in another environment.
 
+## Netuid 102 Identifies the Subnet On-Chain
+
+Bittensor assigns every subnet a unique numeric identifier called a netuid, and Subnet 102 is the
+subnet registered at netuid 102
+([Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)). The
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets) reference
+explains that each subnet runs its own incentive mechanism while sharing the same underlying
+Subtensor chain, so the netuid is the stable handle that distinguishes ConnitoAI from every other
+subnet.
+
+For a reader, this means "Subnet 102" and "netuid 102" refer to the same on-chain slot. A claim
+about ConnitoAI should be tied to that netuid rather than to the registered name alone, because the
+name field can be changed on-chain while the netuid stays fixed.
+
+## Reader Boundary
+
+Subnet 102 ConnitoAI should not be read as generic Bittensor subnet documentation, a released
+production model, or a guarantee about the combined model's quality. It names one subnet for
+collaborative AI training where many contributors each train a specialized expert and the experts
+are combined into one larger model on netuid 102
+([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)).
+
 ## Further Reading
 
 - [ConnitoAI website](https://connito.ai/)

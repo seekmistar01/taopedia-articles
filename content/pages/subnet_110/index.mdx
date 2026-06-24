@@ -69,6 +69,29 @@ On mainnet, Green Compute (SN110) is registered as the live production subnet at
 separates mainnet, testnet, and localnet. Participation examples or emission outcomes from one
 environment should not be read as representing production subnet performance in another environment.
 
+## Netuid 110 Identifies the Subnet On-Chain
+
+Bittensor assigns every subnet a unique numeric identifier called a netuid, and Subnet 110 is the
+subnet registered at netuid 110
+([Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)). The
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets) reference
+explains that each subnet runs its own incentive mechanism while sharing the same underlying
+Subtensor chain, so the netuid is the stable handle that distinguishes Green Compute from every
+other subnet.
+
+For a reader, this means "Subnet 110" and "netuid 110" refer to the same on-chain slot. A claim
+about Green Compute should be tied to that netuid rather than to the registered name alone, because
+the name field can be changed on-chain while the netuid stays fixed.
+
+## Reader Boundary
+
+Subnet 110 Green Compute should not be read as generic Bittensor subnet documentation, a
+certification that any specific hardware is carbon-neutral, or a retail marketplace for renting
+GPUs. It names one subnet's decentralized GPU-compute network for inference hardware powered by
+verified green energy on netuid 110
+([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)).
+
 ## Further Reading
 
 - [Green Compute website](https://www.green-compute.com/)

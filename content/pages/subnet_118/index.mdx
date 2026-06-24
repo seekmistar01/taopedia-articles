@@ -112,6 +112,29 @@ On mainnet, Ditto (SN118) is registered as the live production subnet at netuid 
 separates mainnet, testnet, and localnet. Participation examples or emission outcomes from one
 environment should not be read as representing production subnet performance in another environment.
 
+## Netuid 118 Identifies the Subnet On-Chain
+
+Bittensor assigns every subnet a unique numeric identifier called a netuid, and Subnet 118 is the
+subnet registered at netuid 118
+([Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)). The
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets) reference
+explains that each subnet runs its own incentive mechanism while sharing the same underlying
+Subtensor chain, so the netuid is the stable handle that distinguishes Ditto from every other
+subnet.
+
+For a reader, this means "Subnet 118" and "netuid 118" refer to the same on-chain slot. A claim
+about Ditto should be tied to that netuid rather than to the registered name alone, because the name
+field can be changed on-chain while the netuid stays fixed.
+
+## Reader Boundary
+
+Subnet 118 Ditto should not be read as generic Bittensor subnet documentation, an official Anthropic
+or Claude product, or a guarantee about how any integrated assistant behaves. It names one
+open-source assistant-memory subnet whose public materials focus on persistent memory and agent
+integrations on netuid 118
+([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)).
+
 ## Further Reading
 
 - [Ditto website](https://heyditto.ai)

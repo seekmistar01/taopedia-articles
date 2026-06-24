@@ -77,6 +77,7 @@ function validateTags(data, filePath) {
   if (data.tags.length > 3) {
     throw new Error(`${filePath}: use at most 3 tags`);
   }
+  const seenTags = new Set();
   for (const tag of data.tags) {
     if (typeof tag !== "string" || !tag.trim()) {
       throw new Error(`${filePath}: tags must be non-empty strings`);
@@ -89,6 +90,14 @@ function validateTags(data, filePath) {
         `${filePath}: do not use "Bittensor" as a tag; every Taopedia article is already Bittensor-focused`
       );
     }
+    // Tags render as a deduplicated facet, so a repeated tag (case- or
+    // whitespace-insensitive) is silently collapsed in the UI but inflates the
+    // 3-tag budget in the source. Reject it here so the source matches what ships.
+    const normalizedTag = tag.toLowerCase().trim();
+    if (seenTags.has(normalizedTag)) {
+      throw new Error(`${filePath}: duplicate tag "${tag}"; each tag must be unique`);
+    }
+    seenTags.add(normalizedTag);
   }
 }
 

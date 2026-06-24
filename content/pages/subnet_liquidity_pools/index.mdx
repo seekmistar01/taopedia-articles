@@ -135,6 +135,27 @@ This keeps emissions and pools connected without merging them. Emissions explain
 movement, while the subnet liquidity pool names the paired reserve surface affected by that
 movement.
 
+## Development Stage Context
+
+The
+[Introduction to Bittensor](https://docs.learnbittensor.org/learn/introduction#subnet-development)
+describes subnet development as moving from localnet to testnet and then mainnet. For Subnet
+Liquidity Pools, that sequence changes how an example should be read, because the surrounding
+network state differs at each stage.
+
+In localnet, subnet Liquidity Pools can be exercised in an isolated development environment, where
+the surrounding chain state reflects local configuration rather than production history.
+
+On testnet, subnet Liquidity Pools can be observed in a shared, non-production network whose state
+is kept separate from mainnet.
+
+On mainnet, subnet Liquidity Pools applies on the live, production Bittensor network, where the
+surrounding state is real and persistent.
+
+The [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-networks) reference
+separates mainnet, testnet, and localnet. A subnet Liquidity Pools example from one environment
+should not be read as representing another environment.
+
 ## Reader Boundary
 
 Subnet liquidity pools are reserve and conversion vocabulary. They connect TAO reserves, alpha

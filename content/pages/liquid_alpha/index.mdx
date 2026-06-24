@@ -159,6 +159,17 @@ Localnet examples can explain the mechanism in isolation. Testnet examples belon
 non-production state, and mainnet examples belong to production consensus history. The concept is
 portable, but observed behavior is environment-specific.
 
+## Relationship to Yuma Consensus
+
+Liquid Alpha and Yuma Consensus describe related parts of Bittensor's incentive system. Yuma
+Consensus is the on-chain process that aggregates validator weight signals within a subnet into
+miner incentives and validator dividends, applying consensus clipping, bonding, and emission
+calculation ([Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
+
+For readers, liquid Alpha names a specific part of that incentive picture, while Yuma Consensus
+names the consensus process that turns validator weights into the resulting incentives and
+dividends.
+
 ## Reader Boundary
 
 Liquid alpha is a consensus bond-smoothing concept. The stable point is that the smoothing factor

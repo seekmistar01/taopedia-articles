@@ -101,6 +101,29 @@ The [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-netw
 separates mainnet, testnet, and localnet. A video generation result or emission outcome from one
 environment should not be read as representing production subnet performance in another environment.
 
+## Netuid 99 Identifies the Subnet On-Chain
+
+Bittensor assigns every subnet a unique numeric identifier called a netuid, and Subnet 99 is the
+subnet registered at netuid 99
+([Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)). The
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets) reference
+explains that each subnet runs its own incentive mechanism while sharing the same underlying
+Subtensor chain, so the netuid is the stable handle that distinguishes Leoma from every other
+subnet.
+
+For a reader, this means "Subnet 99" and "netuid 99" refer to the same on-chain slot. A claim about
+Leoma should be tied to that netuid rather than to the registered name alone, because the name field
+can be changed on-chain while the netuid stays fixed.
+
+## Reader Boundary
+
+Subnet 99 Leoma should not be read as generic Bittensor subnet documentation, a consumer
+video-generation product, or proof that any generated clip is original or rights-cleared. It names
+one subnet's AI-video competition where miners run text-image-to-video models and validators score
+the generated clips with winner-take-all weights each round on netuid 99
+([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)).
+
 ## Further Reading
 
 - [Leoma website](https://leoma.ai/)

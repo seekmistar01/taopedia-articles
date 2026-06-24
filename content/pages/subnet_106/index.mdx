@@ -51,6 +51,29 @@ On mainnet, Nodexo (SN106) is registered as the live production subnet at netuid
 separates mainnet, testnet, and localnet. Participation examples or emission outcomes from one
 environment should not be read as representing production subnet performance in another environment.
 
+## Netuid 106 Identifies the Subnet On-Chain
+
+Bittensor assigns every subnet a unique numeric identifier called a netuid, and Subnet 106 is the
+subnet registered at netuid 106
+([Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)). The
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets) reference
+explains that each subnet runs its own incentive mechanism while sharing the same underlying
+Subtensor chain, so the netuid is the stable handle that distinguishes Nodexo from every other
+subnet even when its other identity fields are sparse.
+
+For a reader, this means "Subnet 106" and "netuid 106" refer to the same on-chain slot. A claim
+about Nodexo should be tied to that netuid rather than to the registered name alone, because the
+name field can be changed on-chain while the netuid stays fixed.
+
+## Reader Boundary
+
+Subnet 106 Nodexo should not be read as generic Bittensor subnet documentation, confirmation that
+its listed GitHub repository or website is live, or proof that the subnet has a published miner and
+validator mechanism. It names one on-chain subnet slot registered at netuid 106 with the description
+"tokenized ai compute"
+([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)).
+
 ## Further Reading
 
 - [Subnet 106 on TaoStats](https://taostats.io/subnets/106)

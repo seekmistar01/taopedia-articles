@@ -121,6 +121,17 @@ state. Mainnet belongs to production chain history.
 The concept is stable across those environments: one subnet can contain more than one evaluation
 mechanism. A concrete result from one environment still belongs to that environment.
 
+## Relationship to Yuma Consensus
+
+Multiple Incentive Mechanisms and Yuma Consensus describe related parts of Bittensor's incentive
+system. Yuma Consensus is the on-chain process that aggregates validator weight signals within a
+subnet into miner incentives and validator dividends, applying consensus clipping, bonding, and
+emission calculation ([Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
+
+For readers, multiple Incentive Mechanisms names a specific part of that incentive picture, while
+Yuma Consensus names the consensus process that turns validator weights into the resulting
+incentives and dividends.
+
 ## Reader Boundary
 
 Multiple incentive mechanisms are subnet-internal evaluation structure. The term does not by itself

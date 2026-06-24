@@ -65,6 +65,29 @@ separates mainnet, testnet, and localnet. On-chain identity data for netuid 3 sh
 mainnet state. Pool state or owner coldkey information observed on testnet or localnet would belong
 to those environments and would not represent the mainnet registration described here.
 
+## Netuid 3 Identifies the Subnet On-Chain
+
+Bittensor assigns every subnet a unique numeric identifier called a netuid, and Subnet 3 is the
+subnet registered at netuid 3
+([Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)). The
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets) reference
+explains that each subnet runs its own incentive mechanism while sharing the same underlying
+Subtensor chain, so the netuid is the stable handle that distinguishes Subnet 3 from every other
+subnet.
+
+For a reader, this means "Subnet 3" and "netuid 3" refer to the same on-chain slot. A claim about
+Subnet 3 should be tied to that netuid rather than to the registered name alone, because the name
+field can be changed on-chain while the netuid stays fixed.
+
+## Reader Boundary
+
+Subnet 3 should not be read as generic Bittensor subnet documentation, confirmation that the subnet
+has a published, working mechanism, or a substitute for the subnet's own primary sources. It names
+the on-chain subnet slot registered at netuid 3; see this article's On-Chain Identity section for
+its current registered fields
+([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)).
+
 ## Further Reading
 
 - [taostats.io/subnets/3](https://taostats.io/subnets/3)

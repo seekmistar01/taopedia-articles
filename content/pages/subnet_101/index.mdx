@@ -116,6 +116,28 @@ The [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-netw
 separates mainnet, testnet, and localnet. A tag scoring result or emission outcome from one
 environment should not be read as representing production subnet performance in another environment.
 
+## Netuid 101 Identifies the Subnet On-Chain
+
+Bittensor assigns every subnet a unique numeric identifier called a netuid, and Subnet 101 is the
+subnet registered at netuid 101
+([Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)). The
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets) reference
+explains that each subnet runs its own incentive mechanism while sharing the same underlying
+Subtensor chain, so the netuid is the stable handle that distinguishes Tag101 from every other
+subnet.
+
+For a reader, this means "Subnet 101" and "netuid 101" refer to the same on-chain slot. A claim
+about Tag101 should be tied to that netuid rather than to the registered name alone, because the
+name field can be changed on-chain while the netuid stays fixed.
+
+## Reader Boundary
+
+Subnet 101 Tag101 should not be read as generic Bittensor subnet documentation, an official X or
+Twitter service, or proof that any individual label is correct. It names one decentralized
+social-post tagging subnet where miners submit labels for X posts and validators evaluate them on
+netuid 101 ([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)).
+
 ## Further Reading
 
 - [tag101-ai/tag101 on GitHub](https://github.com/tag101-ai/tag101)

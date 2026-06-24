@@ -217,6 +217,14 @@ async function validateArticle(slug, articleDir, knownTargets) {
   const { data, content } = matter(raw);
   validateTextField(data, "title", articlePath, 120);
   validateTextField(data, "summary", articlePath, 240);
+  // The summary renders as a standalone sentence (the article lead and the
+  // search/social description), so a clipped fragment reads as truncated. Require
+  // it to end with sentence-ending punctuation.
+  if (!/[.!?]["')\]]?$/.test(data.summary.trim())) {
+    throw new Error(
+      `${articlePath}: front matter field "summary" should end with sentence punctuation (. ! or ?)`
+    );
+  }
   validateTextField(data, "category", articlePath, 60);
   if (data.category?.trim().toLowerCase() === "bittensor") {
     throw new Error(

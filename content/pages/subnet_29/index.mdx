@@ -111,6 +111,29 @@ The [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-netw
 separates mainnet, testnet, and localnet. A training evaluation result or emission outcome from one
 environment should not be read as representing production subnet performance in another environment.
 
+## Netuid 29 Identifies the Subnet On-Chain
+
+Bittensor assigns every subnet a unique numeric identifier called a netuid, and Subnet 29 is the
+subnet registered at netuid 29
+([Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)). The
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets) reference
+explains that each subnet runs its own incentive mechanism while sharing the same underlying
+Subtensor chain, so the netuid is the stable handle that distinguishes Coldint from every other
+subnet.
+
+For a reader, this means "Subnet 29" and "netuid 29" refer to the same on-chain slot. A claim about
+Coldint should be tied to that netuid rather than to the registered name alone, because the name
+field can be changed on-chain while the netuid stays fixed.
+
+## Reader Boundary
+
+Subnet 29 Coldint should not be read as generic Bittensor subnet documentation, a released
+production model, or a guarantee of model-quality improvement on any task. It names one
+collaborative distributed-training subnet focused on model-training research and incremental model
+improvements on netuid 29
+([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)).
+
 ## Further Reading
 
 - [Coldint repository](https://github.com/coldint/coldint_validator)

@@ -224,6 +224,14 @@ async function validateArticle(slug, articleDir, knownTargets) {
     );
   }
   validateTags(data, articlePath);
+  // The summary renders as the meta description and search snippet, where Markdown
+  // and HTML are not parsed, so link or emphasis syntax leaks as literal
+  // characters. Require the summary to be plain text.
+  if (/\[[^\]]+\]\([^)]+\)|\[\[|[*`]|<[a-z]/i.test(data.summary)) {
+    throw new Error(
+      `${articlePath}: front matter field "summary" must be plain text (no Markdown links, wiki links, emphasis, or HTML)`
+    );
+  }
   for (const target of [...extractWikiLinks(content), ...extractWikiLinksFromValue(data)]) {
     const normalizedTarget = slugifyWikiLink(target);
     if (!knownTargets.has(normalizedTarget)) {

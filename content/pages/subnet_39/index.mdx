@@ -63,6 +63,29 @@ On mainnet, Subnet 39 is registered as a deprecated slot at netuid 39. The
 separates mainnet, testnet, and localnet. Participation examples or emission outcomes from one
 environment should not be read as representing production subnet performance in another environment.
 
+## Netuid 39 Identifies the Subnet On-Chain
+
+Bittensor assigns every subnet a unique numeric identifier called a netuid, and Subnet 39 is the
+subnet registered at netuid 39
+([Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)). The
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets) reference
+explains that each subnet runs its own incentive mechanism while sharing the same underlying
+Subtensor chain, so the netuid is the stable handle that distinguishes Subnet 39 from every other
+subnet.
+
+For a reader, this means "Subnet 39" and "netuid 39" refer to the same on-chain slot. A claim about
+Subnet 39 should be tied to that netuid rather than to the registered name alone, because the name
+field can be changed on-chain while the netuid stays fixed.
+
+## Reader Boundary
+
+Subnet 39 should not be read as generic Bittensor subnet documentation, confirmation that the subnet
+has a published, working mechanism, or a substitute for the subnet's own primary sources. It names
+the on-chain subnet slot registered at netuid 39; see this article's On-Chain Identity section for
+its current registered fields
+([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)).
+
 ## Further Reading
 
 - [Subnet 39 on TaoStats](https://taostats.io/subnets/39)

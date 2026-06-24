@@ -111,6 +111,29 @@ The [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-netw
 separates mainnet, testnet, and localnet. A prediction or attestation result from one environment
 should not be read as representing production subnet performance in another environment.
 
+## Netuid 103 Identifies the Subnet On-Chain
+
+Bittensor assigns every subnet a unique numeric identifier called a netuid, and Subnet 103 is the
+subnet registered at netuid 103
+([Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)). The
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets) reference
+explains that each subnet runs its own incentive mechanism while sharing the same underlying
+Subtensor chain, so the netuid is the stable handle that distinguishes Djinn from every other
+subnet.
+
+For a reader, this means "Subnet 103" and "netuid 103" refer to the same on-chain slot. A claim
+about Djinn should be tied to that netuid rather than to the registered name alone, because the name
+field can be changed on-chain while the netuid stays fixed.
+
+## Reader Boundary
+
+Subnet 103 Djinn should not be read as generic Bittensor subnet documentation, financial or
+investment advice, or a guarantee that any purchased prediction is correct. It names one subnet
+operating as a marketplace for analysis where purchased predictions stay private and each seller's
+accuracy is provable from a tamper-proof record on netuid 103
+([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)).
+
 ## Further Reading
 
 - [Djinn on GitHub](https://github.com/Djinn-Inc/djinn)

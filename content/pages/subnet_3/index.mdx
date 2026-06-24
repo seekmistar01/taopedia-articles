@@ -79,6 +79,12 @@ For a reader, this means "Subnet 3" and "netuid 3" refer to the same on-chain sl
 Subnet 3 should be tied to that netuid rather than to the registered name alone, because the name
 field can be changed on-chain while the netuid stays fixed.
 
+## Miner and Validator Roles
+
+Subnet 3 operates under the standard Bittensor two-role structure. Miners supply the subnet's
+capability and validators evaluate those contributions and set weights. Reward distribution follows
+[Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus).
+
 ## Reader Boundary
 
 Subnet 3 should not be read as generic Bittensor subnet documentation, confirmation that the subnet

@@ -63,6 +63,14 @@ function validateTextField(data, field, filePath, maxLength) {
   if (typeof value !== "string" || !value.trim()) {
     throw new Error(`${filePath}: front matter field "${field}" is required`);
   }
+  // Leading/trailing whitespace is invisible in the source but survives into the
+  // rendered title/summary/category and into derived slugs and search text, so a
+  // stray space silently changes what ships. Require the stored value to be trimmed.
+  if (value !== value.trim()) {
+    throw new Error(
+      `${filePath}: front matter field "${field}" must not have leading or trailing whitespace`
+    );
+  }
   if (value.length > maxLength) {
     throw new Error(
       `${filePath}: front matter field "${field}" must be ${maxLength} characters or fewer`

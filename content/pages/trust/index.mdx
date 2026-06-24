@@ -156,6 +156,16 @@ The [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-netw
 separates mainnet, testnet, and localnet. A trust example from one environment should not be read as
 representing another environment.
 
+## Relationship to Yuma Consensus
+
+Trust and Yuma Consensus describe related parts of Bittensor's incentive system. Yuma Consensus is
+the on-chain process that aggregates validator weight signals within a subnet into miner incentives
+and validator dividends, applying consensus clipping, bonding, and emission calculation
+([Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
+
+For readers, trust names a specific part of that incentive picture, while Yuma Consensus names the
+consensus process that turns validator weights into the resulting incentives and dividends.
+
 ## Reader Boundary
 
 Trust is a miner-side consensus metric after clipping. It is not rank itself, validator trust, or a

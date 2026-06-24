@@ -78,6 +78,29 @@ The [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-netw
 separates mainnet, testnet, and localnet. A retrieval quality result or emission outcome from one
 environment should not be read as representing production subnet performance in another environment.
 
+## Netuid 31 Identifies the Subnet On-Chain
+
+Bittensor assigns every subnet a unique numeric identifier called a netuid, and Subnet 31 is the
+subnet registered at netuid 31
+([Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)). The
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets) reference
+explains that each subnet runs its own incentive mechanism while sharing the same underlying
+Subtensor chain, so the netuid is the stable handle that distinguishes rec4ll from every other
+subnet.
+
+For a reader, this means "Subnet 31" and "netuid 31" refer to the same on-chain slot. A claim about
+rec4ll should be tied to that netuid rather than to the registered name alone, because the name
+field can be changed on-chain while the netuid stays fixed.
+
+## Reader Boundary
+
+Subnet 31 rec4ll should not be read as generic Bittensor subnet documentation, a general-purpose
+search engine, or proof that any single retrieved answer is correct. It names one subnet's
+retrieval-augmented generation competition where miners serve embeddings, vector search, and
+inference and validators score retrieval and answer quality on netuid 31
+([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)).
+
 ## Further Reading
 
 - [Subnet 31 on TaoStats](https://taostats.io/subnets/31)

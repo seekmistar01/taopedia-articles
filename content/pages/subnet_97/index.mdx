@@ -113,6 +113,29 @@ The [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-netw
 separates mainnet, testnet, and localnet. A model duel result or emission outcome from one
 environment should not be read as representing production subnet performance in another environment.
 
+## Netuid 97 Identifies the Subnet On-Chain
+
+Bittensor assigns every subnet a unique numeric identifier called a netuid, and Subnet 97 is the
+subnet registered at netuid 97
+([Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)). The
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets) reference
+explains that each subnet runs its own incentive mechanism while sharing the same underlying
+Subtensor chain, so the netuid is the stable handle that distinguishes Albedo from every other
+subnet.
+
+For a reader, this means "Subnet 97" and "netuid 97" refer to the same on-chain slot. A claim about
+Albedo should be tied to that netuid rather than to the registered name alone, because the name
+field can be changed on-chain while the netuid stays fixed.
+
+## Reader Boundary
+
+Subnet 97 Albedo should not be read as generic Bittensor subnet documentation, an official ranking
+of commercial language models, or proof that the reigning champion is the best available model. It
+names one king-of-the-hill competition where miners submit challenger language models judged
+head-to-head against a reigning champion, with full match transcripts published on netuid 97
+([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)).
+
 ## Further Reading
 
 - [Albedo repository](https://github.com/unarbos/albedo)

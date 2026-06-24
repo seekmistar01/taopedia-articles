@@ -89,6 +89,26 @@ the subnet. The [Emission](https://docs.learnbittensor.org/learn/emissions) docu
 how those consensus weights determine each participant's share of the subnet's accumulated emission
 each tempo.
 
+## Reader Boundary
+
+Subnet 70 NexisGen should not be read as generic Bittensor subnet documentation, a passive
+media-scraping pipeline, or a claim that larger datasets automatically earn more rewards. The public
+materials frame the product as commissioned, validated video-clip datasets with captions and
+provenance, where validators certify record quality and arbitrate overlap so the same media is not
+rewarded twice
+([NexisGen README source](https://raw.githubusercontent.com/RendixNetwork/nexisgen/main/README.md)).
+
+This also means the unit of value is the verified record set, not only the presence of clips. A
+miner can submit many records and still score poorly if validators find schema issues, duplication,
+or low-quality captions. Validator weight vectors then flow through Yuma Consensus to determine
+emissions each tempo ([Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus),
+[Emission](https://docs.learnbittensor.org/learn/emissions)).
+
+The production-cycle framing is another scope boundary. The article describes miners submitting a
+dataset package for the active cycle, and validators checking genuineness and overlap in that cycle,
+so “best miner” is defined against the current commission constraints and dataset lot rather than a
+timeless, fixed benchmark.
+
 ## Development Stage Context
 
 The

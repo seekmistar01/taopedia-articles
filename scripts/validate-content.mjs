@@ -242,6 +242,15 @@ async function validateArticle(slug, articleDir, knownTargets) {
       `${articlePath}: published articles must not contain fenced code blocks; explain commands and configuration in prose`
     );
   }
+  // The article title comes from front matter and renders as the page's single
+  // H1. A second top-level "# " heading in the body emits two H1s, which breaks
+  // the document outline and heading-order accessibility/SEO. Sections use "##"+.
+  const h1Count = (content.match(/^#[ \t]+\S/gm) || []).length;
+  if (h1Count > 1) {
+    throw new Error(
+      `${articlePath}: body has ${h1Count} level-1 (#) headings; use the front matter title as the only H1 and "##" or deeper for sections`
+    );
+  }
 
   if (Array.isArray(data.infoboxRows)) {
     for (const row of data.infoboxRows) {

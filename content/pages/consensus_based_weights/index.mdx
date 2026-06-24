@@ -131,6 +131,17 @@ The [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-netw
 separates mainnet, testnet, and localnet. A liquid-alpha example from one environment should not be
 read as representing production bond behavior in another environment.
 
+## Relationship to Yuma Consensus
+
+Consensus-Based Weights and Yuma Consensus describe related parts of Bittensor's incentive system.
+Yuma Consensus is the on-chain process that aggregates validator weight signals within a subnet into
+miner incentives and validator dividends, applying consensus clipping, bonding, and emission
+calculation ([Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
+
+For readers, consensus-Based Weights names a specific part of that incentive picture, while Yuma
+Consensus names the consensus process that turns validator weights into the resulting incentives and
+dividends.
+
 ## Reader Boundary
 
 Consensus-based weights are a Yuma Consensus bond-smoothing concept. They are not a separate subnet

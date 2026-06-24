@@ -125,6 +125,28 @@ The [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-netw
 separates mainnet, testnet, and localnet. A liquidation or oracle result from one environment should
 not be read as representing production subnet performance in another environment.
 
+## Netuid 113 Identifies the Subnet On-Chain
+
+Bittensor assigns every subnet a unique numeric identifier called a netuid, and Subnet 113 is the
+subnet registered at netuid 113
+([Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)). The
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets) reference
+explains that each subnet runs its own incentive mechanism while sharing the same underlying
+Subtensor chain, so the netuid is the stable handle that distinguishes TensorUSD from every other
+subnet.
+
+For a reader, this means "Subnet 113" and "netuid 113" refer to the same on-chain slot. A claim
+about TensorUSD should be tied to that netuid rather than to the registered name alone, because the
+name field can be changed on-chain while the netuid stays fixed.
+
+## Reader Boundary
+
+Subnet 113 TensorUSD should not be read as generic Bittensor subnet documentation, financial,
+trading, or investment advice, or a substitute for the subnet's own primary sources. It names the
+on-chain subnet registered at netuid 113 under the identity "TensorUSD"
+([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)).
+
 ## Further Reading
 
 - [TensorUSD website](https://tensorusd.com)

@@ -68,6 +68,28 @@ On mainnet, CookingTAO (SN122) is registered as the live production subnet at ne
 separates mainnet, testnet, and localnet. Participation examples or emission outcomes from one
 environment should not be read as representing production subnet performance in another environment.
 
+## Netuid 122 Identifies the Subnet On-Chain
+
+Bittensor assigns every subnet a unique numeric identifier called a netuid, and Subnet 122 is the
+subnet registered at netuid 122
+([Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)). The
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets) reference
+explains that each subnet runs its own incentive mechanism while sharing the same underlying
+Subtensor chain, so the netuid is the stable handle that distinguishes CookingTAO from every other
+subnet.
+
+For a reader, this means "Subnet 122" and "netuid 122" refer to the same on-chain slot. A claim
+about CookingTAO should be tied to that netuid rather than to the registered name alone, because the
+name field can be changed on-chain while the netuid stays fixed.
+
+## Reader Boundary
+
+Subnet 122 CookingTAO should not be read as generic Bittensor subnet documentation,
+mining-profitability or investment advice, or a guarantee of mining returns. It names one subnet
+whose on-chain identity is registered with the description "Democratizing Bittensor Mining" on
+netuid 122 ([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)).
+
 ## Further Reading
 
 - [CookingTAO website](https://cookingtao.com/)

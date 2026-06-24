@@ -62,6 +62,27 @@ On mainnet, gm (SN28) is registered as the live production subnet at netuid 28. 
 separates mainnet, testnet, and localnet. Participation examples or emission outcomes from one
 environment should not be read as representing production subnet performance in another environment.
 
+## Netuid 28 Identifies the Subnet On-Chain
+
+Bittensor assigns every subnet a unique numeric identifier called a netuid, and Subnet 28 is the
+subnet registered at netuid 28
+([Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)). The
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets) reference
+explains that each subnet runs its own incentive mechanism while sharing the same underlying
+Subtensor chain, so the netuid is the stable handle that distinguishes gm from every other subnet.
+
+For a reader, this means "Subnet 28" and "netuid 28" refer to the same on-chain slot. A claim about
+gm should be tied to that netuid rather than to the registered name alone, because the name field
+can be changed on-chain while the netuid stays fixed.
+
+## Reader Boundary
+
+Subnet 28 gm should not be read as generic Bittensor subnet documentation, confirmation that the
+subnet has a published, working mechanism, or a substitute for the subnet's own primary sources. It
+names the on-chain subnet registered at netuid 28 under the identity "gm"
+([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)).
+
 ## Further Reading
 
 - [gm website](https://saygm.com/)

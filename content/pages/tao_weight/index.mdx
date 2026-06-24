@@ -122,6 +122,27 @@ Use TAO weight when the focus is the relative role of TAO stake in stake weight.
 when the focus is the combined validator influence value, and use root proportion when the focus is
 that separate dividend-context measure.
 
+## Development Stage Context
+
+The
+[Introduction to Bittensor](https://docs.learnbittensor.org/learn/introduction#subnet-development)
+describes subnet development as moving from localnet to testnet and then mainnet. For TAO Weight,
+that sequence changes how an example should be read, because the surrounding network state differs
+at each stage.
+
+In localnet, tAO Weight can be exercised in an isolated development environment, where the
+surrounding chain state reflects local configuration rather than production history.
+
+On testnet, tAO Weight can be observed in a shared, non-production network whose state is kept
+separate from mainnet.
+
+On mainnet, tAO Weight applies on the live, production Bittensor network, where the surrounding
+state is real and persistent.
+
+The [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-networks) reference
+separates mainnet, testnet, and localnet. A tAO Weight example from one environment should not be
+read as representing another environment.
+
 ## Reader Boundary
 
 TAO weight names the relative role of TAO stake inside stake-weight computation, not validator

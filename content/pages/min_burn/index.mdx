@@ -84,6 +84,36 @@ Min burn therefore answers how low registration cost can fall, not whether regis
 Readers should keep the burn floor separate from the root-level switch that gates subnet entry
 ([Register](https://docs.learnbittensor.org/resources/glossary#register)).
 
+## BurnHalfLife Pulls the Live Burn Back Toward the Floor
+
+The [Glossary: Register](https://docs.learnbittensor.org/resources/glossary#register) describes the
+dynamic registration burn as decaying over time according to `BurnHalfLife` while staying inside the
+documented `MinBurn` and `MaxBurn` band. When registration demand quiets, that decay drifts the live
+burn downward, and min burn is the value it settles toward but cannot fall below
+([Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters)).
+
+That keeps min burn distinct from the decay mechanism. Half-life names how quickly the live burn
+eases during slow periods; min burn names the floor that decay approaches rather than passes.
+
+References: [Glossary: Register](https://docs.learnbittensor.org/resources/glossary#register),
+[Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters)
+
+## BurnIncreaseMult Steps the Burn Up From the Floor
+
+Official registration vocabulary also states that each successful registration can raise the dynamic
+burn through `BurnIncreaseMult`. That multiplier responds to demand inside the same min/max band:
+more registrations push the live burn upward from the floor, while half-life decay pulls it back
+down toward min burn when activity slows
+([Glossary: Register](https://docs.learnbittensor.org/resources/glossary#register)).
+
+Min burn therefore sets where that upward stepping begins, not how far it can climb. A subnet owner
+can adjust the floor for their subnet, for example netuid 1, but the multiplier still operates only
+inside the documented hyperparameter bounds for that subnet
+([Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters)).
+
+References: [Glossary: Register](https://docs.learnbittensor.org/resources/glossary#register),
+[Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters)
+
 ## Further Reading
 
 - [Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters)

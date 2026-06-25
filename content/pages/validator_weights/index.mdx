@@ -189,6 +189,20 @@ Yuma Consensus
 Specific examples belong to the subnet, mechanism, network, and source that produced the value at
 the time of observation.
 
+## Relationship to Weight Setting
+
+Validator weights and weight setting describe the same signal as data and action. Validator weights
+are the evaluation values a validator assigns to miners to express how it rates their work, while
+weight setting is the on-chain `set_weights` action that submits and records that weight vector, so
+the weights are the content and weight setting is the step that commits them before Yuma Consensus
+reads them
+([Glossary: Weight Setting](https://docs.learnbittensor.org/resources/glossary#weight-setting),
+[Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#validator-weights),
+[Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
+
+- **Validator weights** — the evaluation values a validator assigns to miners.
+- **Weight setting** — the on-chain action that submits and records those weights.
+
 ## Further Reading
 
 - [Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#validator-weights)

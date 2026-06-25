@@ -224,6 +224,9 @@ async function validateArticle(slug, articleDir, knownTargets) {
     );
   }
   validateTags(data, articlePath);
+  if (data.summary.trim().length < 20) {
+    throw new Error(`${articlePath}: front matter field "summary" must be at least 20 characters`);
+  }
   for (const target of [...extractWikiLinks(content), ...extractWikiLinksFromValue(data)]) {
     const normalizedTarget = slugifyWikiLink(target);
     if (!knownTargets.has(normalizedTarget)) {

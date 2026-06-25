@@ -210,6 +210,20 @@ Metagraph belongs to subnet-state labels, while UID slot belongs to single-posit
 that state
 ([Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters)).
 
+## Relationship to Deregistration
+
+The metagraph and deregistration describe subnet membership as snapshot and change. The metagraph is
+the snapshot of a subnet's registered neurons and their state at each UID, while deregistration
+removes a neuron from a UID slot so that the next metagraph reads the reassigned slot rather than
+the removed neuron
+([Glossary: Metagraph](https://docs.learnbittensor.org/resources/glossary#metagraph),
+[Glossary: Deregistration](https://docs.learnbittensor.org/resources/glossary#deregistration),
+[Subnet Metagraph](https://docs.learnbittensor.org/subnets/metagraph)).
+
+- **Metagraph** — the per-subnet snapshot of registered neurons and their state by UID.
+- **Deregistration** — removal of a neuron from a UID slot, reflected in the next metagraph
+  snapshot.
+
 ## Further Reading
 
 - [Glossary: Metagraph](https://docs.learnbittensor.org/resources/glossary#metagraph)

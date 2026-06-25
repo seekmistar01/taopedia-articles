@@ -168,6 +168,19 @@ rather than the lower bound alone
 Floor and ceiling hyperparameters answer different reader questions for the same registration-burn
 band ([Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters)).
 
+## Relationship to Burn Cost
+
+Min burn and the burn cost describe the same registration burn as floor and live value. Min burn is
+the owner-settable per-subnet hyperparameter that sets the lower bound on the dynamic TAO burn
+required to register a neuron, while the burn cost is the actual amount charged at registration
+time, which rises with demand but cannot fall below that floor
+([Glossary: Burn Cost](https://docs.learnbittensor.org/resources/glossary#burn-cost),
+[Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters),
+[Recycling and Burning](https://docs.learnbittensor.org/learn/emissions)).
+
+- **Min burn** — the configured lower bound on the registration burn.
+- **Burn cost** — the live, demand-driven amount charged, floored by min burn.
+
 ## Further Reading
 
 - [Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters)

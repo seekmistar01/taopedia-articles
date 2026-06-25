@@ -245,6 +245,19 @@ describe miner-side outcomes, dividends describe validator-side outcomes, and bo
 smoothed relationship connecting validators to miners
 ([Glossary: Validator-Miner Bonds](https://docs.learnbittensor.org/resources/glossary#validator-miner-bonds)).
 
+## Relationship to Weight Setting
+
+Validator-miner bonds and weight setting connect submitted weights to accrued relationships. Weight
+setting is the action by which a validator assigns weights to miners each round, while
+validator-miner bonds are the smoothed, time-accumulated relationships built from those weights, so
+each weight-setting submission updates the bonds that shape a validator's later emission outcomes
+([Glossary: Validator-Miner Bonds](https://docs.learnbittensor.org/resources/glossary#validator-miner-bonds),
+[Glossary: Weight Setting](https://docs.learnbittensor.org/resources/glossary#weight-setting),
+[Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
+
+- **Weight setting** — the per-round action that assigns weights to miners.
+- **Validator-miner bonds** — the smoothed relationships accumulated from those weights.
+
 ## Further Reading
 
 - [Glossary: Validator-Miner Bonds](https://docs.learnbittensor.org/resources/glossary#validator-miner-bonds)

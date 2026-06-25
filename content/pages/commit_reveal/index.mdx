@@ -43,7 +43,7 @@ of weight disclosure; Yuma Consensus later interprets available validator signal
 The weight-copying problem comes from visible weight information being useful to validators that did
 not independently evaluate subnet work
 ([Weight Copying Problem](https://docs.learnbittensor.org/concepts/weight-copying-in-bittensor),
-[Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#validator-weights)).
+[Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#weight-vector)).
 
 Commit Reveal reduces that timing advantage by hiding fresh weight signals until a later reveal
 point. The protection is narrow: it makes recent signals harder to copy before disclosure, while the
@@ -92,7 +92,7 @@ separate kind of consensus input
 
 The reveal step therefore changes availability, not meaning. Once readable, the weights are still
 validator-weight signals in the subnet's consensus path
-([Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#validator-weights)).
+([Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#weight-vector)).
 
 ## Drand Time-Lock Timing
 
@@ -166,7 +166,7 @@ before those signals become readable to observers.
 
 Validator weights, weight copying, Drand time-lock encryption, subnet hyperparameters, and Yuma
 Consensus name neighboring parts of the path
-([Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#validator-weights),
+([Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#weight-vector),
 [Glossary: Weight Copying](https://docs.learnbittensor.org/resources/glossary#weight-copying),
 [Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
 
@@ -296,7 +296,7 @@ Commit reveal delays when validator weight signals become visible on chain. Weig
 validator action of assigning scores to miners before those signals are submitted
 ([Glossary: Commit Reveal](https://docs.learnbittensor.org/resources/glossary#commit-reveal),
 [Commit Reveal](https://docs.learnbittensor.org/concepts/commit-reveal),
-[Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#validator-weights)).
+[Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#weight-vector)).
 
 Readers comparing evaluation to disclosure timing need both terms. Weight setting covers the scoring
 step validators perform, while commit reveal covers the concealment interval before fresh weights
@@ -307,7 +307,7 @@ can be read and reused
 Use weight setting when covering how validators score miners; use commit reveal when covering
 delayed visibility of those submitted weights rather than the scoring act itself
 ([Understanding Incentive Mechanisms](https://docs.learnbittensor.org/learn/anatomy-of-incentive-mechanism),
-[Glossary: Subnet Validator](https://docs.learnbittensor.org/resources/glossary#subnet-validator)).
+[Glossary: Subnet Validator](https://docs.learnbittensor.org/resources/glossary#validator-or-subnet-validator)).
 
 Scoring action and disclosure timing answer different reader questions on the same validator-weight
 path ([Glossary: Weight Matrix](https://docs.learnbittensor.org/resources/glossary#weight-matrix)).
@@ -321,4 +321,4 @@ path ([Glossary: Weight Matrix](https://docs.learnbittensor.org/resources/glossa
 - [Glossary: Drand/time-lock encryption](https://docs.learnbittensor.org/resources/glossary#drandtime-lock-encryption)
 - [Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)
 - [Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters)
-- [Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#validator-weights)
+- [Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#weight-vector)

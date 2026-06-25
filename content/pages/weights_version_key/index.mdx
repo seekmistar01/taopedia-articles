@@ -147,6 +147,20 @@ particular subnet or whether a given validator's submission currently meets it. 
 state and should be checked for the relevant netuid. The default of 0 is the documented value, and
 the parameter is owner-settable per subnet.
 
+## Relationship to Validator Weights
+
+The weights version key and validator weights meet at acceptance. Validator weights are the
+evaluation values a validator submits to rate miners, while the weights version key is the minimum
+version such a submission must carry, so validator weights arriving in a `set_weights` call below
+the key are rejected before they are recorded and the key gates whether submitted validator weights
+count
+([Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#validator-weights),
+[Glossary: Weight Setting](https://docs.learnbittensor.org/resources/glossary#weight-setting),
+[Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters)).
+
+- **Weights version key** — the minimum version a weight submission must carry to be accepted.
+- **Validator weights** — the submitted evaluation values that the key gates.
+
 ## Further Reading
 
 - [Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters)

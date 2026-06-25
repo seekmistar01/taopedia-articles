@@ -176,6 +176,19 @@ staking actions
 ([Staking and Delegation](https://docs.learnbittensor.org/staking-and-delegation/delegation),
 [Glossary: Unstaking](https://docs.learnbittensor.org/resources/glossary#unstaking)).
 
+## Relationship to Effective Stake
+
+Unstaking and effective stake describe a position as withdrawal and resulting total. Unstaking is
+the operation that removes staked TAO from a validator and returns it to the coldkey, while
+effective stake is that validator's combined self-and-delegated total, so unstaking lowers the
+effective stake of the validator the TAO leaves and with it that validator's stake-weighted
+influence ([Glossary: Unstaking](https://docs.learnbittensor.org/resources/glossary#unstaking),
+[Glossary: Effective Stake](https://docs.learnbittensor.org/resources/glossary#effective-stake),
+[Staking and delegation overview](https://docs.learnbittensor.org/staking-and-delegation/delegation)).
+
+- **Unstaking** — withdrawing staked TAO from a validator back to the coldkey.
+- **Effective stake** — the validator total that unstaking reduces.
+
 ## Further Reading
 
 - [Glossary: Unstaking](https://docs.learnbittensor.org/resources/glossary#unstaking)

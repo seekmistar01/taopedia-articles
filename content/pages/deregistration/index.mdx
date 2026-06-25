@@ -181,6 +181,19 @@ participants, or describe registration commands. Live replacement eligibility be
 validator references
 ([Glossary: Deregistration](https://docs.learnbittensor.org/resources/glossary#deregistration)).
 
+## Relationship to Pruning Score
+
+Deregistration and the pruning score act on the same removal decision as action and selector. The
+pruning score is the per-neuron value that ranks which UID is most expendable when a full subnet
+takes a new registration, while deregistration is the removal itself that frees that UID slot for
+the new entrant, so the score chooses the target and deregistration carries it out
+([Glossary: Pruning Score](https://docs.learnbittensor.org/resources/glossary#pruning-score),
+[Glossary: Deregistration](https://docs.learnbittensor.org/resources/glossary#deregistration),
+[Mining: Miner deregistration](https://docs.learnbittensor.org/miners#miner-deregistration)).
+
+- **Pruning score** — the per-neuron ranking that selects which UID is removed.
+- **Deregistration** — the removal that frees the selected UID slot.
+
 ## Further Reading
 
 - [Introduction to Bittensor: Subnet development](https://docs.learnbittensor.org/learn/introduction#subnet-development)

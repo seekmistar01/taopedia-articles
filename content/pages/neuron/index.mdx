@@ -31,9 +31,9 @@ accounts ([Understanding Neurons](https://docs.learnbittensor.org/learn/neurons)
 
 A [subnet miner](https://docs.learnbittensor.org/resources/glossary#subnet-miner) names the
 task-performing role inside a subnet, while a
-[subnet validator](https://docs.learnbittensor.org/resources/glossary#subnet-validator) names the
-evaluation role. A neuron is the participant record term; miner and validator are role terms for
-what that participant may do inside the subnet.
+[subnet validator](https://docs.learnbittensor.org/resources/glossary#validator-or-subnet-validator)
+names the evaluation role. A neuron is the participant record term; miner and validator are role
+terms for what that participant may do inside the subnet.
 
 ## Metagraph Context
 
@@ -147,7 +147,7 @@ govern how that participant's role is judged.
 
 ## Validator Weights and Yuma Consensus
 
-[Validator weights](https://docs.learnbittensor.org/resources/glossary#validator-weights) are the
+[Validator weights](https://docs.learnbittensor.org/resources/glossary#weight-vector) are the
 evaluation signals that validator-role participants submit for miners after judging their work.
 [Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus) aggregates those weight
 signals into miner incentives and validator dividends, applying clipping, bonding, and emission
@@ -206,7 +206,7 @@ succeeds ([The Subnet Metagraph](https://docs.learnbittensor.org/subnets/metagra
 Use neuron when discussing registered participant records; use UID slot when naming which position
 index on the netuid is in scope
 ([Glossary: Subnet Miner](https://docs.learnbittensor.org/resources/glossary#subnet-miner),
-[Glossary: Subnet Validator](https://docs.learnbittensor.org/resources/glossary#subnet-validator)).
+[Glossary: Subnet Validator](https://docs.learnbittensor.org/resources/glossary#validator-or-subnet-validator)).
 
 Participant record and position index answer different reader questions in the same subnet context
 ([Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid)).
@@ -232,7 +232,7 @@ participant snapshot for a netuid rather than a single record label
 
 Single participant record and full subnet snapshot answer different reader questions on the same
 netuid
-([Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#validator-weights)).
+([Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#weight-vector)).
 
 ## Further Reading
 

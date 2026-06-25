@@ -177,6 +177,20 @@ does not rise ([Glossary: Rank](https://docs.learnbittensor.org/resources/glossa
 - **Self-weighting** — a lone validator inflating weights for entities it controls.
 - **Rank** — the consensus standing that clipping protects from that inflation.
 
+## Relationship to Stake Weight
+
+Self-weighting and stake weight meet at how much a manipulation can matter. Self-weighting is a
+validator assigning inflated weights to entities it controls, while stake weight is the
+stake-derived value that scales how much that validator's weights count in consensus, so a
+self-weighting attempt moves the outcome only in proportion to the attacker's stake weight and stays
+negligible from a low-stake validator
+([Glossary: Stake Weight](https://docs.learnbittensor.org/resources/glossary#stake-weight),
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
+
+- **Self-weighting** — inflating weights toward entities a validator controls.
+- **Stake weight** — the value that scales how much that inflated weight can count.
+
 ## Further Reading
 
 - [Understanding Incentive Mechanisms](https://docs.learnbittensor.org/learn/anatomy-of-incentive-mechanism)

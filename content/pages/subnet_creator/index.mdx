@@ -164,6 +164,19 @@ work target and evaluation method
 ([Glossary: Subnet Creator](https://docs.learnbittensor.org/resources/glossary#subnet-creator),
 [Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets)).
 
+## Relationship to Immunity Period
+
+A subnet creator and the immunity period meet at configuration. A subnet creator is the role that
+defines a subnet's task and evaluation and sets the subnet's hyperparameters, while the immunity
+period is one such owner-settable hyperparameter that fixes how long a new UID is protected from
+deregistration, so the creator chooses the immunity window its subnet enforces
+([Glossary: Immunity Period](https://docs.learnbittensor.org/resources/glossary#immunity-period),
+[Glossary: Subnet Creator](https://docs.learnbittensor.org/resources/glossary#subnet-creator),
+[Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters)).
+
+- **Subnet creator** — the owner role that sets the subnet's hyperparameters.
+- **Immunity period** — the owner-settable window protecting new UIDs from deregistration.
+
 ## Further Reading
 
 - [Glossary: Subnet Creator](https://docs.learnbittensor.org/resources/glossary#subnet-creator)

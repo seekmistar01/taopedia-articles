@@ -140,6 +140,19 @@ median clipping benchmark rather than the stake threshold itself
 Majority threshold and clipping benchmark answer different reader questions inside the same epoch
 ([Glossary: Trust](https://docs.learnbittensor.org/resources/glossary#trust)).
 
+## Relationship to Trust
+
+Kappa and trust meet at the consensus benchmark. Kappa is the majority-stake fraction that sets the
+threshold used when computing the stake-weighted consensus benchmark, while trust is the
+consensus-alignment measure evaluated relative to that benchmark, so kappa defines where the
+threshold sits and trust reflects alignment with the resulting consensus
+([Glossary: Kappa](https://docs.learnbittensor.org/resources/glossary#kappa),
+[Glossary: Trust](https://docs.learnbittensor.org/resources/glossary#trust),
+[Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
+
+- **Kappa** — the majority-stake fraction that sets the consensus benchmark threshold.
+- **Trust** — the consensus-alignment measure evaluated relative to that benchmark.
+
 ## Further Reading
 
 - [Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters)

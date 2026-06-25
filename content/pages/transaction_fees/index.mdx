@@ -204,6 +204,19 @@ neighboring vocabulary when the question is a read, swap fee, batch wrapper, rec
 record, or a fee observation tied to one network environment
 ([Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-networks)).
 
+## Relationship to Mempool
+
+Transaction fees and the mempool sit on the same submission path as cost and queue. A transaction
+fee is the cost the chain attaches to a state-changing action, while the mempool is the holding area
+where submitted transactions wait before a block includes them, so a transaction carries its fee
+while it sits in the mempool awaiting inclusion
+([Glossary: Mempool](https://docs.learnbittensor.org/resources/glossary#mempool),
+[Transaction Fees in Bittensor](https://docs.learnbittensor.org/learn/fees),
+[Glossary: Transaction Fees](https://docs.learnbittensor.org/resources/glossary#transaction-fees)).
+
+- **Transaction fees** — the cost the chain attaches to a state-changing action.
+- **Mempool** — the queue where fee-bearing transactions wait before inclusion.
+
 ## Further Reading
 
 - [Transaction Fees in Bittensor](https://docs.learnbittensor.org/learn/fees)

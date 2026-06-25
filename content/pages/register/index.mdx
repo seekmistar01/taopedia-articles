@@ -224,6 +224,19 @@ quote, a guarantee of future rewards, or a status report on any specific subnet'
 capacity. Exact registration steps, prices, and subnet-specific details belong in current
 documentation at the time of observation.
 
+## Relationship to Validator Permit
+
+Register and the validator permit are separate subnet states a UID can hold. Register is the
+subnet-entry action that places a hotkey on a UID slot, while the validator permit is the rights
+flag, awarded to the top neurons by stake weight, that records whether that registered UID may
+submit counting validator weights, so registration alone does not grant the permit
+([Glossary: Register](https://docs.learnbittensor.org/resources/glossary#register),
+[Glossary: Validator Permit](https://docs.learnbittensor.org/resources/glossary#validator-permit),
+[Validating: Validator registration](https://docs.learnbittensor.org/validators#validator-registration)).
+
+- **Register** — the entry action that places a hotkey on a subnet UID slot.
+- **Validator permit** — the separate right to submit counting weights, earned by top stake weight.
+
 ## Further Reading
 
 - [Glossary: Register](https://docs.learnbittensor.org/resources/glossary#register)

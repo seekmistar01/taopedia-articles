@@ -72,11 +72,11 @@ evaluations into consensus processing
 The chain assembles those vectors into the subnet-level
 [weight matrix](https://docs.learnbittensor.org/resources/glossary#weight-matrix) that
 [Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus) reads as ranking input.
-[Validator weights](https://docs.learnbittensor.org/resources/glossary#validator-weights) name the
+[Validator weights](https://docs.learnbittensor.org/resources/glossary#weight-vector) name the
 submitted scores; the weight matrix names the gathered input set; Yuma Consensus applies clipping,
 bonding, and emission calculation to turn that matrix into miner
 [incentives](https://docs.learnbittensor.org/resources/glossary#incentives) and validator
-[dividends](https://docs.learnbittensor.org/resources/glossary#dividends).
+[dividends](https://docs.learnbittensor.org/resources/glossary#emission).
 
 The useful pipeline order on a subnet such as netuid 1 is therefore miner response, scoring-model
 evaluation, weight vector submission, matrix assembly, Yuma clipping and aggregation, and
@@ -95,7 +95,7 @@ Miners produce responses for the subnet, and validators evaluate those responses
 standards. Miners and validators are separate subnet roles
 ([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
 [Glossary: Subnet Miner](https://docs.learnbittensor.org/resources/glossary#subnet-miner),
-[Glossary: Subnet Validator](https://docs.learnbittensor.org/resources/glossary#subnet-validator),
+[Glossary: Subnet Validator](https://docs.learnbittensor.org/resources/glossary#validator-or-subnet-validator),
 [Glossary: Subnet Scoring Model](https://docs.learnbittensor.org/resources/glossary#subnet-scoring-model)).
 
 The scoring model is the method validators apply to that work. It links miner responses to validator
@@ -185,7 +185,7 @@ weight vectors and Yuma Consensus
 - [Glossary: Subnet Scoring Model](https://docs.learnbittensor.org/resources/glossary#subnet-scoring-model)
 - [Glossary: Subnet Task](https://docs.learnbittensor.org/resources/glossary#subnet-task)
 - [Glossary: Subnet Miner](https://docs.learnbittensor.org/resources/glossary#subnet-miner)
-- [Glossary: Subnet Validator](https://docs.learnbittensor.org/resources/glossary#subnet-validator)
+- [Glossary: Subnet Validator](https://docs.learnbittensor.org/resources/glossary#validator-or-subnet-validator)
 - [Understanding Incentive Mechanisms](https://docs.learnbittensor.org/learn/anatomy-of-incentive-mechanism)
 - [Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets)
 - [Glossary: Weight Vector](https://docs.learnbittensor.org/resources/glossary#weight-vector)

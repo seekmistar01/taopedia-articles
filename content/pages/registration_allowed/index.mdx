@@ -137,6 +137,19 @@ pause control. Live hyperparameter values for a subnet belong in current chain s
 subnet hyperparameter references
 ([Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters)).
 
+## Relationship to Recycling
+
+Registration allowed and recycling sit on the same registration path as switch and mechanism.
+Registration allowed is the per-subnet hyperparameter that controls whether new neurons may register
+at all, while recycling is the mechanism by which a registering neuron's TAO is burned to claim a
+UID; when the toggle is off, no recycling-based registration can occur on that subnet
+([Glossary: Recycling](https://docs.learnbittensor.org/resources/glossary#recycling),
+[Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters),
+[Recycling and Burning](https://docs.learnbittensor.org/learn/emissions)).
+
+- **Registration allowed** — the toggle for whether a subnet accepts new registrations.
+- **Recycling** — the TAO-burn mechanism used to register, available only while the toggle is on.
+
 ## Further Reading
 
 - [Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters)

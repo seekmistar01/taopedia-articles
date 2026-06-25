@@ -239,6 +239,20 @@ through clipping; validator trust summarizes validator-side influence left by cl
 [Rank](https://docs.learnbittensor.org/resources/glossary#rank) names miner-side results; validator
 trust stays on the validator side of the filtered weight set.
 
+## Relationship to Validator Permit
+
+Validator trust and the validator permit sit on the same weight-submission path as eligibility gate
+and resulting measure. The validator permit is the binary right, awarded to top neurons by stake
+weight, that records whether a validator may submit counting weights, while validator trust is the
+metric measured only on weights that do count, indicating how much of that submitted weight survives
+consensus clipping, so the permit decides whether weights enter and trust reads what happens to them
+([Glossary: Validator Permit](https://docs.learnbittensor.org/resources/glossary#validator-permit),
+[Glossary: Validator Trust](https://docs.learnbittensor.org/resources/glossary#validator-trust),
+[Validating: Validator registration](https://docs.learnbittensor.org/validators#validator-registration)).
+
+- **Validator permit** — the right that lets a validator's weights count at all.
+- **Validator trust** — the measure of how much of those counting weights survive consensus.
+
 ## Further Reading
 
 - [Glossary: Validator Trust](https://docs.learnbittensor.org/resources/glossary#validator-trust)

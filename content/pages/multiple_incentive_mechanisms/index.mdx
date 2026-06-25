@@ -180,6 +180,19 @@ were distributed in a specific case
 The stable reference point is separation: several evaluation mechanisms can exist inside one subnet,
 with their own evaluation systems and bond pools.
 
+## Relationship to Rank
+
+Multiple incentive mechanisms and rank connect a subnet's split evaluation to separate standings.
+Multiple incentive mechanisms is the case where one subnet runs more than one evaluation mechanism,
+each with its own bond pool, while rank is the consensus standing produced per mechanism, so a
+subnet with several mechanisms computes a separate rank within each rather than one combined
+ordering ([Glossary: Rank](https://docs.learnbittensor.org/resources/glossary#rank),
+[Glossary: Multiple Incentive Mechanisms](https://docs.learnbittensor.org/resources/glossary#multiple-incentive-mechanisms),
+[Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
+
+- **Multiple incentive mechanisms** — several evaluation mechanisms inside one subnet.
+- **Rank** — the consensus standing computed separately within each mechanism.
+
 ## Further Reading
 
 - [Glossary: Multiple Incentive Mechanisms](https://docs.learnbittensor.org/resources/glossary#multiple-incentive-mechanisms)

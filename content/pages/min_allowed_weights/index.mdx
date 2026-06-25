@@ -104,8 +104,8 @@ is structurally valid before that aggregation begins
 Subnet [hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters) include an
 activity cutoff measured in blocks within each
 [epoch](https://docs.learnbittensor.org/resources/glossary#epoch). Documentation states that a
-[validator](https://docs.learnbittensor.org/resources/glossary#subnet-validator) who does not submit
-[validator weights](https://docs.learnbittensor.org/resources/glossary#validator-weights) within the
+[validator](https://docs.learnbittensor.org/resources/glossary#validator-or-subnet-validator) who does not submit
+[validator weights](https://docs.learnbittensor.org/resources/glossary#weight-vector) within the
 first activity-cutoff blocks of the epoch cannot participate in the current epoch.
 
 Min allowed weights and activity cutoff therefore govern different parts of the same submission. The
@@ -138,7 +138,7 @@ allowed weights is the per-subnet hyperparameter that sets the fewest weights a 
 assign, while weight setting is the `set_weights` action that submits the vector, so a
 weight-setting call that includes fewer weights than the minimum is rejected and the constraint
 shapes what a valid submission must contain
-([Glossary: Weight Setting](https://docs.learnbittensor.org/resources/glossary#weight-setting),
+([Glossary: Weight Setting](https://docs.learnbittensor.org/resources/glossary#weight-vector),
 [Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters),
 [Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
 

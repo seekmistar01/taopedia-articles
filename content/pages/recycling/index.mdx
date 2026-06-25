@@ -172,6 +172,19 @@ That reading keeps recycling separate from broader supply statements. It can exp
 outcome, but it does not predict emissions, set valuation expectations, or report a live supply
 number.
 
+## Relationship to Burn Cost
+
+Recycling and the burn cost meet at registration. The burn cost is the TAO a participant pays to
+register a neuron and claim a UID, while recycling is the supply-accounting treatment that returns
+that paid TAO to future protocol distribution instead of removing it permanently, so a recycle-style
+registration burn is recycled into later emission rather than destroyed
+([Glossary: Burn Cost](https://docs.learnbittensor.org/resources/glossary#burn-cost),
+[Glossary: Recycling](https://docs.learnbittensor.org/resources/glossary#recycling),
+[Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters)).
+
+- **Burn cost** — the TAO paid to register a neuron and claim a UID.
+- **Recycling** — the treatment that returns that paid TAO to future emission.
+
 ## Further Reading
 
 - [Glossary: Recycling](https://docs.learnbittensor.org/resources/glossary#recycling)

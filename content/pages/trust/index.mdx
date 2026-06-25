@@ -39,7 +39,7 @@ comparing validator signals across the set
 Trust therefore sits after validator weights and consensus score. Validator weights provide input,
 consensus score supports clipping, and trust describes the miner-side support left after that
 filtering step
-([Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#validator-weights),
+([Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#weight-vector),
 [Glossary: Consensus Score](https://docs.learnbittensor.org/resources/glossary#consensus-score)).
 
 ## Consensus Clipping
@@ -89,13 +89,13 @@ a subnet.
 The distinction is role direction. Trust concerns support for an evaluated miner. Validator trust
 concerns validator-side influence reflected by clipped weights
 ([Glossary: Validator Trust](https://docs.learnbittensor.org/resources/glossary#validator-trust),
-[Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#validator-weights)).
+[Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#weight-vector)).
 
 ## Weights and Scores
 
 Validator weights are the input signals, and consensus score is the benchmark used to clip outlier
 weights. Trust is read after those filtering steps affect miner-side support
-([Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#validator-weights),
+([Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#weight-vector),
 [Glossary: Consensus Score](https://docs.learnbittensor.org/resources/glossary#consensus-score)).
 
 This makes trust downstream of weight input language. A validator weight can contribute to the
@@ -225,7 +225,7 @@ Specific trust values belong to the subnet, network, and consensus run that prod
 - [Glossary: Trust](https://docs.learnbittensor.org/resources/glossary#trust)
 - [Glossary: Rank](https://docs.learnbittensor.org/resources/glossary#rank)
 - [Glossary: Validator Trust](https://docs.learnbittensor.org/resources/glossary#validator-trust)
-- [Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#validator-weights)
+- [Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#weight-vector)
 - [Glossary: Weight Matrix](https://docs.learnbittensor.org/resources/glossary#weight-matrix)
 - [Consensus Score](https://docs.learnbittensor.org/resources/glossary#consensus-score)
 - [Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)

@@ -325,6 +325,24 @@ The [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-netw
 separates mainnet, testnet, and localnet. A subnet-task example from one environment should not be
 read as representing production task design on another network.
 
+## The Task Defines What "Good Work" Means for a Subnet
+
+A subnet task is more than a label for activity; documentation frames it as the thing that gives
+validator evaluation something concrete to measure. Without a defined task, there is no stable basis
+for comparing miner outputs, so the task is what makes scoring meaningful in the first place
+([Understanding Incentive Mechanisms](https://docs.learnbittensor.org/learn/anatomy-of-incentive-mechanism),
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets)).
+
+For readers, this is why the task sits upstream of weights and emissions. Validators encode their
+judgment of task performance into weight vectors, and consensus turns those into incentives, so a
+poorly defined task weakens every step that follows
+([Glossary: Weight Vector](https://docs.learnbittensor.org/resources/glossary#weight-vector)).
+
+That dependency also explains why tasks differ so much across subnets. Each subnet defines its own
+task to match the useful work it targets, which is why a strong result on one subnet's task does not
+translate into another's
+([Glossary: Subnet Scoring Model](https://docs.learnbittensor.org/resources/glossary#subnet-scoring-model)).
+
 ## Reader Boundary
 
 Subnet task is requested-work terminology. It is not the scoring model, the protocol, the consensus

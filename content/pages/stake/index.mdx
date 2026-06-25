@@ -179,6 +179,30 @@ ranking, or stake weight itself
 
 A stake amount should stay attached to its validator and subnet context.
 
+## Relationship to Validator Permit
+
+Stake and the validator permit sit on the same validation-rights path but name different things.
+Stake, interpreted as stake weight, is the validator-associated amount that determines consensus
+influence, while the validator permit is the binary rights flag awarded to the top neurons by stake
+weight on a subnet
+([Glossary: Stake Weight](https://docs.learnbittensor.org/resources/glossary#stake-weight),
+[Glossary: Validator Permit](https://docs.learnbittensor.org/resources/glossary#validator-permit)).
+
+Stake position is what earns the permit, but it is not the permit itself. A neuron's stake weight
+determines whether it ranks among the top neurons that receive the flag; the permit then records
+whether that neuron may submit validator weights that count in the subnet
+([Glossary: Validator Permit](https://docs.learnbittensor.org/resources/glossary#validator-permit),
+[Understanding Subnets: Validator stake weight](https://docs.learnbittensor.org/subnets/understanding-subnets#validator-stake-weight)).
+
+Use stake when covering the validator-associated amount and its consensus weighting; use validator
+permit when covering the binary right to submit weights that the top-stake neurons earn
+([Glossary: Stake](https://docs.learnbittensor.org/resources/glossary#stake),
+[Glossary: Validator Permit](https://docs.learnbittensor.org/resources/glossary#validator-permit)).
+
+Stake amount and weight-submission right answer different reader questions on the same subnet
+validation path
+([Glossary: Stake Weight](https://docs.learnbittensor.org/resources/glossary#stake-weight)).
+
 ## Further Reading
 
 - [Glossary: Stake](https://docs.learnbittensor.org/resources/glossary#stake)

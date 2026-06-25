@@ -55,7 +55,7 @@ that represent their scoring of miner performance
 Those role names matter. Miner refers to the work-producing side of the subnet, while validator
 refers to the evaluation side
 ([Glossary: Miner](https://docs.learnbittensor.org/resources/glossary#subnet-miner),
-[Glossary: Validator](https://docs.learnbittensor.org/resources/glossary#subnet-validator)).
+[Glossary: Validator](https://docs.learnbittensor.org/resources/glossary#validator-or-subnet-validator)).
 
 This loop is central to subnet creation. A mechanism has to make the miner side legible to the
 validator side: miners need a target they can satisfy, and validators need a scoring method that can
@@ -63,7 +63,7 @@ separate stronger outputs from weaker ones.
 
 The loop also keeps mechanism language narrow. Miner output, validator measurement, and weight
 submission are separate parts of the same repeatable mechanism
-([Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#validator-weights)).
+([Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#weight-vector)).
 
 ## Consensus and Emission Path
 
@@ -78,7 +78,7 @@ consensus and emissions use the resulting validator signals in the reward path.
 Validator weights sit between evaluation and consensus. They express validator scoring of miner
 performance, while Yuma Consensus aggregates those signals into outputs that feed incentives and
 dividends
-([Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#validator-weights)).
+([Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#weight-vector)).
 
 ## Multiple-Mechanism Context
 

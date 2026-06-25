@@ -265,6 +265,19 @@ The useful boundary is evaluation independence. Similar-looking validator scores
 honest convergence; weight copying concerns dependence on copied or derived weight information
 ([Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
 
+## Relationship to Consensus Score
+
+Weight copying and consensus score describe the same evaluation step as exploit and benchmark.
+Weight copying is when a validator submits another validator's weights instead of evaluating miners
+itself, while consensus score is the stake-weighted benchmark those submitted weights are measured
+against, so copied weights aim to track that benchmark without independent work
+([Glossary: Consensus Score](https://docs.learnbittensor.org/resources/glossary#consensus-score),
+[Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus),
+[Implementation of the Yuma Consensus Epoch](https://docs.learnbittensor.org/navigating-subtensor/epoch)).
+
+- **Weight copying** — submitting another validator's weights instead of evaluating independently.
+- **Consensus score** — the stake-weighted benchmark those weights are measured against.
+
 ## Further Reading
 
 - [Weight Copying Problem](https://docs.learnbittensor.org/concepts/weight-copying-in-bittensor)

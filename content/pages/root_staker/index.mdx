@@ -138,6 +138,19 @@ Both paths apply the same configured Keep-or-Swap handling to the claimed divide
 chooses the handling setting once; automatic and manual claims both follow it rather than requiring
 a separate choice each time.
 
+## Relationship to TAO Weight
+
+A root staker and tao weight describe root stake as role and scaling factor. A root staker is the
+TAO holder who stakes on the Root Subnet through validators, while tao weight is the global
+multiplier that sets how much root (TAO) stake counts relative to a subnet's own alpha stake when
+stake weight is computed, so a root staker's influence is scaled by the prevailing tao weight
+([Glossary: Root Staker](https://docs.learnbittensor.org/resources/glossary#root-staker),
+[Glossary: TAO Weight](https://docs.learnbittensor.org/resources/glossary#tao-weight),
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets)).
+
+- **Root staker** — the holder who stakes on the Root Subnet through validators.
+- **TAO weight** — the multiplier that scales how that root stake counts against alpha stake.
+
 ## Further Reading
 
 - [Glossary: Root Staker](https://docs.learnbittensor.org/resources/glossary#root-staker)

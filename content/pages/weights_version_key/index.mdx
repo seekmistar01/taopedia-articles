@@ -169,6 +169,19 @@ References:
 [Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters),
 [Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)
 
+## Relationship to Weight Setting
+
+The weights version key and weight setting act on the same submission as gate and action. The
+weights version key is the per-subnet hyperparameter that sets the minimum version a `set_weights`
+call must carry, while weight setting is the act of submitting that weight vector; a call carrying a
+version below the key is rejected before the weights are recorded
+([Glossary: Weight Setting](https://docs.learnbittensor.org/resources/glossary#weight-setting),
+[Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters),
+[Implementation of the Yuma Consensus Epoch](https://docs.learnbittensor.org/navigating-subtensor/epoch)).
+
+- **Weights version key** — the minimum version a weight submission must carry to be accepted.
+- **Weight setting** — the act of submitting the weight vector that the key gates.
+
 ## Further Reading
 
 - [Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters)

@@ -32,7 +32,7 @@ Locked stake is subnet alpha stake constrained by a lock. The conviction staking
 explains that the locked amount limits how far the staked alpha balance on that subnet can fall
 while the lock is active
 ([Conviction and locked stake](https://docs.learnbittensor.org/staking-and-delegation/conviction-staking),
-[Glossary: Alpha Tokens](https://docs.learnbittensor.org/resources/glossary#alpha-tokens)).
+[Glossary: Alpha Tokens](https://docs.learnbittensor.org/resources/glossary#protocol-alpha)).
 
 That makes locked stake narrower than ordinary stake. The stake still belongs to a subnet alpha
 context, but the locked portion carries an additional commitment constraint.
@@ -79,7 +79,7 @@ type or as a promise about validator rewards.
 
 Conviction and locked stake apply to subnet alpha already staked inside a specific subnet. Alpha
 tokens are subnet-specific, and staking into subnets places stake in subnet-local context
-([Glossary: Alpha Tokens](https://docs.learnbittensor.org/resources/glossary#alpha-tokens),
+([Glossary: Alpha Tokens](https://docs.learnbittensor.org/resources/glossary#protocol-alpha),
 [Staking into Subnets](https://docs.learnbittensor.org/staking-and-delegation/delegation#staking-into-subnets)).
 
 The concept is therefore separate from Root Subnet TAO staking and from ordinary unlocked stake. An
@@ -103,7 +103,7 @@ authority term.
 
 [Conviction and locked stake](https://docs.learnbittensor.org/staking-and-delegation/conviction-staking)
 documentation describes the lock as a floor on how low total staked
-[Glossary: Alpha Tokens](https://docs.learnbittensor.org/resources/glossary#alpha-tokens) on a
+[Glossary: Alpha Tokens](https://docs.learnbittensor.org/resources/glossary#protocol-alpha) on a
 subnet can fall for one coldkey. Stake above that locked floor is not itself locked and can leave
 through ordinary [Glossary: Unstaking](https://docs.learnbittensor.org/resources/glossary#unstaking)
 paths
@@ -155,12 +155,12 @@ values finish falling toward zero.
 ## Locked Stake, Conviction, and Yuma on netuid 1
 
 On a subnet such as netuid 1, locked
-[alpha](https://docs.learnbittensor.org/resources/glossary#alpha) stake constrains how far a staked
+[alpha](https://docs.learnbittensor.org/resources/glossary#protocol-alpha) stake constrains how far a staked
 position can fall while building a public conviction signal
 ([Conviction and locked stake](https://docs.learnbittensor.org/staking-and-delegation/conviction-staking)).
 
 That commitment path sits on subnet staking vocabulary rather than on
-[validator weights](https://docs.learnbittensor.org/resources/glossary#validator-weights) or
+[validator weights](https://docs.learnbittensor.org/resources/glossary#weight-vector) or
 [Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus) scoring
 ([Emission](https://docs.learnbittensor.org/learn/emissions)).
 
@@ -193,7 +193,7 @@ read as evidence for another environment.
 Conviction and locked stake are commitment vocabulary for subnet alpha, not a separate token, a
 validator recommendation, or a reward forecast
 ([Conviction and locked stake](https://docs.learnbittensor.org/staking-and-delegation/conviction-staking),
-[Glossary: Alpha Tokens](https://docs.learnbittensor.org/resources/glossary#alpha-tokens)).
+[Glossary: Alpha Tokens](https://docs.learnbittensor.org/resources/glossary#protocol-alpha)).
 
 Conviction names the time-based signal built from locked stake; stake names the amount in the
 position. Root Subnet TAO staking and ordinary unlocked alpha stake are separate paths
@@ -220,7 +220,7 @@ already carries weight
 - [Conviction score](https://docs.learnbittensor.org/staking-and-delegation/conviction-staking#the-conviction-score)
 - [Decaying and perpetual modes](https://docs.learnbittensor.org/staking-and-delegation/conviction-staking#decaying-and-perpetual-modes)
 - [Staking into Subnets](https://docs.learnbittensor.org/staking-and-delegation/delegation#staking-into-subnets)
-- [Glossary: Alpha Tokens](https://docs.learnbittensor.org/resources/glossary#alpha-tokens)
+- [Glossary: Alpha Tokens](https://docs.learnbittensor.org/resources/glossary#protocol-alpha)
 - [Glossary: Stake](https://docs.learnbittensor.org/resources/glossary#stake)
 - [Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)
 - [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-networks)

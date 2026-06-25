@@ -130,6 +130,20 @@ This keeps the role terms separate from the mechanism-specific rules that decide
 rewards. A complete subnet example needs both the roles and the mechanism that gives those roles
 their rules.
 
+## Relationship to Validator Permit
+
+Mining and validating describe two roles, and the validator permit gates whether the validating
+side's output counts. Validating is the role that evaluates miner work and submits weights, while
+the validator permit is the right, held by the top neurons by stake weight, that records whether
+those submitted weights are counted in consensus, so a neuron can validate but its weights only
+enter consensus while it holds the permit
+([Glossary: Validator Permit](https://docs.learnbittensor.org/resources/glossary#validator-permit),
+[Validators](https://docs.learnbittensor.org/validators),
+[Mining](https://docs.learnbittensor.org/miners)).
+
+- **Validating** — the role that evaluates miners and submits weights.
+- **Validator permit** — the right that lets those submitted weights count in consensus.
+
 ## Further Reading
 
 - [Mining](https://docs.learnbittensor.org/miners)

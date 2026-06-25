@@ -224,6 +224,11 @@ async function validateArticle(slug, articleDir, knownTargets) {
     );
   }
   validateTags(data, articlePath);
+  if (/\[[^\]]+\]\([^)]+\)|\[\[|[*\`]|<[a-z]/i.test(data.summary)) {
+    throw new Error(
+      `${articlePath}: front matter field "summary" must be plain text (no Markdown, wiki links, emphasis, or HTML)`
+    );
+  }
   for (const target of [...extractWikiLinks(content), ...extractWikiLinksFromValue(data)]) {
     const normalizedTarget = slugifyWikiLink(target);
     if (!knownTargets.has(normalizedTarget)) {

@@ -169,6 +169,19 @@ and should be checked for the relevant netuid at the time of observation. The nu
 the 64 minimum and the roughly 30-day rate limit, are documented protocol values
 ([UID Trimming](https://docs.learnbittensor.org/subnets/uid-trimming)).
 
+## Relationship to Pruning Score
+
+UID trimming and the pruning score both reduce a subnet's UID set but through different mechanisms.
+UID trimming is the owner-initiated operation that shrinks the registered set down to a chosen
+maximum and compacts the remaining UIDs, while the pruning score is the per-neuron value that ranks
+which single UID is displaced when a full subnet takes a new registration
+([Glossary: Pruning Score](https://docs.learnbittensor.org/resources/glossary#pruning-score),
+[UID Trimming](https://docs.learnbittensor.org/subnets/uid-trimming),
+[Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters)).
+
+- **UID trimming** — the owner-initiated bulk shrink of the registered UID set to a maximum.
+- **Pruning score** — the per-neuron ranking that selects one UID for removal on a full subnet.
+
 ## Further Reading
 
 - [UID Trimming](https://docs.learnbittensor.org/subnets/uid-trimming)

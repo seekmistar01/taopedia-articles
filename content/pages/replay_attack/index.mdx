@@ -144,6 +144,18 @@ References: [Glossary: Synapse](https://docs.learnbittensor.org/resources/glossa
 [Glossary: Dendrite](https://docs.learnbittensor.org/resources/glossary#dendrite),
 [Glossary: Axon](https://docs.learnbittensor.org/resources/glossary#axon)
 
+## Relationship to Mempool
+
+A replay attack and the mempool meet at transaction acceptance. A replay attack resends an
+already-signed message hoping it is accepted again, while the mempool is the holding area where
+submitted transactions wait before inclusion, so a replayed transaction re-enters the mempool and
+must be rejected there rather than re-executed
+([Glossary: Mempool](https://docs.learnbittensor.org/resources/glossary#mempool),
+[Transaction Fees in Bittensor](https://docs.learnbittensor.org/learn/fees)).
+
+- **Replay attack** — resending an already-signed message to be accepted twice.
+- **Mempool** — the queue a replayed transaction re-enters and must be rejected from.
+
 ## Further Reading
 
 - [bittensor.core.axon](https://docs.learnbittensor.org/python-api/html/autoapi/bittensor/core/axon/)

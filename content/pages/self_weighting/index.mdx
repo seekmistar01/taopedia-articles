@@ -164,6 +164,19 @@ different situation, nor does it quantify any threshold. The stake distribution 
 that decide how strong the resistance is on any subnet are live chain state and change over time
 ([Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
 
+## Relationship to Rank
+
+Self-weighting and rank describe the same manipulation attempt as the action and the result it
+targets. Self-weighting is a lone validator assigning inflated weights to entities it controls,
+while rank is the consensus standing produced after all validators' weights are clipped toward the
+stake-weighted majority, so a single inflated weight is clipped away and the self-dealt miner's rank
+does not rise ([Glossary: Rank](https://docs.learnbittensor.org/resources/glossary#rank),
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
+
+- **Self-weighting** — a lone validator inflating weights for entities it controls.
+- **Rank** — the consensus standing that clipping protects from that inflation.
+
 ## Further Reading
 
 - [Understanding Incentive Mechanisms](https://docs.learnbittensor.org/learn/anatomy-of-incentive-mechanism)

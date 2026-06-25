@@ -166,6 +166,23 @@ The [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-netw
 separates mainnet, testnet, and localnet. Autostaking examples from one environment should not be
 read as emission routing outcomes on another network.
 
+## Autostaking Changes Where Emissions Go, Not How They Are Earned
+
+A clarifying boundary is that autostaking is a routing convenience layered on top of emissions, not
+a change to how rewards are produced. Documentation describes it as automatically directing earned
+emissions into staking, so the underlying consensus and emission mechanics stay the same
+([Auto Staking for Miners](https://docs.learnbittensor.org/miners/autostaking),
+[Emission](https://docs.learnbittensor.org/learn/emissions)).
+
+For readers, this separates earning from compounding. The amount earned is still determined by
+evaluation and the emission split, while autostaking only decides that the earned value is restaked
+rather than left idle ([Glossary: Stake](https://docs.learnbittensor.org/resources/glossary#stake)).
+
+That framing also explains why autostaking is described as optional automation. Because it acts
+after emissions are credited, turning it on or off changes what happens to rewards next, not whether
+or how they were produced in the first place
+([Understanding Incentive Mechanisms](https://docs.learnbittensor.org/learn/anatomy-of-incentive-mechanism)).
+
 ## Reader Boundary
 
 Autostaking names automatic routing of earned miner emissions into validator staking

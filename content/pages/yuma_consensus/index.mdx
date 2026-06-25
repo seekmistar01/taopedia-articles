@@ -14,7 +14,7 @@ incentives and validator dividends. Validators evaluate miner work inside a subn
 and Yuma Consensus aggregates those weights into the reward outcomes used by the subnet
 ([Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus),
 [Glossary: Yuma Consensus](https://docs.learnbittensor.org/resources/glossary#yuma-consensus),
-[Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#validator-weights)).
+[Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#weight-vector)).
 
 The term belongs to the consensus layer of subnet incentives. It does not describe the off-chain
 scoring system that produced the weights, and it does not replace the emission process that later
@@ -27,7 +27,7 @@ allocates value through Bittensor tokenomics
 Validator weights are the main input vocabulary for Yuma Consensus. They are per-validator
 evaluation signals for miners, formed after subnet-specific scoring and then used by consensus to
 calculate outcomes
-([Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#validator-weights),
+([Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#weight-vector),
 [Understanding Incentive Mechanisms](https://docs.learnbittensor.org/learn/anatomy-of-incentive-mechanism)).
 
 That input boundary separates Yuma Consensus from the off-chain scoring process. A subnet's
@@ -43,7 +43,7 @@ Incentives are the miner-side reward outcome, while dividends are the validator-
 inside the same consensus flow
 ([Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus),
 [Glossary: Incentives](https://docs.learnbittensor.org/resources/glossary#incentives),
-[Glossary: Dividends](https://docs.learnbittensor.org/resources/glossary#dividends)).
+[Glossary: Dividends](https://docs.learnbittensor.org/resources/glossary#emission)).
 
 That makes Yuma Consensus an allocation mechanism rather than a general performance label. It
 answers how many validator signals are combined into reward outcomes, not what task a subnet asks
@@ -185,8 +185,8 @@ to favor certain miners
 
 The consensus score is the stake-weighted median benchmark used in that step. That median creates a
 threshold that filters outlier
-[validator weights](https://docs.learnbittensor.org/resources/glossary#validator-weights) before
-they reach final [rank](https://docs.learnbittensor.org/resources/glossary#rank) calculations
+[validator weights](https://docs.learnbittensor.org/resources/glossary#weight-vector) before they
+reach final [rank](https://docs.learnbittensor.org/resources/glossary#rank) calculations
 ([Glossary: Consensus Score](https://docs.learnbittensor.org/resources/glossary#consensus-score)).
 
 When a submitted weight exceeds the clipped benchmark for a miner, neither the miner nor the
@@ -220,7 +220,7 @@ multiplied by each miner's incentive outcome
 That pairing links the two reward sides inside one consensus flow.
 [Incentives](https://docs.learnbittensor.org/resources/glossary#incentives) name miner-side outcomes
 produced from clipped and aggregated weight signals, while
-[dividends](https://docs.learnbittensor.org/resources/glossary#dividends) name validator-side
+[dividends](https://docs.learnbittensor.org/resources/glossary#emission) name validator-side
 outcomes derived from bond strength relative to those miner results.
 
 Dividend calculation uses smoothed exponential moving average bond values rather than instantaneous
@@ -264,7 +264,7 @@ Official epoch documentation places validator signal processing inside a bounded
 Consensus documentation explains clipping, bonding, and emission allocation from the submitted
 weights
 ([Implementation of the Yuma Consensus Epoch](https://docs.learnbittensor.org/navigating-subtensor/epoch),
-[Glossary: Dividends](https://docs.learnbittensor.org/resources/glossary#dividends)).
+[Glossary: Dividends](https://docs.learnbittensor.org/resources/glossary#emission)).
 
 Name Yuma Consensus when covering aggregation rules; name epoch when covering which consensus period
 on a selected netuid is being discussed

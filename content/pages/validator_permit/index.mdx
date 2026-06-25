@@ -140,6 +140,30 @@ validator influence, and VPermit names broader authorization context
 The term is narrow: a validator permit is the subnet-scoped rights flag, not a full validator guide
 or a ranking of subnet performance.
 
+## Relationship to Activity Cutoff
+
+A validator permit and activity cutoff are two different gates on whether a validator's weights
+count in a subnet's consensus pass. The permit is a permission flag that records whether a UID may
+submit validator weights, while activity cutoff is the early-epoch block window that sets when those
+weights must arrive to be included
+([Glossary: Validator Permit](https://docs.learnbittensor.org/resources/glossary#validator-permit),
+[Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters),
+[Glossary: Activity Cutoff](https://docs.learnbittensor.org/resources/glossary#activity-cutoff)).
+
+A permitted validator still has to submit inside that window. Weights from a validator that holds
+the permit but arrives after the activity-cutoff window can miss the current consensus pass, so the
+permission gate and the timing gate are checked separately
+([Implementation of the Yuma Consensus Epoch](https://docs.learnbittensor.org/navigating-subtensor/epoch),
+[Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#validator-weights)).
+
+Use validator permit when covering whether weight submission is allowed in the subnet; use activity
+cutoff when covering when that submission must happen inside the epoch
+([Glossary: Validator Permit](https://docs.learnbittensor.org/resources/glossary#validator-permit),
+[Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters)).
+
+Permission and timing answer different questions on the same weight-submission path
+([Implementation of the Yuma Consensus Epoch](https://docs.learnbittensor.org/navigating-subtensor/epoch)).
+
 ## Further Reading
 
 - [Glossary: Validator Permit](https://docs.learnbittensor.org/resources/glossary#validator-permit)

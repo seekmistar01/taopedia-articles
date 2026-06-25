@@ -200,6 +200,19 @@ that interpret validator weights
 ([Understanding Incentive Mechanisms](https://docs.learnbittensor.org/learn/anatomy-of-incentive-mechanism),
 [Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
 
+## Relationship to Consensus Score
+
+Consensus-based weights and the consensus score describe the same clipping step as benchmark and
+output. The consensus score is the stake-weighted benchmark weight computed per miner, while
+consensus-based weights are the submitted weights after they are clipped down toward that benchmark,
+so weight above the benchmark is reduced before rank and emissions are derived
+([Glossary: Consensus Score](https://docs.learnbittensor.org/resources/glossary#consensus-score),
+[Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus),
+[Implementation of the Yuma Consensus Epoch](https://docs.learnbittensor.org/navigating-subtensor/epoch)).
+
+- **Consensus score** — the stake-weighted benchmark weight computed per miner.
+- **Consensus-based weights** — the submitted weights after clipping toward that benchmark.
+
 ## Further Reading
 
 - [Consensus-based Weights](https://docs.learnbittensor.org/concepts/consensus-based-weights)

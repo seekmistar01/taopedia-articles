@@ -224,6 +224,15 @@ async function validateArticle(slug, articleDir, knownTargets) {
     );
   }
   validateTags(data, articlePath);
+  if (Array.isArray(data.infoboxRows)) {
+    for (const row of data.infoboxRows) {
+      if (typeof row?.label === "string" && row.label !== row.label.trim()) {
+        throw new Error(
+          `${articlePath}: infoboxRows label "${row.label}" must not have leading or trailing whitespace`
+        );
+      }
+    }
+  }
   for (const target of [...extractWikiLinks(content), ...extractWikiLinksFromValue(data)]) {
     const normalizedTarget = slugifyWikiLink(target);
     if (!knownTargets.has(normalizedTarget)) {

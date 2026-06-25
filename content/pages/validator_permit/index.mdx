@@ -176,6 +176,20 @@ cutoff when covering when that submission must happen inside the epoch
 Permission and timing answer different questions on the same weight-submission path
 ([Implementation of the Yuma Consensus Epoch](https://docs.learnbittensor.org/navigating-subtensor/epoch)).
 
+## Relationship to Deregistration
+
+A validator permit and deregistration act on the same subnet UID from opposite ends. The permit is
+the rights flag, reassigned each epoch to the top neurons by stake weight, that records whether a
+UID may submit counting weights, while deregistration removes a neuron from its UID slot when the
+subnet is full, ending any permit attached to that slot
+([Glossary: Validator Permit](https://docs.learnbittensor.org/resources/glossary#validator-permit),
+[Glossary: Deregistration](https://docs.learnbittensor.org/resources/glossary#deregistration),
+[Mining: Miner deregistration](https://docs.learnbittensor.org/miners#miner-deregistration)).
+
+- **Validator permit** — the per-epoch right to submit counting weights, held only while the UID
+  stays registered.
+- **Deregistration** — removal of the UID slot, which ends any permit attached to it.
+
 ## Further Reading
 
 - [Glossary: Validator Permit](https://docs.learnbittensor.org/resources/glossary#validator-permit)

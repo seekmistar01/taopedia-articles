@@ -175,6 +175,20 @@ miner's output
 A specific miner's rank or incentive is a consensus-and-network outcome to read from live subnet
 data, not something the term itself reports.
 
+## Relationship to Pruning Score
+
+A subnet miner and the pruning score describe a miner as the role and the value that governs its
+removal. A subnet miner is the participant that performs the work validators evaluate, while the
+pruning score is the per-neuron value that ranks which UID is displaced when a full subnet takes a
+new registration, so a miner that earns little and holds the lowest pruning score is the first
+removed once its immunity ends
+([Glossary: Subnet Miner](https://docs.learnbittensor.org/resources/glossary#subnet-miner),
+[Glossary: Pruning Score](https://docs.learnbittensor.org/resources/glossary#pruning-score),
+[Mining: Miner deregistration](https://docs.learnbittensor.org/miners#miner-deregistration)).
+
+- **Subnet miner** — the role that performs the work validators evaluate.
+- **Pruning score** — the value that ranks whether that miner is removed when the subnet is full.
+
 ## Further Reading
 
 - [Glossary: Subnet Miner](https://docs.learnbittensor.org/resources/glossary#subnet-miner)

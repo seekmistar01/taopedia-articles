@@ -224,6 +224,14 @@ async function validateArticle(slug, articleDir, knownTargets) {
     );
   }
   validateTags(data, articlePath);
+  if (isPublishedArticle(slug, data)) {
+    const h1Count = (content.match(/^#[ \t]+\S/gm) || []).length;
+    if (h1Count > 1) {
+      throw new Error(
+        `${articlePath}: body has ${h1Count} level-1 (#) headings; use the front matter title as the only H1 and "##" or deeper for sections`
+      );
+    }
+  }
   for (const target of [...extractWikiLinks(content), ...extractWikiLinksFromValue(data)]) {
     const normalizedTarget = slugifyWikiLink(target);
     if (!knownTargets.has(normalizedTarget)) {

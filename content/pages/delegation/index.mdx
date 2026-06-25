@@ -70,7 +70,7 @@ helps explain why stake attached to a validator can matter for consensus power a
 
 Dividends are a related but distinct outcome term. Delegation establishes the support position, and
 dividends describe an emission share that can follow from delegated-stake relationships
-([Glossary: Dividends](https://docs.learnbittensor.org/resources/glossary#dividends),
+([Glossary: Dividends](https://docs.learnbittensor.org/resources/glossary#emission),
 [Staking and delegation overview](https://docs.learnbittensor.org/staking-and-delegation/delegation)).
 
 ## Development Stage Context
@@ -117,8 +117,8 @@ The
 states that staking is always local to a subnet. When a TAO holder delegates on an alpha subnet such
 as netuid 1, the TAO first enters that subnet's automated market maker pool and is converted into
 the subnet's
-[Glossary: Alpha Tokens](https://docs.learnbittensor.org/resources/glossary#alpha-tokens) before the
-delegated position settles behind the validator hotkey.
+[Glossary: Alpha Tokens](https://docs.learnbittensor.org/resources/glossary#protocol-alpha) before
+the delegated position settles behind the validator hotkey.
 
 That conversion is part of the delegation path itself, not a separate reward step. The support
 relationship is the same staking concept, but the amount held behind the validator is expressed in
@@ -138,9 +138,9 @@ validator identity can carry separate delegated positions across separate subnet
 The
 [Staking and delegation overview](https://docs.learnbittensor.org/staking-and-delegation/delegation)
 explains that after a validator or delegate extracts their
-[Glossary: Validator Take %](https://docs.learnbittensor.org/resources/glossary#validator-take-),
-the remaining emissions are credited back to stakers and delegators in proportion to their stake
-with that validator.
+[Glossary: Validator Take %](https://docs.learnbittensor.org/resources/glossary#validator-take), the
+remaining emissions are credited back to stakers and delegators in proportion to their stake with
+that validator.
 
 That ordering sits between validator-side emissions and delegator outcomes. Delegation names the
 support relationship, while validator take names the validator's kept share from delegated-stake
@@ -148,7 +148,7 @@ emissions before the rest moves toward those who delegated.
 
 The proportional credit applies within the staking relationship around one validator. It does not
 turn delegation into a fixed yield quote, but it does explain why delegator-facing
-[Glossary: Dividends](https://docs.learnbittensor.org/resources/glossary#dividends) follow after the
+[Glossary: Dividends](https://docs.learnbittensor.org/resources/glossary#emission) follow after the
 validator-side take rather than mirroring the full validator emission total. Validator take is part
 of the distribution stage after validator emissions are calculated
 ([Emission: Distribution](https://docs.learnbittensor.org/learn/emissions#distribution)).
@@ -245,8 +245,8 @@ stake are counted
 - [Glossary: Delegate Stake](https://docs.learnbittensor.org/resources/glossary#delegate-stake)
 - [Glossary: Stake](https://docs.learnbittensor.org/resources/glossary#stake)
 - [Glossary: Nominate](https://docs.learnbittensor.org/resources/glossary#nominate)
-- [Glossary: Dividends](https://docs.learnbittensor.org/resources/glossary#dividends)
-- [Glossary: Validator](https://docs.learnbittensor.org/resources/glossary#subnet-validator)
+- [Glossary: Dividends](https://docs.learnbittensor.org/resources/glossary#emission)
+- [Glossary: Validator](https://docs.learnbittensor.org/resources/glossary#validator-or-subnet-validator)
 - [Glossary: Validator Permit](https://docs.learnbittensor.org/resources/glossary#validator-permit)
 - [Glossary: Hotkey](https://docs.learnbittensor.org/resources/glossary#hotkey)
 - [Staking and delegation overview](https://docs.learnbittensor.org/staking-and-delegation/delegation)

@@ -224,6 +224,13 @@ async function validateArticle(slug, articleDir, knownTargets) {
     );
   }
   validateTags(data, articlePath);
+  for (const field of ["title", "summary", "category"]) {
+    if (data[field] !== data[field].trim()) {
+      throw new Error(
+        `${articlePath}: front matter field "${field}" must not have leading or trailing whitespace`
+      );
+    }
+  }
   for (const target of [...extractWikiLinks(content), ...extractWikiLinksFromValue(data)]) {
     const normalizedTarget = slugifyWikiLink(target);
     if (!knownTargets.has(normalizedTarget)) {

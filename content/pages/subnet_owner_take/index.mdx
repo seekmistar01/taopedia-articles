@@ -47,7 +47,7 @@ is a separate and configurable cut that a validator or delegate keeps from the r
 stake to it. Owner take is the subnet creator's emission share and is not a per-validator setting.
 The two can look similar in size but describe different roles
 ([Emission](https://docs.learnbittensor.org/learn/emissions),
-[Glossary: Validator Take](https://docs.learnbittensor.org/resources/glossary#validator-take-)).
+[Glossary: Validator Take](https://docs.learnbittensor.org/resources/glossary#validator-take)).
 
 ## Owner Take Is Allocated at Tempo End
 
@@ -78,10 +78,10 @@ distribution runs at tempo end ([Emission](https://docs.learnbittensor.org/learn
 
 [Emission](https://docs.learnbittensor.org/learn/emissions) documentation separates subnet rewards
 into injection and distribution. Injection adds
-[alpha](https://docs.learnbittensor.org/resources/glossary#alpha) to each subnet's pools every
-[block](https://docs.learnbittensor.org/resources/glossary#block), while the documented 41/41/18
-split — including the 18 percent owner take on a subnet such as netuid 1 — applies when distribution
-runs at the tempo boundary.
+[alpha](https://docs.learnbittensor.org/resources/glossary#protocol-alpha) to each subnet's pools
+every [block](https://docs.learnbittensor.org/resources/glossary#block), while the documented
+41/41/18 split — including the 18 percent owner take on a subnet such as netuid 1 — applies when
+distribution runs at the tempo boundary.
 
 Owner take reading should keep those stages separate. Injection describes alpha entering the subnet
 over time; owner take describes how much of the distributed alpha the owner receives as stake when
@@ -144,14 +144,14 @@ runs.
 The same distribution section assigns the 41 percent miner bucket through
 [Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus) miner-emission rules and the
 41 percent validator bucket through validator-emission rules, including
-[validator take](https://docs.learnbittensor.org/resources/glossary#validator-take-) and staker
+[validator take](https://docs.learnbittensor.org/resources/glossary#validator-take) and staker
 proportions. Owner take is allocated before those role-specific subdivisions rather than inside
 them.
 
 That ordering keeps subnet ownership separate from miner ranking and validator commission
 vocabulary. Owner cut names the documented owner stake share; miner
 [incentives](https://docs.learnbittensor.org/resources/glossary#incentives) and validator
-[dividends](https://docs.learnbittensor.org/resources/glossary#dividends) follow their own paths.
+[dividends](https://docs.learnbittensor.org/resources/glossary#emission) follow their own paths.
 
 ## Alpha Outstanding Accumulates Before the Owner Cut Is Paid
 
@@ -175,4 +175,4 @@ owner share at the time of writing ([Emission](https://docs.learnbittensor.org/l
 
 - [Emission](https://docs.learnbittensor.org/learn/emissions)
 - [Crowdloans](https://docs.learnbittensor.org/subnets/crowdloans)
-- [Glossary: Validator Take](https://docs.learnbittensor.org/resources/glossary#validator-take-)
+- [Glossary: Validator Take](https://docs.learnbittensor.org/resources/glossary#validator-take)

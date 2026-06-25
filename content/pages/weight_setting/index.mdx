@@ -199,6 +199,19 @@ Actual weight values and their emission effects depend on subnet context, valida
 consensus configuration. The concept travels across subnets; observed outcomes belong to specific
 environments ([Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-networks)).
 
+## Relationship to Activity Cutoff
+
+Weight setting and the activity cutoff meet at timing. Weight setting is the validator action of
+submitting miner scores, while the activity cutoff is the early-epoch block window within which
+those weights must arrive to be counted, so a weight-setting submission that lands after the
+activity cutoff can miss the current consensus pass
+([Glossary: Activity Cutoff](https://docs.learnbittensor.org/resources/glossary#activity-cutoff),
+[Glossary: Weight Setting](https://docs.learnbittensor.org/resources/glossary#weight-setting),
+[Implementation of the Yuma Consensus Epoch](https://docs.learnbittensor.org/navigating-subtensor/epoch)).
+
+- **Weight setting** — the validator action of submitting miner scores.
+- **Activity cutoff** — the early-epoch window those weights must arrive within to count.
+
 ## Further Reading
 
 - [Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#validator-weights)

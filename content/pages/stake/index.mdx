@@ -67,7 +67,7 @@ Stake is local to subnet state. Staking into subnets places stake in that subnet
 context, and subnet references use validator stake weight when explaining validator influence inside
 a subnet
 ([Staking into Subnets](https://docs.learnbittensor.org/staking-and-delegation/delegation#staking-into-subnets),
-[Glossary: Alpha Tokens](https://docs.learnbittensor.org/resources/glossary#alpha-tokens),
+[Glossary: Alpha Tokens](https://docs.learnbittensor.org/resources/glossary#protocol-alpha),
 [Understanding Subnets: Validator stake weight](https://docs.learnbittensor.org/subnets/understanding-subnets#validator-stake-weight)).
 
 This locality keeps stake from becoming one universal account number. A precise statement about
@@ -76,7 +76,7 @@ stake should identify the subnet, validator, and asset context being discussed.
 The asset context matters because subnet staking can be discussed through alpha-token vocabulary
 while Root-side staking is discussed through TAO staked through Root. A static article should not
 collapse those contexts into one undifferentiated amount
-([Glossary: Alpha Tokens](https://docs.learnbittensor.org/resources/glossary#alpha-tokens),
+([Glossary: Alpha Tokens](https://docs.learnbittensor.org/resources/glossary#protocol-alpha),
 [Glossary: Root Subnet](https://docs.learnbittensor.org/resources/glossary#root-subnetsubnet-zero)).
 
 For source reading, the relevant question is which staking path is being discussed. A subnet-local
@@ -163,7 +163,7 @@ validator-associated stake amount for consensus power inside a subnet. At tempo 
 [Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus) uses those stake-weighted
 validator signals when turning weight submissions into miner
 [incentives](https://docs.learnbittensor.org/resources/glossary#incentives) and validator
-[dividends](https://docs.learnbittensor.org/resources/glossary#dividends).
+[dividends](https://docs.learnbittensor.org/resources/glossary#emission).
 
 Stake therefore sits upstream of Yuma's allocation step. Delegation and staking change the measured
 stake behind a hotkey; stake weight translates that amount into validator influence; Yuma converts
@@ -195,7 +195,7 @@ stake weight that records whether they may submit counting validator weights
 ## Further Reading
 
 - [Glossary: Stake](https://docs.learnbittensor.org/resources/glossary#stake)
-- [Glossary: Validator](https://docs.learnbittensor.org/resources/glossary#subnet-validator)
+- [Glossary: Validator](https://docs.learnbittensor.org/resources/glossary#validator-or-subnet-validator)
 - [Glossary: Stake Weight](https://docs.learnbittensor.org/resources/glossary#stake-weight)
 - [Glossary: Delegation](https://docs.learnbittensor.org/resources/glossary#delegation)
 - [Glossary: Delegate Stake](https://docs.learnbittensor.org/resources/glossary#delegate-stake)

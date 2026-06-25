@@ -197,6 +197,20 @@ outside its immunity window can be displaced like any other low scorer
 - **Pruning score** — the removal-ranking value that can deregister a low-scoring neuron, validators
   included.
 
+## Relationship to Stake Weight
+
+A subnet validator and stake weight describe validation as the role and the influence it carries. A
+subnet validator is the participant that measures miner work and submits weights, while stake weight
+is the stake-derived value that scales how much each validator's submitted weights count when
+consensus is computed, so the role does the evaluating and stake weight decides how heavily that
+evaluation lands
+([Glossary: Subnet Validator](https://docs.learnbittensor.org/resources/glossary#subnet-validator),
+[Glossary: Stake Weight](https://docs.learnbittensor.org/resources/glossary#stake-weight),
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets)).
+
+- **Subnet validator** — the role that evaluates miners and submits weights.
+- **Stake weight** — the stake-derived value that scales how much those weights count.
+
 ## Further Reading
 
 - [Glossary: Subnet Validator](https://docs.learnbittensor.org/resources/glossary#subnet-validator)

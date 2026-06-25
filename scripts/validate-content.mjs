@@ -224,6 +224,15 @@ async function validateArticle(slug, articleDir, knownTargets) {
     );
   }
   validateTags(data, articlePath);
+  if (Array.isArray(data.tags)) {
+    for (const tag of data.tags) {
+      if (typeof tag === "string" && tag.includes(",")) {
+        throw new Error(
+          `${articlePath}: tag "${tag}" must not contain a comma; provide separate tags instead`
+        );
+      }
+    }
+  }
   for (const target of [...extractWikiLinks(content), ...extractWikiLinksFromValue(data)]) {
     const normalizedTarget = slugifyWikiLink(target);
     if (!knownTargets.has(normalizedTarget)) {

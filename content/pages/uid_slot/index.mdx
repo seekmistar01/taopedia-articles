@@ -172,6 +172,19 @@ A UID slot identifies who can occupy a participant position inside a subnet.
 per-block emission operation that advances reward processing; the slot names the position that can
 receive subnet outcomes, not the emission mechanism itself.
 
+## Relationship to Pruning Score
+
+A UID slot and the pruning score meet at reuse. A UID slot is the participant position a miner or
+validator occupies in a subnet, while the pruning score is the per-neuron value that ranks which
+occupied slot is freed first when a full subnet takes a new registration, so the pruning score
+decides whose UID slot is reclaimed
+([Glossary: UID Slot](https://docs.learnbittensor.org/resources/glossary#uid-slot),
+[Glossary: Pruning Score](https://docs.learnbittensor.org/resources/glossary#pruning-score),
+[Mining: Miner deregistration](https://docs.learnbittensor.org/miners#miner-deregistration)).
+
+- **UID slot** — the position a miner or validator occupies in a subnet.
+- **Pruning score** — the value ranking which slot is reclaimed when the subnet is full.
+
 ## Further Reading
 
 - [Glossary: UID Slot](https://docs.learnbittensor.org/resources/glossary#uid-slot)

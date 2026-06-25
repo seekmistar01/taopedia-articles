@@ -108,19 +108,19 @@ is the stake-weighted median benchmark that clipping uses to trim outlier weight
 Readers comparing the exploit to the defense need both terms. Self-weighting names the
 self-preferencing weight pattern, while consensus score names the benchmark that helps limit how far
 such weights can depart from broader validator agreement
-([Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#validator-weights),
+([Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#weight-vector),
 [Glossary: Trust](https://docs.learnbittensor.org/resources/glossary#trust)).
 
 Use self-weighting when covering a validator favoring its own side; use consensus score when
 covering the clipping benchmark rather than the exploit behavior itself
-([Glossary: Subnet Validator](https://docs.learnbittensor.org/resources/glossary#subnet-validator)).
+([Glossary: Subnet Validator](https://docs.learnbittensor.org/resources/glossary#validator-or-subnet-validator)).
 
 ## Clipping, Bonds, and Yuma Settlement on netuid 1
 
 On a subnet such as netuid 1, [Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)
-aggregates validator [weights](https://docs.learnbittensor.org/resources/glossary#weights) into
-miner [incentives](https://docs.learnbittensor.org/resources/glossary#incentives) and validator
-[dividends](https://docs.learnbittensor.org/resources/glossary#dividends) only after clipping trims
+aggregates validator [weights](https://docs.learnbittensor.org/resources/glossary#weight-vector)
+into miner [incentives](https://docs.learnbittensor.org/resources/glossary#incentives) and validator
+[dividends](https://docs.learnbittensor.org/resources/glossary#emission) only after clipping trims
 weights that depart from the stake-weighted
 [consensus score](https://docs.learnbittensor.org/resources/glossary#consensus-score)
 ([Yuma Consensus: Clipping](https://docs.learnbittensor.org/learn/yuma-consensus#clipping)).

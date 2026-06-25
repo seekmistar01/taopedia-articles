@@ -224,6 +224,9 @@ async function validateArticle(slug, articleDir, knownTargets) {
     );
   }
   validateTags(data, articlePath);
+  if (data.title.trim() === data.summary.trim()) {
+    throw new Error(`${articlePath}: front matter fields "title" and "summary" must differ`);
+  }
   for (const target of [...extractWikiLinks(content), ...extractWikiLinksFromValue(data)]) {
     const normalizedTarget = slugifyWikiLink(target);
     if (!knownTargets.has(normalizedTarget)) {

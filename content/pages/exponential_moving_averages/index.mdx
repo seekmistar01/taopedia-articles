@@ -163,10 +163,10 @@ representing production smoothing behavior on another network.
 line between the smoothing factor used in the EMA formula and the word alpha used elsewhere in
 Bittensor tokenomics. The alpha parameter in the moving-average calculation controls how much weight
 each new observation carries; it is distinct from and unrelated to
-[alpha tokens](https://docs.learnbittensor.org/resources/glossary#alpha-tokens) as subnet-specific
+[alpha tokens](https://docs.learnbittensor.org/resources/glossary#protocol-alpha) as subnet-specific
 currencies
 ([Exponential Moving Averages: Mathematical definition](https://docs.learnbittensor.org/learn/ema#mathematical-definition),
-[Glossary: Alpha Tokens](https://docs.learnbittensor.org/resources/glossary#alpha-tokens)).
+[Glossary: Alpha Tokens](https://docs.learnbittensor.org/resources/glossary#protocol-alpha)).
 
 That separation matters because Bittensor prose reuses alpha in several places. Consensus-based bond
 smoothing can vary alpha by validator-miner pair, while alpha tokens name subnet assets and pool
@@ -222,7 +222,7 @@ comparison input
 
 ## Validator Weights, Bond Smoothing, and Yuma Consensus
 
-[Validator weights](https://docs.learnbittensor.org/resources/glossary#validator-weights) are the
+[Validator weights](https://docs.learnbittensor.org/resources/glossary#weight-vector) are the
 evaluation signals validators submit for miners. Inside
 [Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus), those weights are clipped,
 compared, and converted into instant bond contributions before EMA smoothing turns them into

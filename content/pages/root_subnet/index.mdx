@@ -128,6 +128,19 @@ instruction, governance explainer, or root-claim settings guide
 The stable article-level point is that the Root Subnet is Subnet Zero, a special subnet for
 subnet-agnostic validator staking rather than miner work.
 
+## Relationship to Stake Weight
+
+The Root Subnet and stake weight connect a staking venue to consensus influence. The Root Subnet,
+also called Subnet Zero, is the subnet-agnostic staking path for TAO, while stake weight is the
+value that scales a validator's consensus influence from its stake, so stake routed through the Root
+Subnet contributes to the stake weight that decides that influence
+([Glossary: Stake Weight](https://docs.learnbittensor.org/resources/glossary#stake-weight),
+[Glossary: Root Subnet/Subnet Zero](https://docs.learnbittensor.org/resources/glossary#root-subnetsubnet-zero),
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets)).
+
+- **Root Subnet** — the subnet-agnostic staking path for TAO.
+- **Stake weight** — the value that scales consensus influence from that stake.
+
 ## Further Reading
 
 - [Introduction to Bittensor: Subnet development](https://docs.learnbittensor.org/learn/introduction#subnet-development)

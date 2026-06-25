@@ -224,6 +224,11 @@ async function validateArticle(slug, articleDir, knownTargets) {
     );
   }
   validateTags(data, articlePath);
+  if (/\s{2,}/.test(data.summary)) {
+    throw new Error(
+      `${articlePath}: front matter field "summary" must not contain consecutive whitespace`
+    );
+  }
   for (const target of [...extractWikiLinks(content), ...extractWikiLinksFromValue(data)]) {
     const normalizedTarget = slugifyWikiLink(target);
     if (!knownTargets.has(normalizedTarget)) {

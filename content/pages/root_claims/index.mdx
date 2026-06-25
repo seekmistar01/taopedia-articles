@@ -146,6 +146,20 @@ original root stake, guarantee future dividend amounts, or describe a general un
 ([Root Claims](https://docs.learnbittensor.org/staking-and-delegation/root-claims),
 [Glossary: Root Staker](https://docs.learnbittensor.org/resources/glossary#root-staker)).
 
+## Relationship to TAO Weight
+
+Root claims and tao weight both shape how Root Subnet stake counts, at different layers. Root claims
+decide whether alpha dividends earned through Root staking stay as subnet alpha or are converted to
+TAO and restaked on Root, while tao weight is the global multiplier that sets how much root (TAO)
+stake counts against alpha stake, so a claim that restakes as TAO lands on the side of stake that
+tao weight scales
+([Glossary: TAO Weight](https://docs.learnbittensor.org/resources/glossary#tao-weight),
+[Root Claims](https://docs.learnbittensor.org/staking-and-delegation/root-claims),
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets)).
+
+- **Root claims** — whether earned alpha stays as alpha or converts to restaked TAO.
+- **TAO weight** — the multiplier scaling how that root TAO stake counts.
+
 ## Further Reading
 
 - [Root Claims](https://docs.learnbittensor.org/staking-and-delegation/root-claims)

@@ -143,6 +143,19 @@ one activity input within a broader metagraph snapshot, not a standalone status 
 References: [The Subnet Metagraph](https://docs.learnbittensor.org/subnets/metagraph),
 [Understanding Neurons](https://docs.learnbittensor.org/learn/neurons)
 
+## Relationship to Tempo
+
+Last update and tempo are both block-counted values that meet when recency is judged. Last update is
+the per-neuron metagraph value recording the block of a neuron's most recent update, while tempo is
+the block interval that paces each subnet epoch, so a neuron's last-update block is read against the
+current tempo cycle to decide how recent its data is
+([Glossary: Tempo](https://docs.learnbittensor.org/resources/glossary#tempo),
+[The Subnet Metagraph](https://docs.learnbittensor.org/subnets/metagraph),
+[Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters)).
+
+- **Last update** — the block recording a neuron's most recent update.
+- **Tempo** — the block interval pacing each epoch that the last-update block is read against.
+
 ## Further Reading
 
 - [The Subnet Metagraph](https://docs.learnbittensor.org/subnets/metagraph)

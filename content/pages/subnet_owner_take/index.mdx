@@ -171,6 +171,19 @@ on any particular subnet or name a specific owner. Those are live chain state an
 for the relevant netuid. The 18 percent figure is the documented value and is the protocol's stated
 owner share at the time of writing ([Emission](https://docs.learnbittensor.org/learn/emissions)).
 
+## Relationship to Dividends
+
+Subnet owner take and dividends are two named slices of the same subnet alpha emission. Subnet owner
+take is the fixed share, documented at 18 percent, that goes to the subnet owner, while dividends
+are the validator-side payout distributed to validators and the nominators who back them, so both
+draw from each tempo's emission but flow to different recipients
+([Glossary: Dividends](https://docs.learnbittensor.org/resources/glossary#dividends),
+[Emission](https://docs.learnbittensor.org/learn/emissions),
+[Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters)).
+
+- **Subnet owner take** — the fixed owner share of each subnet's alpha emission.
+- **Dividends** — the validator-and-nominator share of that same emission.
+
 ## Further Reading
 
 - [Emission](https://docs.learnbittensor.org/learn/emissions)

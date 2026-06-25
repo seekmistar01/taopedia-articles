@@ -224,6 +224,11 @@ async function validateArticle(slug, articleDir, knownTargets) {
     );
   }
   validateTags(data, articlePath);
+  if (!/[.!?]["')\]]?$/.test(data.summary.trim())) {
+    throw new Error(
+      `${articlePath}: front matter field "summary" should end with sentence punctuation (. ! or ?)`
+    );
+  }
   for (const target of [...extractWikiLinks(content), ...extractWikiLinksFromValue(data)]) {
     const normalizedTarget = slugifyWikiLink(target);
     if (!knownTargets.has(normalizedTarget)) {

@@ -140,6 +140,19 @@ UIDs can change through deregistration. A UID that identifies one participant to
 different participant in the same subnet after a registration event
 ([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets)).
 
+## Relationship to Immunity Period
+
+A UID and the immunity period meet when a new participant joins. A UID is the unique identifier of a
+participant's position in a subnet, while the immunity period is the block window that shields a
+newly assigned UID from deregistration regardless of score, so a fresh UID is protected for the
+immunity window before it can be displaced
+([Glossary: Immunity Period](https://docs.learnbittensor.org/resources/glossary#immunity-period),
+[Glossary: UID Slot](https://docs.learnbittensor.org/resources/glossary#uid-slot),
+[Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters)).
+
+- **UID** — the unique identifier of a participant's position in a subnet.
+- **Immunity period** — the window shielding a newly assigned UID from deregistration.
+
 ## Further Reading
 
 - [Glossary: UID slot](https://docs.learnbittensor.org/resources/glossary#uid-slot)

@@ -205,6 +205,31 @@ that starts after admission rather than the entry step itself
 Entry action and post-entry protection window answer different reader questions on the same netuid
 ([Glossary: Deregistration](https://docs.learnbittensor.org/resources/glossary#deregistration)).
 
+## Relationship to Pruning Score
+
+Immunity period and pruning score act on the same deregistration decision from two sides. Pruning
+score is the per-neuron value that ranks which UID is removed first when a subnet is full and a new
+registration arrives, while immunity period is the block-measured window that exempts a newly
+registered UID from that removal
+([Glossary: Pruning Score](https://docs.learnbittensor.org/resources/glossary#pruning-score),
+[Glossary: Immunity Period](https://docs.learnbittensor.org/resources/glossary#immunity-period),
+[Mining: Miner deregistration](https://docs.learnbittensor.org/miners#miner-deregistration)).
+
+During the immunity window, a low pruning score does not trigger displacement. A new entrant can
+hold the lowest score on the subnet and still be protected until the configured block window ends,
+after which the pruning-score ranking applies again
+([Mining: Immunity period](https://docs.learnbittensor.org/miners#immunity-period),
+[Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters#immunityperiod)).
+
+Use pruning score when covering which neuron is selected for removal; use immunity period when
+covering the grace window that temporarily suspends that selection for a new entrant
+([Glossary: Pruning Score](https://docs.learnbittensor.org/resources/glossary#pruning-score),
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets)).
+
+Removal ranking and removal-protection window answer different reader questions on the same
+deregistration path
+([Glossary: Deregistration](https://docs.learnbittensor.org/resources/glossary#deregistration)).
+
 ## Further Reading
 
 - [Introduction to Bittensor: Subnet development](https://docs.learnbittensor.org/learn/introduction#subnet-development)

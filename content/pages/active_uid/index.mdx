@@ -160,6 +160,20 @@ Participant activity can change while the subnet continues to exist, whereas sub
 describes removal of an entire subnet context under different rules
 ([Subnet Deregistration](https://docs.learnbittensor.org/subnets/subnet-deregistration)).
 
+## Relationship to Immunity Period
+
+An active UID and the immunity period both describe a UID's standing on a subnet but answer
+different questions. An active UID is the participant slot that currently counts as usable for
+validating or mining, while the immunity period is the block window that exempts a newly registered
+UID from deregistration regardless of its score, giving it time to reach usable standing
+([Glossary: Active UID](https://docs.learnbittensor.org/resources/glossary#active-uid),
+[Glossary: Immunity Period](https://docs.learnbittensor.org/resources/glossary#immunity-period),
+[Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters)).
+
+- **Active UID** — the slot that currently counts as usable for participation.
+- **Immunity period** — the grace window protecting a new UID from deregistration while it earns
+  that standing.
+
 ## Further Reading
 
 - [Glossary: Active UID](https://docs.learnbittensor.org/resources/glossary#active-uid)

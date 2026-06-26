@@ -209,6 +209,19 @@ For readers, event vocabulary complements storage reads. Storage can show curren
 while events show which actions produced observable state changes on the connected network
 ([Subtensor extrinsics](https://docs.learnbittensor.org/subtensor-api/extrinsics)).
 
+## Distinction from Extrinsics
+
+A chain read and an extrinsic sit on opposite sides of the chain's request boundary. A chain read
+queries public state — storage, events, constants, or runtime calls — without asking Subtensor to
+record anything, and the documentation treats it as free inspection, while an extrinsic is a
+submitted, fee-bearing call that asks the runtime to change state such as staking, transferring, or
+registering, so a read observes what already exists and an extrinsic is what produces a new recorded
+change ([Transaction Fees in Bittensor](https://docs.learnbittensor.org/learn/fees),
+[Subtensor extrinsics](https://docs.learnbittensor.org/subtensor-api/extrinsics)).
+
+- **Chain read** — free, read-only observation of public chain state.
+- **Extrinsic** — a submitted, fee-bearing call that changes chain state.
+
 ## Reader Boundary
 
 Chain reads identify read-only observation. They do not prove intent, predict a later action,

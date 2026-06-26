@@ -149,6 +149,20 @@ The [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-netw
 separates mainnet, testnet, and localnet. A back-running example from one environment should not be
 read as representing production transaction behavior in another environment.
 
+## Distinction from Arbitrage
+
+Back-running and arbitrage can describe the same closing trade from different angles, but their
+defining feature differs. Back-running is defined by ordering: it submits immediately after a
+specific observed pending swap to act on the price move that swap just caused, while arbitrage is
+defined by purpose: it trades to close a real gap between a pool price and fair value regardless of
+any one pending transaction, so a lone back-run that corrects a dislocation is arbitrage, but
+back-running names the timing relationship to the target rather than the gap-closing motive
+([MEV](https://docs.learnbittensor.org/resources/glossary#mev-maximal-extractable-value),
+[Slippage](https://docs.learnbittensor.org/learn/slippage)).
+
+- **Back-running** — ordering right after an observed pending swap to act on its move.
+- **Arbitrage** — trading to close a real price gap, independent of any single pending swap.
+
 ## Reader Boundary
 
 This page defines the concept at a high level and is not trading advice or a claim that any specific

@@ -172,6 +172,19 @@ are different shapes of the same extractable-value problem around observable ord
 why documentation groups them under maximal extractable value
 ([Glossary: MEV](https://docs.learnbittensor.org/resources/glossary#mev-maximal-extractable-value)).
 
+## Distinction from Price Protection
+
+Front-running and price protection sit on opposite sides of the same swap: one is the extraction
+tactic, the other the trader's defense. Front-running observes a pending pool conversion and orders
+ahead to profit from the price move it will cause, while price protection is the slippage tolerance
+the trader sets so a swap fails or only partially fills instead of completing at a front-runner's
+inflated price, so price protection does not detect the attacker — it caps how much a successful
+front-run can extract ([Price Protection](https://docs.learnbittensor.org/learn/price-protection),
+[MEV Shield](https://docs.learnbittensor.org/concepts/mev-shield/)).
+
+- **Front-running** — ordering ahead of a visible pending swap to profit from its price move.
+- **Price protection** — the trader-set tolerance that bounds the loss such ordering can impose.
+
 ## Reader Boundary
 
 This page defines the concept at a high level and is not trading advice or a claim that any specific

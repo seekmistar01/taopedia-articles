@@ -105,6 +105,20 @@ unrelated participants were willing to trade at, while wash trading only repeats
 round-trip that the pool charges for through slippage
 ([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets)).
 
+## Distinction from Arbitrage
+
+Wash trading and arbitrage both involve repeated pool swaps, but only one responds to a real price
+signal. Arbitrage trades on an actual gap between a subnet's pool price and broader market pricing,
+buying the cheaper side and selling the dearer side until the gap closes, while wash trading has no
+gap to close: the same controller buys and sells its own alpha to simulate activity and absorbs
+slippage on every round-trip, so arbitrage corrects price while wash trading only manufactures the
+appearance of volume
+([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Slippage](https://docs.learnbittensor.org/learn/slippage)).
+
+- **Arbitrage** — trading that closes a real price gap between markets.
+- **Wash trading** — self-dealing that fakes volume with no real gap, paying slippage each cycle.
+
 ## Reader Boundary
 
 This page defines the concept at a high level. It is not a claim that wash trading never happens or

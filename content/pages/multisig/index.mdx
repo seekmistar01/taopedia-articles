@@ -218,6 +218,19 @@ threshold decision into an on-chain action. The two should be read together: the
 how many approvals are needed, and the proposal lifecycle answers how a proposal becomes a
 submittable call.
 
+## Distinction from Coldkey
+
+A multisig and a coldkey name a control arrangement and the key it governs. A coldkey is the single
+owning key that authorizes high-value wallet actions such as transfers and staking, while a multisig
+distributes authority over a coldkey-level account across N signatories and requires M of them to
+approve before an action executes, so a multisig is not a new key type but a threshold rule layered
+over coldkey authority
+([Secure a Coldkey with a Multisig Wallet](https://docs.learnbittensor.org/keys/multisig),
+[Wallets, Coldkeys and Hotkeys](https://docs.learnbittensor.org/keys/wallets)).
+
+- **Coldkey** — the single owning key that authorizes high-value wallet actions.
+- **Multisig** — an M-of-N approval rule layered over coldkey-level authority.
+
 ## Reader Boundary
 
 Multisig should not be read as a subnet role, a proxy delegation pattern, or proof that any one

@@ -159,6 +159,19 @@ with its own alpha emission, does not change the 21 million TAO bound, because s
 distinct from the network currency the cap measures
 ([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets)).
 
+## Distinction from Circulating Supply
+
+Maximum supply and circulating supply both count TAO but answer different questions. Maximum supply
+is the fixed 21 million lifetime ceiling that issuance can approach but never exceed, while
+circulating supply is the amount of TAO actually in circulation at a given moment, a figure that
+rises with emission and falls as registration burns and transaction fees recycle TAO out of the
+tracked total, so the cap stays constant while circulating supply moves continuously
+([Halving Mechanisms](https://docs.learnbittensor.org/concepts/halving),
+[Emission](https://docs.learnbittensor.org/learn/emissions)).
+
+- **Maximum supply** — the fixed 21 million lifetime ceiling on total TAO.
+- **Circulating supply** — the live amount in circulation, changing with issuance and recycling.
+
 ## Reader Boundary
 
 This page defines the concept at a high level. It does not report the current circulating supply,

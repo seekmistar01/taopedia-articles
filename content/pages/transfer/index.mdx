@@ -199,6 +199,18 @@ validator inside a subnet market
 A transfer relocates free balance between addresses. Staking changes delegation state on a selected
 netuid without using transfer as the same operation label.
 
+## Distinction from Moving Stake
+
+A transfer and moving stake both relocate value, but they act on different balances. A transfer
+sends free, unstaked TAO from one coldkey wallet address to another, while moving stake relocates an
+existing stake position from one hotkey to another without first returning it to free balance, so a
+transfer changes which address holds free TAO and moving stake changes which hotkey a stake supports
+([Glossary: Transfer](https://docs.learnbittensor.org/resources/glossary#transfer),
+[Staking and delegation overview](https://docs.learnbittensor.org/staking-and-delegation/delegation)).
+
+- **Transfer** — sending free TAO between coldkey wallet addresses.
+- **Moving stake** — relocating an existing stake position between hotkeys without unstaking.
+
 ## Reader Boundary
 
 Transfer should not be read as staking, subnet registration, or coinbase emission. It names

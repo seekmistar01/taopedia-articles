@@ -156,6 +156,19 @@ impermanent loss incurred
 - **Impermanent loss** — the hold-versus-pool opportunity cost from price drift.
 - **Liquidity provider rewards** — the fee income that can offset that cost.
 
+## Distinction from Price Protection
+
+Impermanent loss and price protection both concern pool price movement, but from opposite roles.
+Impermanent loss is the drift risk a liquidity provider carries while their TAO and alpha sit in the
+pool and the ratio rebalances against simply holding, while price protection is the slippage
+tolerance a trader sets on a single swap so it fails or only partially fills past a chosen limit, so
+price protection bounds a trader's execution cost and does nothing to offset a provider's ongoing
+drift ([Understand Price Protection](https://docs.learnbittensor.org/learn/price-protection),
+[Liquidity Positions](https://docs.learnbittensor.org/liquidity-positions)).
+
+- **Impermanent loss** — a provider's ongoing hold-versus-pool drift risk.
+- **Price protection** — a trader's per-swap tolerance bounding execution cost.
+
 ## Reader Boundary
 
 This page defines the concept at a high level and is not financial advice. Whether any position is

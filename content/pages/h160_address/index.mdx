@@ -157,6 +157,18 @@ H160-to-SS58 conversion therefore belongs to address-format vocabulary. Wallet c
 whichever private key can sign in the intended environment
 ([Glossary: SS58 Encoded](https://docs.learnbittensor.org/resources/glossary#ss58-encoded)).
 
+## Distinction from Coldkey
+
+An H160 address and a coldkey identify wallets on two different sides of Bittensor. An H160 address
+is the Ethereum-style account format used by EVM wallets in Bittensor EVM, while a coldkey is the
+native SS58 owning key that authorizes Subtensor actions such as staking and transfers, so holding
+or converting an H160 address does not grant the signing control a coldkey has over native wallet
+authority ([Bittensor EVM Smart Contracts](https://docs.learnbittensor.org/evm-tutorials),
+[Wallets, Coldkeys and Hotkeys in Bittensor](https://docs.learnbittensor.org/keys/wallets)).
+
+- **H160 address** — the Ethereum-style EVM wallet address used in Bittensor EVM.
+- **Coldkey** — the native SS58 key that authorizes Subtensor wallet actions.
+
 ## Reader Boundary
 
 This article explains the term, not a setup procedure. It does not describe how to use an EVM

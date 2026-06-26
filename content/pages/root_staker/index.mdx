@@ -132,6 +132,19 @@ stake weight is computed, so a root staker's influence is scaled by the prevaili
 - **Root staker** — the holder who stakes on the Root Subnet through validators.
 - **TAO weight** — the multiplier that scales how that root stake counts against alpha stake.
 
+## Distinction from Alpha Staker
+
+A root staker and an alpha staker name two staking roles split by venue and asset. A root staker
+stakes TAO on the Root Subnet (Subnet Zero), the only subnet with no alpha currency of its own,
+while an alpha staker holds stake denominated in a specific subnet's alpha after TAO converts
+through that subnet's pool, so a root staker's position stays in TAO on Subnet Zero while an alpha
+staker's position tracks one subnet's alpha
+([Glossary: Root Subnet/Subnet Zero](https://docs.learnbittensor.org/resources/glossary#root-subnetsubnet-zero),
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets)).
+
+- **Root staker** — a TAO holder staking on the Root Subnet (Subnet Zero).
+- **Alpha staker** — a holder whose stake is denominated in one subnet's alpha.
+
 ## Reader Boundary
 
 Root staker identifies a TAO holder staking through validators on the Root Subnet

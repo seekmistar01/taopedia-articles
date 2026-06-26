@@ -115,6 +115,19 @@ selected subnet's reserves, liquidity, and trading activity
 A price-discovery example from one environment should not be read as representing production pool
 behavior in another environment.
 
+## Distinction from Emission
+
+Price discovery and emission both produce numbers attached to a subnet's alpha, but from different
+systems. Price discovery is the market process that sets the alpha price from the pool's
+TAO-to-alpha ratio as participants trade, stake, and unstake, while emission is the protocol-driven
+distribution of reward alpha that Yuma Consensus settles from validator evaluation, so emission
+decides how much alpha is created and to whom rather than the pool price a reader sees
+([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Emission](https://docs.learnbittensor.org/learn/emissions)).
+
+- **Price discovery** — the market-set alpha price emerging from pool trading.
+- **Emission** — the protocol distribution of reward alpha from validator evaluation.
+
 ## Reader Boundary
 
 This page defines the concept at a high level and is not financial advice. The discovered price for

@@ -243,6 +243,18 @@ An H160 address is best understood as the Ethereum-style address for the EVM wal
 Bittensor EVM. When an address crosses into SS58 representation, the user should treat that as an
 address-format bridge, not as a transfer of private keys or native wallet authority.
 
+## Distinction from EdDSA Cryptographic Keypairs
+
+An H160 address and EdDSA cryptographic keypairs sit on different key layers of Bittensor. An H160
+address is the Ethereum-style address used by EVM wallets on Bittensor EVM, while EdDSA
+cryptographic keypairs are the public-and-private keypairs behind native Bittensor wallet keys
+([Bittensor EVM Smart Contracts](https://docs.learnbittensor.org/evm-tutorials),
+[Glossary: EdDSA Cryptographic Keypairs](https://docs.learnbittensor.org/resources/glossary#eddsa-cryptographic-keypairs),
+[Glossary: SS58 Encoded](https://docs.learnbittensor.org/resources/glossary#ss58-encoded)).
+
+- **H160 address** — the Ethereum-style address used on Bittensor EVM.
+- **EdDSA cryptographic keypairs** — the keypair scheme behind native Bittensor keys.
+
 ## Further Reading
 
 - [Bittensor EVM Smart Contracts](https://docs.learnbittensor.org/evm-tutorials)

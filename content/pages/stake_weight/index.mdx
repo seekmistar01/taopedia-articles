@@ -150,6 +150,19 @@ Validator weights say what a validator signaled about miner work. Stake weight e
 that signal participates when Yuma Consensus filters and combines validator submissions
 ([Glossary: Weight Vector](https://docs.learnbittensor.org/resources/glossary#weight-vector)).
 
+## Distinction from TAO Weight
+
+Stake weight and TAO weight relate as a computed result and a coefficient that feeds it. Stake
+weight is the total consensus influence a validator's stake carries, combining root TAO and subnet
+alpha, while TAO weight is the global coefficient that scales the root TAO portion relative to alpha
+stake when that stake weight is calculated
+([Glossary: Stake Weight](https://docs.learnbittensor.org/resources/glossary#stake-weight),
+[Glossary: TAO Weight](https://docs.learnbittensor.org/resources/glossary#tao-weight),
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets)).
+
+- **Stake weight** — a validator's total stake-based consensus influence.
+- **TAO weight** — the coefficient scaling root TAO against alpha when computing it.
+
 ## Further Reading
 
 - [Glossary: Stake Weight](https://docs.learnbittensor.org/resources/glossary#stake-weight)

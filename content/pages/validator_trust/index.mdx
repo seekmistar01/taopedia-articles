@@ -150,6 +150,19 @@ reputation label, miner-side trust score, or dividend forecast
 ([Glossary: Validator Trust](https://docs.learnbittensor.org/resources/glossary#validator-trust),
 [Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
 
+## Distinction from Validator Weights
+
+Validator trust and validator weights sit before and after consensus filtering. Validator weights
+are the evaluation signals a validator sets to express how it assesses miner work, while validator
+trust is the validator-side Yuma Consensus metric read after those weights are clipped toward
+consensus, indicating validator influence post-filtering
+([Glossary: Validator Trust](https://docs.learnbittensor.org/resources/glossary#validator-trust),
+[Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus),
+[Glossary: Trust](https://docs.learnbittensor.org/resources/glossary#trust)).
+
+- **Validator weights** — the raw evaluation signals a validator submits.
+- **Validator trust** — the validator-side metric read after consensus clipping.
+
 ## Further Reading
 
 - [Glossary: Validator Trust](https://docs.learnbittensor.org/resources/glossary#validator-trust)

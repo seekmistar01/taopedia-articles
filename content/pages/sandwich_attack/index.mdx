@@ -120,6 +120,19 @@ should not be read as a consensus failure, a validator scoring issue, or a descr
 slippage
 ([Glossary: Sandwich attack](https://docs.learnbittensor.org/resources/glossary#mev-maximal-extractable-value)).
 
+## Distinction from Front-Running
+
+A sandwich attack and front-running are related MEV tactics of different scope. Front-running places
+a transaction ahead of a victim's pending trade to act first, while a sandwich attack brackets the
+victim — front-running with a buy before and back-running with a sell after — so front-running is
+one half of the sandwich rather than the whole maneuver
+([Glossary: MEV](https://docs.learnbittensor.org/resources/glossary#mev-maximal-extractable-value),
+[MEV Shield](https://docs.learnbittensor.org/concepts/mev-shield/),
+[Price Protection](https://docs.learnbittensor.org/learn/price-protection)).
+
+- **Front-running** — placing a transaction ahead of a victim's to act first.
+- **Sandwich attack** — bracketing the victim with a front-run and a back-run.
+
 ## Further Reading
 
 - [Glossary: MEV](https://docs.learnbittensor.org/resources/glossary#mev-maximal-extractable-value)

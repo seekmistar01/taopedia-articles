@@ -152,6 +152,18 @@ Trust is a miner-side consensus metric after clipping. It is not rank itself, va
 reward guarantee ([Glossary: Trust](https://docs.learnbittensor.org/resources/glossary#trust),
 [Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
 
+## Distinction from Pruning Score
+
+Trust and a pruning score are different per-neuron metrics serving different purposes. Trust
+measures the proportion of validators that assign a miner non-zero weight, feeding consensus and
+reward, while the pruning score determines which neuron is evicted when a full subnet must free a
+UID slot ([Glossary: Trust](https://docs.learnbittensor.org/resources/glossary#trust),
+[Glossary: Pruning Score](https://docs.learnbittensor.org/resources/glossary#pruning-score),
+[Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
+
+- **Trust** — the share of validators assigning a miner non-zero weight.
+- **Pruning score** — the value deciding which neuron is evicted from a slot.
+
 ## Further Reading
 
 - [Glossary: Trust](https://docs.learnbittensor.org/resources/glossary#trust)

@@ -160,6 +160,18 @@ label, reward guarantee, or one validator's raw score
 ([Glossary: Rank](https://docs.learnbittensor.org/resources/glossary#rank),
 [Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
 
+## Distinction from Pruning Score
+
+Rank and pruning score serve different roles for a miner. Rank is the consensus-weighted measure of
+a miner's performance derived from validator weights, feeding incentive and emission, while pruning
+score is the value the chain uses to decide which UID is dropped when a full subnet must make room
+for a new registration ([Glossary: Rank](https://docs.learnbittensor.org/resources/glossary#rank),
+[Glossary: Pruning Score](https://docs.learnbittensor.org/resources/glossary#pruning-score),
+[Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
+
+- **Rank** — the performance measure that feeds incentive and emission.
+- **Pruning score** — the value that decides which UID is deregistered when a subnet is full.
+
 ## Further Reading
 
 - [Glossary: Rank](https://docs.learnbittensor.org/resources/glossary#rank)

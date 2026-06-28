@@ -172,6 +172,18 @@ to move stake, or state current fee, slippage, or fee-minimization behavior. Rea
 official staking documentation for operational detail
 ([Staking and delegation overview](https://docs.learnbittensor.org/staking-and-delegation/delegation)).
 
+## Distinction from Transfer
+
+Moving stake and a transfer both relocate value but act on different forms of it. Moving stake
+relocates an existing staked position between hotkeys or subnets without returning it to free
+balance, while a transfer sends free, unstaked TAO from one coldkey account to another
+([Glossary: Staking](https://docs.learnbittensor.org/resources/glossary#staking),
+[Glossary: Transfer](https://docs.learnbittensor.org/resources/glossary#transfer),
+[Staking and delegation overview](https://docs.learnbittensor.org/staking-and-delegation/delegation)).
+
+- **Moving stake** — relocating a staked position between hotkeys or subnets.
+- **Transfer** — sending free, unstaked TAO between coldkey accounts.
+
 ## Further Reading
 
 - [Staking and delegation overview](https://docs.learnbittensor.org/staking-and-delegation/delegation)

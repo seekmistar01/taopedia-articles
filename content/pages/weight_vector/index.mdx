@@ -176,6 +176,18 @@ weight, rank, or a complete reward model
 ([Glossary: Weight Vector](https://docs.learnbittensor.org/resources/glossary#weight-vector),
 [Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
 
+## Distinction from UID
+
+A weight vector and a UID relate as a list and the index into it. A UID is the number identifying a
+single neuron's position within a subnet, while a weight vector is the full list of weights a
+validator assigns across UIDs — each entry keyed by a UID — that Yuma Consensus aggregates
+([Glossary: Weight Vector](https://docs.learnbittensor.org/resources/glossary#weight-vector),
+[Glossary: UID Slot](https://docs.learnbittensor.org/resources/glossary#uid-slot),
+[Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
+
+- **UID** — the number identifying one neuron's position in a subnet.
+- **Weight vector** — a validator's list of weights indexed by UID.
+
 ## Further Reading
 
 - [Glossary: Weight Vector](https://docs.learnbittensor.org/resources/glossary#weight-vector)

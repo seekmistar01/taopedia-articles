@@ -238,6 +238,19 @@ roles, or TAO balances. The term names the cryptographic keypair context behind 
 material
 ([Glossary: EdDSA Cryptographic Keypairs](https://docs.learnbittensor.org/resources/glossary#eddsa-cryptographic-keypairs)).
 
+## Distinction from SS58 Encoded
+
+EdDSA cryptographic keypairs and SS58 encoding sit at the key layer and the address layer. EdDSA
+cryptographic keypairs are the public-and-private keypairs that underlie Bittensor wallet keys,
+while SS58 encoding is the compact string format that represents the public key as a shareable
+wallet address
+([Glossary: EdDSA Cryptographic Keypairs](https://docs.learnbittensor.org/resources/glossary#eddsa-cryptographic-keypairs),
+[Glossary: SS58 Encoded](https://docs.learnbittensor.org/resources/glossary#ss58-encoded),
+[Glossary: Public Key](https://docs.learnbittensor.org/resources/glossary#public-key)).
+
+- **EdDSA cryptographic keypairs** — the public/private keypairs behind wallet keys.
+- **SS58 encoded** — the address-string format representing the public key.
+
 ## Further Reading
 
 - [Introduction to Bittensor: Subnet development](https://docs.learnbittensor.org/learn/introduction#subnet-development)

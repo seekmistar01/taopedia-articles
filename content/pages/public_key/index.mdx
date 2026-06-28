@@ -202,6 +202,19 @@ Public key should not be read as a recovery phrase, a private key, or a complete
 It is a shareable public component used in identification and verification context. This article
 does not describe how to create, store, recover, rotate, or use wallet keys.
 
+## Distinction from Seed Phrase Security
+
+A public key and seed phrase security sit at opposite ends of key handling. A public key is the
+shareable half of a keypair used to verify signatures and derive a wallet address, while seed phrase
+security is the set of practices for protecting the secret mnemonic from which the entire keypair —
+public and private — is derived
+([Glossary: Public Key](https://docs.learnbittensor.org/resources/glossary#public-key),
+[Handle your Seed Phrase/Mnemonic Securely](https://docs.learnbittensor.org/keys/handle-seed-phrase),
+[Glossary: Mnemonic](https://docs.learnbittensor.org/resources/glossary#mnemonic)).
+
+- **Public key** — the shareable half of a keypair, safe to distribute.
+- **Seed phrase security** — practices protecting the secret mnemonic behind the keypair.
+
 ## Further Reading
 
 - [Glossary: Public Key](https://docs.learnbittensor.org/resources/glossary#public-key)

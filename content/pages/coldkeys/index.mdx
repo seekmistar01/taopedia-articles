@@ -155,6 +155,20 @@ A coldkey is the custody and financial-signing key in Bittensor wallet vocabular
 hotkey, a seed phrase by itself, or permission to run routine subnet traffic on live nodes
 ([Glossary: Coldkey](https://docs.learnbittensor.org/resources/glossary#coldkey)).
 
+## Distinction from Hotkey
+
+A coldkey and a hotkey are the two keys in a Bittensor wallet, separated by what they control. The
+coldkey is the owner key that custodies TAO and stake and authorizes high-value actions such as
+transfers, staking, and unstaking, so it is kept offline; the hotkey is the operational key a neuron
+uses to sign routine on-chain actions like registration and weight submission, so it stays online on
+the running machine
+([Glossary: Coldkey](https://docs.learnbittensor.org/resources/glossary#coldkey),
+[Glossary: Hotkey](https://docs.learnbittensor.org/resources/glossary#hotkey),
+[Wallets, Coldkeys and Hotkeys](https://docs.learnbittensor.org/keys/wallets)).
+
+- **Coldkey** — the offline owner key that holds funds and authorizes high-value actions.
+- **Hotkey** — the online operational key that signs a neuron's routine network actions.
+
 ## Further Reading
 
 - [Glossary: Coldkey](https://docs.learnbittensor.org/resources/glossary#coldkey)

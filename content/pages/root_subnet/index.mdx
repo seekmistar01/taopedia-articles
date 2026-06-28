@@ -175,6 +175,19 @@ instruction, governance explainer, or root-claim settings guide
 The stable article-level point is that the Root Subnet is Subnet Zero, a special subnet for
 subnet-agnostic validator staking rather than miner work.
 
+## Distinction from Netuid
+
+The root subnet and a netuid relate as a specific subnet and the identifiers that label all subnets.
+A netuid is the number identifying any subnet, while the root subnet is the particular subnet at
+netuid 0 that handles root staking and TAO-weighted influence across the network — so the root
+subnet is one specific value within the netuid space
+([Glossary: Root Subnet/Subnet Zero](https://docs.learnbittensor.org/resources/glossary#root-subnetsubnet-zero),
+[Glossary: Netuid](https://docs.learnbittensor.org/resources/glossary#netuid),
+[Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-networks)).
+
+- **Netuid** — the number identifying any subnet.
+- **Root subnet** — the specific subnet at netuid 0 for root staking.
+
 ## Further Reading
 
 - [Introduction to Bittensor: Subnet development](https://docs.learnbittensor.org/learn/introduction#subnet-development)

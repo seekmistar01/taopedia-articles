@@ -204,6 +204,18 @@ guarantee that a pending transaction will be included
 Mempool identifies pending transaction state before block inclusion, while block records,
 extrinsics, fees, MEV Shield, and network context describe neighboring parts of the system.
 
+## Distinction from Transaction Fees
+
+A mempool and transaction fees address where a transaction waits versus what it costs. The mempool
+is the staging area holding submitted extrinsics before they are included in a block, while
+transaction fees are the amount paid to process an extrinsic, which can influence how quickly it
+leaves the mempool ([Glossary: Mempool](https://docs.learnbittensor.org/resources/glossary#mempool),
+[Transaction Fees in Bittensor](https://docs.learnbittensor.org/learn/fees),
+[Glossary: Block](https://docs.learnbittensor.org/resources/glossary#block)).
+
+- **Mempool** — the staging area of pending extrinsics awaiting inclusion.
+- **Transaction fees** — the amount paid to process an extrinsic.
+
 ## Further Reading
 
 - [Glossary: Mempool](https://docs.learnbittensor.org/resources/glossary#mempool)

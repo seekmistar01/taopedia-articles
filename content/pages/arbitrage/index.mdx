@@ -186,6 +186,18 @@ whether acting on it is profitable after costs, depends on live prices and liqui
 continuously. The durable point is the role arbitrage plays: turning price differences into a force
 that pulls pool prices back into line.
 
+## Distinction from Alpha Reserve
+
+Arbitrage and the alpha reserve relate as an activity and the pool state it acts on. The alpha
+reserve is the alpha-side balance held in a subnet's liquidity pool, one of the two reserves whose
+ratio sets the alpha price; arbitrage is the trading activity that buys or sells against that pool
+when its price diverges from elsewhere, moving the paired reserves back toward an aligned price
+([Understanding Subnets: Liquidity pools](https://docs.learnbittensor.org/subnets/understanding-subnets#liquidity-pools),
+[Understanding Slippage](https://docs.learnbittensor.org/learn/slippage)).
+
+- **Alpha reserve** — the alpha-side balance held in the subnet liquidity pool.
+- **Arbitrage** — the trading that pushes a diverging pool price back into line.
+
 ## Further Reading
 
 - [User Liquidity Positions](https://docs.learnbittensor.org/liquidity-positions)

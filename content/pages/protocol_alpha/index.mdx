@@ -158,6 +158,19 @@ A protocol-alpha statement needs the subnet and lifecycle context attached. Duri
 injection, the term explains protocol-side alpha attribution. During dissolution, it explains how
 that cached amount participates in settlement.
 
+## Distinction from Alpha Reserve
+
+Protocol alpha and the alpha reserve are different pools of a subnet's alpha. The alpha reserve is
+the alpha-side balance in the liquidity pool that, paired with the TAO reserve, sets the alpha
+price, while protocol alpha is alpha held by the protocol itself rather than sitting in the
+tradeable pool reserve
+([Glossary: Protocol Alpha](https://docs.learnbittensor.org/resources/glossary#protocol-alpha),
+[Understanding Subnets: Liquidity pools](https://docs.learnbittensor.org/subnets/understanding-subnets#liquidity-pools),
+[Emission: Alpha reserve injection](https://docs.learnbittensor.org/learn/emissions#alpha-reserve-injection)).
+
+- **Alpha reserve** — the alpha-side balance in the tradeable liquidity pool.
+- **Protocol alpha** — alpha held by the protocol rather than the pool reserve.
+
 ## Further Reading
 
 - [Glossary: Protocol Alpha](https://docs.learnbittensor.org/resources/glossary#protocol-alpha)

@@ -267,6 +267,19 @@ and signs what the user approves on the device
 Readers should keep those roles separate. Wallet-app compromise or misleading UI can still produce
 bad signature requests even when the coldkey private key never leaves the hardware device.
 
+## Distinction from Polkadot Vault
+
+A Ledger hardware wallet and Polkadot Vault are two cold-signing custody options that both keep the
+private key off an online machine. A Ledger hardware wallet is a dedicated hardware signing device,
+while Polkadot Vault turns a dedicated offline smartphone into a cold-signing device through a
+QR-based workflow
+([Coldkey and Hotkey Workstation Security](https://docs.learnbittensor.org/keys/coldkey-hotkey-security),
+[Using Ledger Hardware Wallet](https://docs.learnbittensor.org/staking-and-delegation/using-ledger-hw-wallet),
+[Glossary: External Wallet](https://docs.learnbittensor.org/resources/glossary#external-wallet)).
+
+- **Ledger hardware wallet** — a dedicated hardware signing device for key custody.
+- **Polkadot Vault** — an offline smartphone used as a QR-based cold signer.
+
 ## Further Reading
 
 - [Introduction to Bittensor: Subnet development](https://docs.learnbittensor.org/learn/introduction#subnet-development)

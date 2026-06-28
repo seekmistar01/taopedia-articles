@@ -253,6 +253,19 @@ performance
 A subnet validator evaluates miner work inside a Bittensor subnet and expresses that evaluation as
 weights for the subnet consensus path.
 
+## Distinction from Axon
+
+A subnet validator and an axon relate as a participant role and a network component. A subnet
+validator is the participant that queries miners and submits weights to drive consensus, while an
+axon is the inbound server endpoint a neuron exposes to receive those queries — most prominently run
+by miners serving responses
+([Glossary: Subnet Validator](https://docs.learnbittensor.org/resources/glossary#subnet-validator),
+[Glossary: Axon](https://docs.learnbittensor.org/resources/glossary#axon),
+[Understanding Incentive Mechanisms](https://docs.learnbittensor.org/learn/anatomy-of-incentive-mechanism)).
+
+- **Subnet validator** — the participant querying miners and setting weights.
+- **Axon** — the inbound server endpoint a neuron exposes to receive queries.
+
 ## Further Reading
 
 - [Glossary: Subnet Validator](https://docs.learnbittensor.org/resources/glossary#subnet-validator)

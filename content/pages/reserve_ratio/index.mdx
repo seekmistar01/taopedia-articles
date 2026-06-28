@@ -133,6 +133,19 @@ subnet pool. Concrete examples require the selected subnet, network environment,
 pool context
 ([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets)).
 
+## Distinction from TAO Reserve
+
+A reserve ratio and the TAO reserve relate as a derived ratio and one of its inputs. The TAO reserve
+is the TAO-side balance held in a subnet's liquidity pool, while the reserve ratio expresses the
+relationship between that TAO reserve and the alpha reserve — the proportion that governs price and
+slippage
+([Glossary: Reserve Ratio](https://docs.learnbittensor.org/resources/glossary#reserve-ratio),
+[Emission: TAO reserve injection](https://docs.learnbittensor.org/learn/emissions#tao-reserve-injection),
+[Understanding Slippage](https://docs.learnbittensor.org/learn/slippage)).
+
+- **TAO reserve** — the TAO-side balance in a subnet's liquidity pool.
+- **Reserve ratio** — the proportion between the TAO and alpha reserves.
+
 ## Further Reading
 
 - [Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets)

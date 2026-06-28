@@ -314,6 +314,19 @@ weight signals before those signals become readable to observers
 ([Commit Reveal](https://docs.learnbittensor.org/concepts/commit-reveal),
 [Glossary: Commit Reveal](https://docs.learnbittensor.org/resources/glossary#commit-reveal)).
 
+## Distinction from Time-Lock Encryption
+
+Commit reveal and time-lock encryption are a scheme and the cryptographic primitive that can power
+it. Commit reveal is the weight-submission scheme that hides a validator's weights when committed
+and discloses them only after a delay, while time-lock (drand-based) encryption is the mechanism
+that seals the committed weights so they can be decrypted automatically once the target round's
+randomness is published ([Commit Reveal](https://docs.learnbittensor.org/concepts/commit-reveal),
+[Glossary: Drand / Time-Lock Encryption](https://docs.learnbittensor.org/resources/glossary#drandtime-lock-encryption)).
+
+- **Commit reveal** — the scheme that hides then later discloses validator weights.
+- **Time-lock encryption** — the drand-based primitive that auto-reveals the sealed weights on
+  schedule.
+
 ## Further Reading
 
 - [Commit Reveal](https://docs.learnbittensor.org/concepts/commit-reveal)

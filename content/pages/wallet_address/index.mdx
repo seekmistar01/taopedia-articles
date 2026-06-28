@@ -275,6 +275,18 @@ received. It names the public destination identifier derived from key material a
 or receiving TAO
 ([Glossary: Wallet Address](https://docs.learnbittensor.org/resources/glossary#wallet-address)).
 
+## Distinction from Private Key
+
+A wallet address and a private key are the public and secret halves of a keypair. A wallet address
+is the public SS58-encoded identifier derived from the public key that others use to send funds,
+while a private key is the secret that signs transactions and must never be shared
+([Glossary: Wallet Address](https://docs.learnbittensor.org/resources/glossary#wallet-address),
+[Glossary: Private Key](https://docs.learnbittensor.org/resources/glossary#private-key),
+[Glossary: SS58 Encoded](https://docs.learnbittensor.org/resources/glossary#ss58-encoded)).
+
+- **Wallet address** — the public SS58 identifier used to receive funds.
+- **Private key** — the secret that signs transactions and stays hidden.
+
 ## Further Reading
 
 - [Glossary: Wallet Address](https://docs.learnbittensor.org/resources/glossary#wallet-address)

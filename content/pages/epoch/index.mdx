@@ -151,6 +151,18 @@ precise. If the focus is evaluation signals themselves, validator weights are mo
 These boundaries keep epoch focused on consensus timing, not a subnet task description or a complete
 account of reward outcomes.
 
+## Distinction from Subnet Task
+
+An epoch and a subnet task separate timing from the work being timed. A subnet task is the problem
+miners are asked to solve and validators score, while an epoch is the recurring block interval over
+which weights are tallied and Yuma Consensus runs to distribute emissions for that work
+([Glossary: Epoch](https://docs.learnbittensor.org/resources/glossary#epoch),
+[Glossary: Subnet Task](https://docs.learnbittensor.org/resources/glossary#subnet-task),
+[Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
+
+- **Subnet task** — the problem miners solve and validators score.
+- **Epoch** — the recurring interval over which consensus runs and emits.
+
 ## Further Reading
 
 - [Glossary: Epoch](https://docs.learnbittensor.org/resources/glossary#epoch)

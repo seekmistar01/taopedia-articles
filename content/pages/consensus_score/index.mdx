@@ -210,6 +210,20 @@ Consensus filters validator weight signals
 ([Glossary: Consensus Score](https://docs.learnbittensor.org/resources/glossary#consensus-score),
 [Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
 
+## Distinction from Subnet Scoring Model
+
+Consensus score and the subnet scoring model operate at different layers of evaluation. The subnet
+scoring model is the subnet-specific method validators use to grade miner responses to that subnet's
+task, producing the raw weights validators submit; consensus score is the protocol-level,
+stake-weighted agreement Yuma Consensus computes from those submitted weights across validators
+([Glossary: Subnet Scoring Model](https://docs.learnbittensor.org/resources/glossary#subnet-scoring-model),
+[Glossary: Consensus Score](https://docs.learnbittensor.org/resources/glossary#consensus-score),
+[Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
+
+- **Subnet scoring model** — the subnet-defined method that grades miners into raw weights.
+- **Consensus score** — the protocol-level, stake-weighted agreement Yuma derives from those
+  weights.
+
 ## Further Reading
 
 - [Glossary: Consensus Score](https://docs.learnbittensor.org/resources/glossary#consensus-score)

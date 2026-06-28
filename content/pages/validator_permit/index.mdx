@@ -170,6 +170,19 @@ validator influence, and VPermit names broader authorization context
 [Glossary: Stake Weight](https://docs.learnbittensor.org/resources/glossary#stake-weight),
 [Glossary: VPermit](https://docs.learnbittensor.org/resources/glossary#vpermit)).
 
+## Distinction from Kappa
+
+A validator permit and kappa operate at different scopes in consensus. The validator permit is a
+per-neuron flag, earned by ranking among the top stake holders, that grants the right to set
+weights, while kappa is a subnet-wide hyperparameter that sets the stake-weighted majority threshold
+used to clip weights during Yuma Consensus
+([Glossary: Validator Permit](https://docs.learnbittensor.org/resources/glossary#validator-permit),
+[Subnet Hyperparameters: Kappa](https://docs.learnbittensor.org/subnets/subnet-hyperparameters#kappa),
+[Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
+
+- **Validator permit** — the per-neuron flag granting the right to set weights.
+- **Kappa** — the subnet-wide majority threshold used when clipping weights.
+
 ## Further Reading
 
 - [Glossary: Validator Permit](https://docs.learnbittensor.org/resources/glossary#validator-permit)

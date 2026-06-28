@@ -98,6 +98,19 @@ Yuma Consensus ([Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-cons
 Specific examples belong to the subnet, mechanism, network, and source that produced the value at
 the time of observation.
 
+## Distinction from Stake Weight
+
+Validator weights and stake weight are different inputs to consensus. Validator weights are the
+per-miner scores a validator submits to rate miner performance, while stake weight is the
+stake-derived influence that determines how heavily that validator's submitted weights count when
+Yuma Consensus aggregates them
+([Glossary: Weight Vector](https://docs.learnbittensor.org/resources/glossary#weight-vector),
+[Glossary: Stake Weight](https://docs.learnbittensor.org/resources/glossary#stake-weight),
+[Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
+
+- **Validator weights** — the per-miner scores a validator submits.
+- **Stake weight** — the stake-based influence applied to those weights in consensus.
+
 ## Further Reading
 
 - [Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)

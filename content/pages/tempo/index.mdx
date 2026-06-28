@@ -302,6 +302,19 @@ The article-level point is stable even when specific values differ by subnet: te
 that helps turn block progression into periodic subnet consensus and emission timing
 ([Emission](https://docs.learnbittensor.org/learn/emissions)).
 
+## Distinction from Coinbase
+
+Tempo and coinbase relate as a cadence and a per-block process. Tempo is the interval, measured in
+blocks, that sets how often a subnet runs an epoch to distribute accumulated emission and run
+consensus, while coinbase is the per-block routine that mints new TAO and advances emission every
+block regardless of tempo
+([Glossary: Tempo](https://docs.learnbittensor.org/resources/glossary#tempo),
+[Coinbase documentation](https://docs.learnbittensor.org/navigating-subtensor/emissions-coinbase),
+[Emission](https://docs.learnbittensor.org/learn/emissions)).
+
+- **Tempo** — the block interval between a subnet's epoch distributions.
+- **Coinbase** — the per-block routine that mints and advances emission each block.
+
 ## Further Reading
 
 - [Glossary: Tempo](https://docs.learnbittensor.org/resources/glossary#tempo)

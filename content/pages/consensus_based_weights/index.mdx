@@ -151,6 +151,19 @@ that interpret validator weights
 ([Understanding Incentive Mechanisms](https://docs.learnbittensor.org/learn/anatomy-of-incentive-mechanism),
 [Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
 
+## Distinction from Weight Copying
+
+Consensus-based weights and weight copying relate as a defense and the behavior it counters. Weight
+copying is the exploit where a validator mirrors others' weights instead of evaluating miners, while
+consensus-based weights is the mechanism that clips each validator's weights toward the
+stake-weighted consensus, reducing the payoff of copying
+([Consensus-based Weights](https://docs.learnbittensor.org/concepts/consensus-based-weights),
+[The Weight Copying Problem](https://docs.learnbittensor.org/concepts/weight-copying-in-bittensor),
+[Commit Reveal](https://docs.learnbittensor.org/concepts/commit-reveal)).
+
+- **Weight copying** — the exploit of mirroring others' weights without evaluating.
+- **Consensus-based weights** — the mechanism clipping weights toward consensus.
+
 ## Further Reading
 
 - [Consensus-based Weights](https://docs.learnbittensor.org/concepts/consensus-based-weights)

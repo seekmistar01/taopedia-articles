@@ -131,6 +131,19 @@ availability ([Glossary: Axon](https://docs.learnbittensor.org/resources/glossar
 The term identifies where subnet messages arrive. Surrounding subnet documentation explains what the
 message means and how the response is evaluated.
 
+## Distinction from Serving Rate Limit
+
+An axon and the serving rate limit relate as a component and a constraint on it. An axon is the
+server endpoint a neuron exposes to receive queries, while the serving rate limit is the subnet
+hyperparameter capping how frequently a neuron may re-publish its axon details on-chain, throttling
+how often serving information changes
+([Glossary: Axon](https://docs.learnbittensor.org/resources/glossary#axon),
+[Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters),
+[Understanding Neurons](https://docs.learnbittensor.org/learn/neurons)).
+
+- **Axon** — the server endpoint a neuron exposes to receive queries.
+- **Serving rate limit** — the hyperparameter capping how often axon details re-publish.
+
 ## Further Reading
 
 - [Glossary: Axon](https://docs.learnbittensor.org/resources/glossary#axon)

@@ -143,6 +143,18 @@ should be checked for the relevant netuid. The 32767 figure, about 0.5 normalize
 default, and the parameter is governed at the root level
 ([Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters)).
 
+## Distinction from Epoch
+
+Kappa and an epoch operate at different layers of consensus. Kappa is the majority-threshold
+hyperparameter Yuma Consensus uses to decide the consensus weight at each UID, while an epoch is the
+recurring block interval over which weights are gathered and that consensus computation runs
+([Subnet Hyperparameters: Kappa](https://docs.learnbittensor.org/subnets/subnet-hyperparameters#kappa),
+[Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus),
+[Glossary: Epoch](https://docs.learnbittensor.org/resources/glossary#epoch)).
+
+- **Kappa** — the majority-threshold hyperparameter used within consensus.
+- **Epoch** — the recurring interval over which consensus runs.
+
 ## Further Reading
 
 - [Subnet Hyperparameters](https://docs.learnbittensor.org/subnets/subnet-hyperparameters)

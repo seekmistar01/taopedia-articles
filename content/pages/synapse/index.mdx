@@ -128,6 +128,18 @@ operation, or a complete subnet task design
 Synapse identifies what is exchanged, while axon, dendrite, subnet task, and incentive mechanism
 references describe neighboring parts of the system.
 
+## Distinction from Subnet Miner
+
+A synapse and a subnet miner relate as a message and a participant that exchanges it. A subnet miner
+is the neuron that performs the subnet's task and returns results, while a synapse is the structured
+request-and-response object passed between validator and miner that carries the query and the
+miner's answer ([Glossary: Synapse](https://docs.learnbittensor.org/resources/glossary#synapse),
+[Glossary: Subnet Miner](https://docs.learnbittensor.org/resources/glossary#subnet-miner),
+[Understanding Incentive Mechanisms](https://docs.learnbittensor.org/learn/anatomy-of-incentive-mechanism)).
+
+- **Subnet miner** — the neuron performing the task and returning results.
+- **Synapse** — the request-and-response object passed between neurons.
+
 ## Further Reading
 
 - [Glossary: Synapse](https://docs.learnbittensor.org/resources/glossary#synapse)

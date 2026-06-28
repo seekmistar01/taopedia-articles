@@ -122,6 +122,19 @@ parameter that applies wherever stake weight is calculated
 ([Glossary: TAO Weight](https://docs.learnbittensor.org/resources/glossary#tao-weight),
 [Glossary: Stake Weight](https://docs.learnbittensor.org/resources/glossary#stake-weight)).
 
+## Distinction from Root Staker
+
+TAO weight and a root staker relate as a parameter and a participant it affects. TAO weight is the
+global coefficient setting how much root (TAO-denominated) stake counts relative to subnet alpha
+stake in consensus, while a root staker is a participant who stakes on the root subnet and whose
+influence that coefficient scales
+([Glossary: TAO Weight](https://docs.learnbittensor.org/resources/glossary#tao-weight),
+[Glossary: Root Subnet/Subnet Zero](https://docs.learnbittensor.org/resources/glossary#root-subnetsubnet-zero),
+[Glossary: Root Proportion](https://docs.learnbittensor.org/resources/glossary#root-proportion)).
+
+- **TAO weight** — the coefficient scaling root stake against alpha stake.
+- **Root staker** — a participant staking on the root subnet, scaled by TAO weight.
+
 ## Further Reading
 
 - [Glossary: TAO Weight](https://docs.learnbittensor.org/resources/glossary#tao-weight)

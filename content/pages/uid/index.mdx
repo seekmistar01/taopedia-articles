@@ -144,6 +144,18 @@ UID is concept vocabulary for subnet participant identification. It should not b
 address, a balance container, or a cross-subnet identity
 ([Glossary: UID slot](https://docs.learnbittensor.org/resources/glossary#uid-slot)).
 
+## Distinction from Hotkeys
+
+A UID and a hotkey identify a neuron in different ways. A hotkey is the cryptographic key that signs
+for a neuron's operator and persists across subnets, while a UID is the positional index a subnet
+assigns to that hotkey at registration — so one hotkey can hold different UIDs in different subnets
+([Glossary: UID Slot](https://docs.learnbittensor.org/resources/glossary#uid-slot),
+[Glossary: Hotkey](https://docs.learnbittensor.org/resources/glossary#hotkey),
+[Wallets, Coldkeys and Hotkeys](https://docs.learnbittensor.org/keys/wallets)).
+
+- **Hotkey** — the cryptographic key signing for a neuron, persistent across subnets.
+- **UID** — the positional index a subnet assigns to a hotkey at registration.
+
 ## Further Reading
 
 - [Glossary: UID slot](https://docs.learnbittensor.org/resources/glossary#uid-slot)

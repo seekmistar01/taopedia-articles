@@ -253,6 +253,19 @@ Existential deposit reading should treat the figure as chain-configured state. W
 can mention the concept without quoting a live threshold unless the value was queried for the
 network in scope.
 
+## Distinction from Recycling and Burning
+
+An existential deposit and recycling/burning act on balances in different ways. The existential
+deposit is the minimum balance an account must retain to keep existing, below which the account is
+reaped, while recycling and burning are mechanisms that remove TAO from an account's spendable
+supply — recycling returns it to issuance and burning destroys it outright
+([Glossary: Existential Deposit](https://docs.learnbittensor.org/resources/glossary#existential-deposit),
+[Glossary: Recycling and burning](https://docs.learnbittensor.org/resources/glossary#recycling-and-burning),
+[Transaction Fees](https://docs.learnbittensor.org/learn/fees)).
+
+- **Existential deposit** — the minimum balance an account must keep to survive.
+- **Recycling and burning** — mechanisms removing TAO from spendable supply.
+
 ## Further Reading
 
 - [Introduction to Bittensor: Subnet development](https://docs.learnbittensor.org/learn/introduction#subnet-development)

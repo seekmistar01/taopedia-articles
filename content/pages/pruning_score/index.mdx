@@ -172,6 +172,19 @@ subnet at a given time is live state that shifts as earnings change, and is best
 chain data at the time of observation
 ([Mining in Bittensor](https://docs.learnbittensor.org/miners)).
 
+## Distinction from Subnet Miner
+
+A pruning score and a subnet miner relate as a metric and the participant it is computed for. A
+subnet miner is the participant that performs the subnet's task at a UID, while the pruning score is
+the per-UID value the chain uses to decide which neuron is dropped when a full subnet must make room
+for a new registration
+([Glossary: Pruning Score](https://docs.learnbittensor.org/resources/glossary#pruning-score),
+[Glossary: Subnet Miner](https://docs.learnbittensor.org/resources/glossary#subnet-miner),
+[Mining: Miner deregistration](https://docs.learnbittensor.org/miners#miner-deregistration)).
+
+- **Subnet miner** — the participant performing the task at a UID.
+- **Pruning score** — the per-UID value that decides which neuron is deregistered.
+
 ## Further Reading
 
 - [Mining in Bittensor](https://docs.learnbittensor.org/miners)

@@ -121,6 +121,18 @@ amount, or a universal comparison across all subnets. Specific values belong to 
 and reserve state being observed
 ([Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets)).
 
+## Distinction from TAO Reserve
+
+Alpha price and the TAO reserve relate as a derived ratio and one of its inputs. The TAO reserve is
+the TAO-side balance in a subnet's liquidity pool; alpha price is the pool price obtained from the
+ratio of the TAO reserve to the alpha reserve, so a change in the TAO reserve moves the alpha price
+rather than being the price itself
+([Emission: TAO reserve injection](https://docs.learnbittensor.org/learn/emissions#tao-reserve-injection),
+[Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets)).
+
+- **TAO reserve** — the TAO-side pool balance that forms the numerator of the price ratio.
+- **Alpha price** — the pool price derived from the TAO-to-alpha reserve ratio.
+
 ## Further Reading
 
 - [Understanding Subnets: Price/rate of alpha tokens](https://docs.learnbittensor.org/subnets/understanding-subnets#pricerate-of-alpha-tokens)

@@ -345,6 +345,19 @@ collection before Yuma Consensus filtering and aggregation
 The central point is that the matrix organizes validator weight vectors for consensus. Later results
 depend on how Yuma Consensus filters and aggregates that organized input.
 
+## Distinction from Validator Trust
+
+A weight matrix and validator trust relate as a consensus input and a per-validator score derived
+from it. The weight matrix is the full set of every validator's weight vector stacked into rows that
+Yuma Consensus ingests, while validator trust is a scalar per validator measuring how well its
+submitted weights align with the resulting consensus
+([Glossary: Weight Matrix](https://docs.learnbittensor.org/resources/glossary#weight-matrix),
+[Glossary: Validator Trust](https://docs.learnbittensor.org/resources/glossary#validator-trust),
+[Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)).
+
+- **Weight matrix** — all validators' weight vectors stacked as consensus input.
+- **Validator trust** — a per-validator score of alignment with consensus.
+
 ## Further Reading
 
 - [Glossary: Weight Matrix](https://docs.learnbittensor.org/resources/glossary#weight-matrix)

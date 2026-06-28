@@ -251,6 +251,19 @@ Private key should not be read as a wallet address, a mnemonic, a subnet role, o
 It names the protected authorization side of a cryptographic key pair
 ([Glossary: Private Key](https://docs.learnbittensor.org/resources/glossary#private-key)).
 
+## Distinction from Seed Phrase Security
+
+A private key and seed phrase security relate as a secret and the practices that protect its source.
+A private key is the cryptographic secret that signs transactions for an address, while seed phrase
+security is the set of operational practices for safeguarding the mnemonic that derives those keys,
+so losing the seed phrase exposes every private key derived from it
+([Glossary: Private Key](https://docs.learnbittensor.org/resources/glossary#private-key),
+[Handle your Seed Phrase/Mnemonic Securely](https://docs.learnbittensor.org/keys/handle-seed-phrase),
+[Glossary: Mnemonic](https://docs.learnbittensor.org/resources/glossary#mnemonic)).
+
+- **Private key** — the cryptographic secret that signs for an address.
+- **Seed phrase security** — the practices protecting the mnemonic that derives keys.
+
 ## Further Reading
 
 - [Glossary: Private Key](https://docs.learnbittensor.org/resources/glossary#private-key)
